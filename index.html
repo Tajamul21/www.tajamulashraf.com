@@ -294,19 +294,19 @@
                     <nav class="navbar">
                         <div class="container">
                             <ul class="navbar-list">
-                                <li class="navbar-item"><a class="navbar-link"
-                                        onclick="scrollToSection('prospective-students')" style="cursor: pointer">NEWS
+                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('news')"
+                                        style="cursor: pointer">NEWS
                                     </a></li>
-                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('publications')"
+                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('research')"
                                         style="cursor: pointer">Research</a></li>
 
-                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('featured-in')"
+                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('timeline')"
                                         style="cursor: pointer">TIMELINE</a></li>
-                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('resume')"
+                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('publications')"
                                         style="cursor: pointer">PUBLICATIONS</a></li>
-                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('contact')"
+                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('blog')"
                                         style="cursor: pointer">BLOG</a></li>
-                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('Commuinty')"
+                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('community')"
                                         style="cursor: pointer">Community</a></li>
                             </ul>
                         </div>
@@ -451,553 +451,199 @@
 
 
                     <!-- ========== PUBLICATIONS ========== -->
-
-                    <div class="docs-section" id="publications">
-                        <h4>Publications</h4>
-
+                    <div class="docs-section" id="research">
+                        <h4 id="research">Research</h4>
                         <p align="justify">
                             My research interests encompass Computer Vision, Medical AI, and Assitive Robotics.
                         </p>
 
-                        <ul class="tab-nav">
-                            <li>
-                                <div class="button active" data-ref="#publication-selected">Selected</div>
-                            </li>
-                            <li>
-                                <div class="button" data-ref="#publication-all">All</div>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="publication-selected">
-                                <table>
-                                    <tbody>
-                                        <tr bgcolor="#ffffd0">
-                                            <td width="38%" valign="top" align="center"><a
-                                                    href="https://extreme-parkour.github.io/">
-                                                    <video autoplay loop muted src="assets\Videos\parkour.mp4" alt="sym"
-                                                        style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
-                                                        width="90%"></video>
-                                                </a></td>
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                        id="EXTREME-PARKOUR">
-                                                        <heading>TransFED: A way to epitomize Transformer based Focal
-                                                            Modulation using Federated Learning</heading>
-                                                    </a><br>
-                                                    Tajamul Ashraf, Fuzayil Mir, Iqra Altaf Gillani<br>
-                                                    WACV 2024 [<a
-                                                        href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>]
-                                                </p>
-
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="https://extreme-parkour.github.io/">webpage</a> |
-                                                    <a href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
-                                                    |
-                                                    <a href="assets\Documents\wacv\WACV_Final_ppt.pdf">
-                                                        presentation</a> |
-
-
-                                                    <a href="https://github.com/Tajamul2">code</a>
-
-                                                    <p align="justify"> <i style="display: none;"
-                                                            id="extreme-parkour-abs">Federated learning has emerged
-                                                            as a
-                                                            promising paradigm for collaborative machine learning,
-                                                            enabling multiple clients to train a model while
-                                                            preserving
-                                                            data privacy jointly. Tailored federated learning takes
-                                                            this
-                                                            concept further by accommodating client heterogeneity
-                                                            and
-                                                            facilitating the learning of personalized models. While
-                                                            the
-                                                            utilization of transformers within federated learning
-                                                            has
-                                                            attracted significant interest, there remains a need to
-                                                            investigate the effects of federated learning algorithms
-                                                            on
-                                                            the latest focal modulation-based transformers. In this
-                                                            paper, we investigate this relationship and uncover the
-                                                            detrimental effects of federated averaging (FedAvg)
-                                                            algorithms on Focal Modulation, particularly in
-                                                            scenarios
-                                                            with heterogeneous data. To address this challenge, we
-                                                            propose TransFed, a novel transformer-based federated
-                                                            learning framework that not only aggregates model
-                                                            parameters
-                                                            but also learns tailored Focal Modulation for each
-                                                            client.
-                                                            Instead of employing a conventional customization
-                                                            mechanism
-                                                            that maintains client-specific focal modulation layers
-                                                            locally, we introduce a learn-to-tailor approach that
-                                                            fosters client collaboration, enhancing scalability and
-                                                            adaptation in TransFed. Our method incorporates a hyper
-                                                            network on the server, responsible for learning
-                                                            personalized
-                                                            projection matrices for the focal modulation layers.
-                                                            This
-                                                            enables the generation of client-specific keys, values,
-                                                            and
-                                                            queries. Furthermore, we provide an analysis of
-                                                            adaptation
-                                                            bounds for TransFed using the learn-to-customize
-                                                            mechanism.
-                                                            Through intensive experiments on datasets related to
-                                                            pneumonia classification, we demonstrate that TransFed,
-                                                            in
-                                                            combination with the learn-to-tailor approach, achieves
-                                                            superior performance in scenarios with non-IID data
-                                                            distributions, surpassing existing methods. Overall,
-                                                            TransFed paves the way for leveraging focal Modulation
-                                                            in
-                                                            federated learning, advancing the capabilities of focal
-                                                            modulated transformer models in decentralized
-                                                            environments.</i></p>
-
-
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr bgcolor="">
-                                            <td width="38%" valign="top" align="center"><a
-                                                    href="https://extreme-parkour.github.io/">
-                                                    <video autoplay loop muted src="assets\Videos\parkour.mp4" alt="sym"
-                                                        style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
-                                                        width="90%"></video>
-                                                </a></td>
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://extreme-parkour.github.io/" id="EXTREME-PARKOUR">
-                                                        <heading>PoseWatch: Advancing Real Time Human Pose Tracking and
-                                                            Juxtaposition with Deep Learning</heading>
-                                                    </a><br>
-                                                    Tajamul Ashraf, Balaji Prabu BV, and Omkar SN<br>
-                                                    CVIP 2023
-                                                </p>
-
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="">webpage</a> |
-                                                    <a href="javascript:toggleblock('hpjt-abs')">abstract</a>
-                                                    |
-
-                                                    <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
-                                                    <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
-
-                                                    <p align="justify"> <i style="display: none;" id="hpjt-abs">Human
-                                                            pose estimation is the
-                                                            process of continuously monitoring a person's action and
-                                                            movement to track and monitor the activity
-                                                            of a person or an object. Human pose estimation is usually
-                                                            done by capturing the key points which describe the pose of
-                                                            a person. A guiding
-                                                            practicing framework that enables people to learn and
-                                                            exercise activities like yoga, fittness, dancing, etc.,
-                                                            might
-                                                            be built using human posture recognition remotely and
-                                                            accurately without the help of a personal
-                                                            trainer. This work has proposed a framework to detect and
-                                                            recognize
-                                                            various yoga and exercise poses to help the individual
-                                                            practice the same
-                                                            correctly. A popular Blaze-pose model extracts key points
-                                                            from the student end and compares the same with the
-                                                            instructor pose. The extracted
-                                                            key points are fed to the Human Pose Juxtaposition model
-                                                            (HPJT) to
-                                                            compare the student pose with the instructor. The model will
-                                                            assess the
-                                                            correctness of the pose by comparing the extracted key
-                                                            points and give
-                                                            feedback to students if any corrections need to be made. The
-                                                            proposed
-                                                            model is trained with 40+ yoga and exercise poses, and
-                                                            evaluated the
-                                                            model's performance with the mAP, and the model achieved an
-                                                            accuracy
-                                                            of 99.04%. The results proved that any person could use the
-                                                            proposed
-                                                            framework in real-time to practice exercise, yoga, dance,
-                                                            etc. At their respective location without the help of a
-                                                            physical instructor with precision
-                                                            and accuracy, leading to a healthy life.
-                                                        </i></p>
 
 
 
+                        <div class="docs-section" id="publications">
+                            <h4>Publications</h4>
 
 
 
+                            <ul class="tab-nav">
+                                <li>
+                                    <div class="button active" data-ref="#publication-selected">Selected</div>
+                                </li>
+                                <li>
+                                    <div class="button" data-ref="#publication-all">All</div>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="publication-selected">
+                                    <table>
+                                        <tbody>
+                                            <tr bgcolor="#ffffd0">
+                                                <td width="38%" valign="top" align="center"><a
+                                                        href="https://extreme-parkour.github.io/">
+                                                        <video autoplay loop muted src="assets\Videos\parkour.mp4"
+                                                            alt="sym"
+                                                            style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
+                                                            width="90%"></video>
+                                                    </a></td>
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading>TransFED: A way to epitomize Transformer based
+                                                                Focal
+                                                                Modulation using Federated Learning</heading>
+                                                        </a><br>
+                                                        Tajamul Ashraf, Fuzayil Mir, Iqra Altaf Gillani<br>
+                                                        WACV 2024 [<a
+                                                            href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>]
+                                                    </p>
 
-                                                </div>
-                                            </td>
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <div class="tab-pane" id="publication-all">
-                                <table>
-                                    <tbody>
-                                        <tr bgcolor="#ffffd0">
-                                            <td width="38%" valign="top" align="center"><a
-                                                    href="https://extreme-parkour.github.io/">
-                                                    <video autoplay loop muted src="assets\Videos\parkour.mp4" alt="sym"
-                                                        style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
-                                                        width="90%"></video>
-                                                </a></td>
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                        id="EXTREME-PARKOUR">
-                                                        <heading>TransFED: A way to epitomize Transformer based Focal
-                                                            Modulation using Federated Learning</heading>
-                                                    </a><br>
-                                                    Tajamul Ashraf, Fuzayil Mir, Iqra Altaf Gillani<br>
-                                                    WACV 2024 [<a
-                                                        href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>]
-                                                </p>
-
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="https://extreme-parkour.github.io/">webpage</a> |
-                                                    <a href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
-                                                    |
-                                                    <a href="assets\Documents\wacv\WACV_Final_ppt.pdf">
-                                                        presentation</a> |
-
-
-                                                    <a href="https://github.com/Tajamul2">code</a>
-
-                                                    <p align="justify"> <i style="display: none;"
-                                                            id="extreme-parkour-abs">Federated learning has emerged
-                                                            as a
-                                                            promising paradigm for collaborative machine learning,
-                                                            enabling multiple clients to train a model while
-                                                            preserving
-                                                            data privacy jointly. Tailored federated learning takes
-                                                            this
-                                                            concept further by accommodating client heterogeneity
-                                                            and
-                                                            facilitating the learning of personalized models. While
-                                                            the
-                                                            utilization of transformers within federated learning
-                                                            has
-                                                            attracted significant interest, there remains a need to
-                                                            investigate the effects of federated learning algorithms
-                                                            on
-                                                            the latest focal modulation-based transformers. In this
-                                                            paper, we investigate this relationship and uncover the
-                                                            detrimental effects of federated averaging (FedAvg)
-                                                            algorithms on Focal Modulation, particularly in
-                                                            scenarios
-                                                            with heterogeneous data. To address this challenge, we
-                                                            propose TransFed, a novel transformer-based federated
-                                                            learning framework that not only aggregates model
-                                                            parameters
-                                                            but also learns tailored Focal Modulation for each
-                                                            client.
-                                                            Instead of employing a conventional customization
-                                                            mechanism
-                                                            that maintains client-specific focal modulation layers
-                                                            locally, we introduce a learn-to-tailor approach that
-                                                            fosters client collaboration, enhancing scalability and
-                                                            adaptation in TransFed. Our method incorporates a hyper
-                                                            network on the server, responsible for learning
-                                                            personalized
-                                                            projection matrices for the focal modulation layers.
-                                                            This
-                                                            enables the generation of client-specific keys, values,
-                                                            and
-                                                            queries. Furthermore, we provide an analysis of
-                                                            adaptation
-                                                            bounds for TransFed using the learn-to-customize
-                                                            mechanism.
-                                                            Through intensive experiments on datasets related to
-                                                            pneumonia classification, we demonstrate that TransFed,
-                                                            in
-                                                            combination with the learn-to-tailor approach, achieves
-                                                            superior performance in scenarios with non-IID data
-                                                            distributions, surpassing existing methods. Overall,
-                                                            TransFed paves the way for leveraging focal Modulation
-                                                            in
-                                                            federated learning, advancing the capabilities of focal
-                                                            modulated transformer models in decentralized
-                                                            environments.</i></p>
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://extreme-parkour.github.io/">webpage</a> |
+                                                        <a
+                                                            href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
+                                                        |
+                                                        <a href="assets\Documents\wacv\WACV_Final_ppt.pdf">
+                                                            presentation</a> |
 
 
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                        <a href="https://github.com/Tajamul2">code</a>
 
-                                        <tr bgcolor="">
-                                            <td width="38%" valign="top" align="center"><a
-                                                    href="https://extreme-parkour.github.io/">
-                                                    <video autoplay loop muted src="assets\Videos\parkour.mp4" alt="sym"
-                                                        style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
-                                                        width="90%"></video>
-                                                </a></td>
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://extreme-parkour.github.io/" id="EXTREME-PARKOUR">
-                                                        <heading>PoseWatch: Advancing Real Time Human Pose Tracking and
-                                                            Juxtaposition with Deep Learning</heading>
-                                                    </a><br>
-                                                    Tajamul Ashraf, Balaji Prabu BV, and Omkar SN<br>
-                                                    CVIP 2023
-                                                </p>
-
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="https://extreme-parkour.github.io/">webpage</a> |
-                                                    <a href="javascript:toggleblock('hpjt_-abs')">abstract</a>
-                                                    |
-
-                                                    <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
-                                                    <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
-
-                                                    <p align="justify"> <i style="display: none;" id="hpjt_-abs">Human
-                                                            pose estimation is the
-                                                            process of continuously monitoring a person's action and
-                                                            movement to track and monitor the activity
-                                                            of a person or an object. Human pose estimation is usually
-                                                            done by capturing the key points which describe the pose of
-                                                            a person. A guiding
-                                                            practicing framework that enables people to learn and
-                                                            exercise activities like yoga, fittness, dancing, etc.,
-                                                            might
-                                                            be built using human posture recognition remotely and
-                                                            accurately without the help of a personal
-                                                            trainer. This work has proposed a framework to detect and
-                                                            recognize
-                                                            various yoga and exercise poses to help the individual
-                                                            practice the same
-                                                            correctly. A popular Blaze-pose model extracts key points
-                                                            from the student end and compares the same with the
-                                                            instructor pose. The extracted
-                                                            key points are fed to the Human Pose Juxtaposition model
-                                                            (HPJT) to
-                                                            compare the student pose with the instructor. The model will
-                                                            assess the
-                                                            correctness of the pose by comparing the extracted key
-                                                            points and give
-                                                            feedback to students if any corrections need to be made. The
-                                                            proposed
-                                                            model is trained with 40+ yoga and exercise poses, and
-                                                            evaluated the
-                                                            model's performance with the mAP, and the model achieved an
-                                                            accuracy
-                                                            of 99.04%. The results proved that any person could use the
-                                                            proposed
-                                                            framework in real-time to practice exercise, yoga, dance,
-                                                            etc. At their respective location without the help of a
-                                                            physical instructor with precision
-                                                            and accuracy, leading to a healthy life.
-                                                        </i></p>
+                                                        <p align="justify"> <i style="display: none;"
+                                                                id="extreme-parkour-abs">Federated learning has emerged
+                                                                as a
+                                                                promising paradigm for collaborative machine learning,
+                                                                enabling multiple clients to train a model while
+                                                                preserving
+                                                                data privacy jointly. Tailored federated learning takes
+                                                                this
+                                                                concept further by accommodating client heterogeneity
+                                                                and
+                                                                facilitating the learning of personalized models. While
+                                                                the
+                                                                utilization of transformers within federated learning
+                                                                has
+                                                                attracted significant interest, there remains a need to
+                                                                investigate the effects of federated learning algorithms
+                                                                on
+                                                                the latest focal modulation-based transformers. In this
+                                                                paper, we investigate this relationship and uncover the
+                                                                detrimental effects of federated averaging (FedAvg)
+                                                                algorithms on Focal Modulation, particularly in
+                                                                scenarios
+                                                                with heterogeneous data. To address this challenge, we
+                                                                propose TransFed, a novel transformer-based federated
+                                                                learning framework that not only aggregates model
+                                                                parameters
+                                                                but also learns tailored Focal Modulation for each
+                                                                client.
+                                                                Instead of employing a conventional customization
+                                                                mechanism
+                                                                that maintains client-specific focal modulation layers
+                                                                locally, we introduce a learn-to-tailor approach that
+                                                                fosters client collaboration, enhancing scalability and
+                                                                adaptation in TransFed. Our method incorporates a hyper
+                                                                network on the server, responsible for learning
+                                                                personalized
+                                                                projection matrices for the focal modulation layers.
+                                                                This
+                                                                enables the generation of client-specific keys, values,
+                                                                and
+                                                                queries. Furthermore, we provide an analysis of
+                                                                adaptation
+                                                                bounds for TransFed using the learn-to-customize
+                                                                mechanism.
+                                                                Through intensive experiments on datasets related to
+                                                                pneumonia classification, we demonstrate that TransFed,
+                                                                in
+                                                                combination with the learn-to-tailor approach, achieves
+                                                                superior performance in scenarios with non-IID data
+                                                                distributions, surpassing existing methods. Overall,
+                                                                TransFed paves the way for leveraging focal Modulation
+                                                                in
+                                                                federated learning, advancing the capabilities of focal
+                                                                modulated transformer models in decentralized
+                                                                environments.</i></p>
 
 
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
-                                        <tr bgcolor="#ffffd0">
-                                            <td width="38%" valign="top" align="center"><a
-                                                    href="https://extreme-parkour.github.io/">
-                                                    <video autoplay loop muted src="assets\Videos\parkour.mp4" alt="sym"
-                                                        style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
-                                                        width="90%"></video>
-                                                </a></td>
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://extreme-parkour.github.io/" id="EXTREME-PARKOUR">
-                                                        <heading>CCTM: Climate Change Temperature Model with
-                                                            Multi-dimensional Tensorial
-                                                            Focal Modulated Encoder</heading>
-                                                    </a><br>
-                                                    Tajamul Ashraf, Janibul Bashir<br>
-                                                    arXiv 2024<a href="https://arxiv.org/abs/2309.14341"></a>
-                                                </p>
+                                            <tr bgcolor="">
+                                                <td width="38%" valign="top" align="center"><a
+                                                        href="https://extreme-parkour.github.io/">
+                                                        <video autoplay loop muted src="assets\Videos\parkour.mp4"
+                                                            alt="sym"
+                                                            style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
+                                                            width="90%"></video>
+                                                    </a></td>
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://extreme-parkour.github.io/"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading>PoseWatch: Advancing Real Time Human Pose Tracking
+                                                                and
+                                                                Juxtaposition with Deep Learning</heading>
+                                                        </a><br>
+                                                        Tajamul Ashraf, Balaji Prabu BV, and Omkar SN<br>
+                                                        CVIP 2023
+                                                    </p>
 
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="https://extreme-parkour.github.io/">webpage</a> |
-                                                    <a href="javascript:toggleblock('cctm-abs')">abstract</a>
-                                                    |
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="">webpage</a> |
+                                                        <a href="javascript:toggleblock('hpjt-abs')">abstract</a>
+                                                        |
 
-                                                    <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
+                                                        <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
+                                                        <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
 
-                                                    <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
-
-                                                    <p align="justify"> <i style="display: none;" id="cctm-abs">One of
-                                                            the severe and pressing problems, which humanity is facing
-                                                            in the 21st Century is climate change. It is adversely
-                                                            affecting the
-                                                            entire globe, as is evident with the rising ocean levels,
-                                                            accelerated melting of glaciers, frequent storms, and many
-                                                            more. Accurate
-                                                            weather forecasting is crucial in understanding and
-                                                            mitigating the impacts of climate change. Cutting-edge
-                                                            data-driven models
-                                                            for weather forecasting typically employ recurrent or
-                                                            convolutional neural networks, with certain models
-                                                            integrating attention
-                                                            mechanisms. This study introduces a novel approach, the
-                                                            FocalNet Transformer-based Climate Change Temperature Model
-                                                            (CCTM),
-                                                            specifically designed for temperature forecasting. The CCTM
-                                                            integrates tensorized modulation, enabling it to harness the
-                                                            spatial
-                                                            and temporal intricacies of climate parameters data by
-                                                            operating in a multi tensor format. Comparative assessments
-                                                            against existing
-                                                            Encoder transformer architectures, 3D Conv Nets, LSTMs, and
-                                                            Conv LSTMs demonstrate the CCTM’s superior ability to
-                                                            capture
-                                                            nuanced patterns inherent in the data, particularly in the
-                                                            context of temperature prediction. We evaluated our model on
-                                                            our collected
-                                                            data in Jammu and Kashmir region and reported state of the
-                                                            art results. In addition to that, the CCTM is assessed on
-                                                            two authentic
-                                                            benchmark temperature datasets showing gain in accuracy by
-                                                            12% over existing models. To understand CCTM, two modulation
-                                                            scores
-                                                            are introduced, derived from the tensorial modulation
-                                                            process. These scores are analysed to illuminate the
-                                                            decision-making process of
-                                                            our model, offering valuable insights into the key
-                                                            parameters influencing climate change</i></p>
-
-
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr bgcolor="">
-                                            <td width="38%" valign="top" align="center"><a
-                                                    href="https://extreme-parkour.github.io/">
-                                                    <video autoplay loop muted src="assets\Videos\parkour.mp4" alt="sym"
-                                                        style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
-                                                        width="90%"></video>
-                                                </a></td>
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://extreme-parkour.github.io/" id="EXTREME-PARKOUR">
-                                                        <heading> Climate Change Parameter Dataset (CCPD): A Benchmark
-                                                            Dataset for Climate
-                                                            Change parameters in Jammu and Kashmir</heading>
-                                                    </a><br>
-                                                    Tajamul Ashraf, Janibul Bashir<br>
-                                                    ICDSA 2023
-                                                </p>
-
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="https://extreme-parkour.github.io/">webpage</a> |
-                                                    <a href="javascript:toggleblock('ccpm-abs')">abstract</a>
-                                                    |
-
-                                                    <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
-
-                                                    <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
-
-                                                    <p align="justify"> <i style="display: none;" id="ccpm-abs">In this
-                                                            paper, we present a Climate Change Parameter Dataset (CCPD)
-                                                            intending to achieve state-of-the-art
-                                                            results in parameters which effect climate change, including
-                                                            forest cover, water bodies, agriculture and
-                                                            vegetation, population, temperature, construction, and air
-                                                            index. The dataset can be used by the research
-                                                            community to validate the claims made in relation to the
-                                                            climate change. Research community has been
-                                                            deeply involved in extending the use case of machine
-                                                            learning algorithms to the effects of climate change.
-                                                            However, the non-availability of sufficient data related to
-                                                            climate change parameters has limited the
-                                                            research in this domain. By presenting this dataset, we want
-                                                            to facilitate the researchers. In this dataset, we
-                                                            provide a large variety of statistical and satellite data
-                                                            acquired by various image processing techniques and
-                                                            on-ground data collection. The data is collected in
-                                                            abundance for a specific region, and then various
-                                                            machine learning techniques are used to extract the useful
-                                                            data related to each parameter separately. We
-                                                            call this amalgam of processed data as CCPD dataset. CCPD
-                                                            dataset contains over 6000 data points for all
-                                                            seven parameters and covers the data from 1960 onwards. We
-                                                            hope this dataset will aid the research
-                                                            community in tackling climate change with the help of
-                                                            AI.</i></p>
-
-
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr bgcolor="#ffffd0">
-                                            <td width="38%" valign="top" align="center"><a
-                                                    href="https://extreme-parkour.github.io/">
-                                                    <video autoplay loop muted src="assets\Videos\parkour.mp4" alt="sym"
-                                                        style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
-                                                        width="90%"></video>
-                                                </a></td>
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://extreme-parkour.github.io/" id="EXTREME-PARKOUR">
-                                                        <heading>An Integral Computer
-                                                            Vision System for Apple Detection, Classification, and
-                                                            Semantic Segmentation,</heading>
-                                                    </a><br>
-                                                    Tajamul Ashraf, Naiyer Abbas, Mohammad Haseeb, Nadeem Yousuf,
-                                                    Janibul Bashir<br>
-                                                    ICMV 2022
-                                                </p>
-
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="https://extreme-parkour.github.io/">webpage</a> |
-                                                    <a href="javascript:toggleblock('apple-abs')">abstract</a>
-                                                    |
-
-                                                    <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
-
-                                                    <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
-
-                                                    <p align="justify"> <i style="display: none;"
-                                                            id="apple-abs">Federated learning has emerged as a
-                                                            promising paradigm for collaborative machine learning,
-                                                            enabling multiple clients to train a model while preserving
-                                                            data privacy jointly. Tailored federated learning takes this
-                                                            concept further by accommodating client heterogeneity and
-                                                            facilitating the learning of personalized models. While the
-                                                            utilization of transformers within federated learning has
-                                                            attracted significant interest, there remains a need to
-                                                            investigate the effects of federated learning algorithms on
-                                                            the latest focal modulation-based transformers. In this
-                                                            paper, we investigate this relationship and uncover the
-                                                            detrimental effects of federated averaging (FedAvg)
-                                                            algorithms on Focal Modulation, particularly in scenarios
-                                                            with heterogeneous data. To address this challenge, we
-                                                            propose TransFed, a novel transformer-based federated
-                                                            learning framework that not only aggregates model parameters
-                                                            but also learns tailored Focal Modulation for each client.
-                                                            Instead of employing a conventional customization mechanism
-                                                            that maintains client-specific focal modulation layers
-                                                            locally, we introduce a learn-to-tailor approach that
-                                                            fosters client collaboration, enhancing scalability and
-                                                            adaptation in TransFed. Our method incorporates a hyper
-                                                            network on the server, responsible for learning personalized
-                                                            projection matrices for the focal modulation layers. This
-                                                            enables the generation of client-specific keys, values, and
-                                                            queries. Furthermore, we provide an analysis of adaptation
-                                                            bounds for TransFed using the learn-to-customize mechanism.
-                                                            Through intensive experiments on datasets related to
-                                                            pneumonia classification, we demonstrate that TransFed, in
-                                                            combination with the learn-to-tailor approach, achieves
-                                                            superior performance in scenarios with non-IID data
-                                                            distributions, surpassing existing methods. Overall,
-                                                            TransFed paves the way for leveraging focal Modulation in
-                                                            federated learning, advancing the capabilities of focal
-                                                            modulated transformer models in decentralized
-                                                            environments.</i></p>
-
-
-                                                    </pre>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                        <p align="justify"> <i style="display: none;"
+                                                                id="hpjt-abs">Human
+                                                                pose estimation is the
+                                                                process of continuously monitoring a person's action and
+                                                                movement to track and monitor the activity
+                                                                of a person or an object. Human pose estimation is
+                                                                usually
+                                                                done by capturing the key points which describe the pose
+                                                                of
+                                                                a person. A guiding
+                                                                practicing framework that enables people to learn and
+                                                                exercise activities like yoga, fittness, dancing, etc.,
+                                                                might
+                                                                be built using human posture recognition remotely and
+                                                                accurately without the help of a personal
+                                                                trainer. This work has proposed a framework to detect
+                                                                and
+                                                                recognize
+                                                                various yoga and exercise poses to help the individual
+                                                                practice the same
+                                                                correctly. A popular Blaze-pose model extracts key
+                                                                points
+                                                                from the student end and compares the same with the
+                                                                instructor pose. The extracted
+                                                                key points are fed to the Human Pose Juxtaposition model
+                                                                (HPJT) to
+                                                                compare the student pose with the instructor. The model
+                                                                will
+                                                                assess the
+                                                                correctness of the pose by comparing the extracted key
+                                                                points and give
+                                                                feedback to students if any corrections need to be made.
+                                                                The
+                                                                proposed
+                                                                model is trained with 40+ yoga and exercise poses, and
+                                                                evaluated the
+                                                                model's performance with the mAP, and the model achieved
+                                                                an
+                                                                accuracy
+                                                                of 99.04%. The results proved that any person could use
+                                                                the
+                                                                proposed
+                                                                framework in real-time to practice exercise, yoga,
+                                                                dance,
+                                                                etc. At their respective location without the help of a
+                                                                physical instructor with precision
+                                                                and accuracy, leading to a healthy life.
+                                                            </i></p>
 
 
 
@@ -1005,11 +651,429 @@
 
 
 
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="tab-pane" id="publication-all">
+                                    <table>
+                                        <tbody>
+                                            <tr bgcolor="#ffffd0">
+                                                <td width="38%" valign="top" align="center"><a
+                                                        href="https://extreme-parkour.github.io/">
+                                                        <video autoplay loop muted src="assets\Videos\parkour.mp4"
+                                                            alt="sym"
+                                                            style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
+                                                            width="90%"></video>
+                                                    </a></td>
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading>TransFED: A way to epitomize Transformer based
+                                                                Focal
+                                                                Modulation using Federated Learning</heading>
+                                                        </a><br>
+                                                        Tajamul Ashraf, Fuzayil Mir, Iqra Altaf Gillani<br>
+                                                        WACV 2024 [<a
+                                                            href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>]
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://extreme-parkour.github.io/">webpage</a> |
+                                                        <a
+                                                            href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
+                                                        |
+                                                        <a href="assets\Documents\wacv\WACV_Final_ppt.pdf">
+                                                            presentation</a> |
+
+
+                                                        <a href="https://github.com/Tajamul2">code</a>
+
+                                                        <p align="justify"> <i style="display: none;"
+                                                                id="extreme-parkour-abs">Federated learning has emerged
+                                                                as a
+                                                                promising paradigm for collaborative machine learning,
+                                                                enabling multiple clients to train a model while
+                                                                preserving
+                                                                data privacy jointly. Tailored federated learning takes
+                                                                this
+                                                                concept further by accommodating client heterogeneity
+                                                                and
+                                                                facilitating the learning of personalized models. While
+                                                                the
+                                                                utilization of transformers within federated learning
+                                                                has
+                                                                attracted significant interest, there remains a need to
+                                                                investigate the effects of federated learning algorithms
+                                                                on
+                                                                the latest focal modulation-based transformers. In this
+                                                                paper, we investigate this relationship and uncover the
+                                                                detrimental effects of federated averaging (FedAvg)
+                                                                algorithms on Focal Modulation, particularly in
+                                                                scenarios
+                                                                with heterogeneous data. To address this challenge, we
+                                                                propose TransFed, a novel transformer-based federated
+                                                                learning framework that not only aggregates model
+                                                                parameters
+                                                                but also learns tailored Focal Modulation for each
+                                                                client.
+                                                                Instead of employing a conventional customization
+                                                                mechanism
+                                                                that maintains client-specific focal modulation layers
+                                                                locally, we introduce a learn-to-tailor approach that
+                                                                fosters client collaboration, enhancing scalability and
+                                                                adaptation in TransFed. Our method incorporates a hyper
+                                                                network on the server, responsible for learning
+                                                                personalized
+                                                                projection matrices for the focal modulation layers.
+                                                                This
+                                                                enables the generation of client-specific keys, values,
+                                                                and
+                                                                queries. Furthermore, we provide an analysis of
+                                                                adaptation
+                                                                bounds for TransFed using the learn-to-customize
+                                                                mechanism.
+                                                                Through intensive experiments on datasets related to
+                                                                pneumonia classification, we demonstrate that TransFed,
+                                                                in
+                                                                combination with the learn-to-tailor approach, achieves
+                                                                superior performance in scenarios with non-IID data
+                                                                distributions, surpassing existing methods. Overall,
+                                                                TransFed paves the way for leveraging focal Modulation
+                                                                in
+                                                                federated learning, advancing the capabilities of focal
+                                                                modulated transformer models in decentralized
+                                                                environments.</i></p>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr bgcolor="">
+                                                <td width="38%" valign="top" align="center"><a
+                                                        href="https://extreme-parkour.github.io/">
+                                                        <video autoplay loop muted src="assets\Videos\parkour.mp4"
+                                                            alt="sym"
+                                                            style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
+                                                            width="90%"></video>
+                                                    </a></td>
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://extreme-parkour.github.io/"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading>PoseWatch: Advancing Real Time Human Pose Tracking
+                                                                and
+                                                                Juxtaposition with Deep Learning</heading>
+                                                        </a><br>
+                                                        Tajamul Ashraf, Balaji Prabu BV, and Omkar SN<br>
+                                                        CVIP 2023
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://extreme-parkour.github.io/">webpage</a> |
+                                                        <a href="javascript:toggleblock('hpjt_-abs')">abstract</a>
+                                                        |
+
+                                                        <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
+                                                        <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
+
+                                                        <p align="justify"> <i style="display: none;"
+                                                                id="hpjt_-abs">Human
+                                                                pose estimation is the
+                                                                process of continuously monitoring a person's action and
+                                                                movement to track and monitor the activity
+                                                                of a person or an object. Human pose estimation is
+                                                                usually
+                                                                done by capturing the key points which describe the pose
+                                                                of
+                                                                a person. A guiding
+                                                                practicing framework that enables people to learn and
+                                                                exercise activities like yoga, fittness, dancing, etc.,
+                                                                might
+                                                                be built using human posture recognition remotely and
+                                                                accurately without the help of a personal
+                                                                trainer. This work has proposed a framework to detect
+                                                                and
+                                                                recognize
+                                                                various yoga and exercise poses to help the individual
+                                                                practice the same
+                                                                correctly. A popular Blaze-pose model extracts key
+                                                                points
+                                                                from the student end and compares the same with the
+                                                                instructor pose. The extracted
+                                                                key points are fed to the Human Pose Juxtaposition model
+                                                                (HPJT) to
+                                                                compare the student pose with the instructor. The model
+                                                                will
+                                                                assess the
+                                                                correctness of the pose by comparing the extracted key
+                                                                points and give
+                                                                feedback to students if any corrections need to be made.
+                                                                The
+                                                                proposed
+                                                                model is trained with 40+ yoga and exercise poses, and
+                                                                evaluated the
+                                                                model's performance with the mAP, and the model achieved
+                                                                an
+                                                                accuracy
+                                                                of 99.04%. The results proved that any person could use
+                                                                the
+                                                                proposed
+                                                                framework in real-time to practice exercise, yoga,
+                                                                dance,
+                                                                etc. At their respective location without the help of a
+                                                                physical instructor with precision
+                                                                and accuracy, leading to a healthy life.
+                                                            </i></p>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr bgcolor="#ffffd0">
+                                                <td width="38%" valign="top" align="center"><a
+                                                        href="https://extreme-parkour.github.io/">
+                                                        <video autoplay loop muted src="assets\Videos\parkour.mp4"
+                                                            alt="sym"
+                                                            style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
+                                                            width="90%"></video>
+                                                    </a></td>
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://extreme-parkour.github.io/"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading>CCTM: Climate Change Temperature Model with
+                                                                Multi-dimensional Tensorial
+                                                                Focal Modulated Encoder</heading>
+                                                        </a><br>
+                                                        Tajamul Ashraf, Janibul Bashir<br>
+                                                        arXiv 2024<a href="https://arxiv.org/abs/2309.14341"></a>
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://extreme-parkour.github.io/">webpage</a> |
+                                                        <a href="javascript:toggleblock('cctm-abs')">abstract</a>
+                                                        |
+
+                                                        <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
+
+                                                        <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
+
+                                                        <p align="justify"> <i style="display: none;" id="cctm-abs">One
+                                                                of
+                                                                the severe and pressing problems, which humanity is
+                                                                facing
+                                                                in the 21st Century is climate change. It is adversely
+                                                                affecting the
+                                                                entire globe, as is evident with the rising ocean
+                                                                levels,
+                                                                accelerated melting of glaciers, frequent storms, and
+                                                                many
+                                                                more. Accurate
+                                                                weather forecasting is crucial in understanding and
+                                                                mitigating the impacts of climate change. Cutting-edge
+                                                                data-driven models
+                                                                for weather forecasting typically employ recurrent or
+                                                                convolutional neural networks, with certain models
+                                                                integrating attention
+                                                                mechanisms. This study introduces a novel approach, the
+                                                                FocalNet Transformer-based Climate Change Temperature
+                                                                Model
+                                                                (CCTM),
+                                                                specifically designed for temperature forecasting. The
+                                                                CCTM
+                                                                integrates tensorized modulation, enabling it to harness
+                                                                the
+                                                                spatial
+                                                                and temporal intricacies of climate parameters data by
+                                                                operating in a multi tensor format. Comparative
+                                                                assessments
+                                                                against existing
+                                                                Encoder transformer architectures, 3D Conv Nets, LSTMs,
+                                                                and
+                                                                Conv LSTMs demonstrate the CCTM’s superior ability to
+                                                                capture
+                                                                nuanced patterns inherent in the data, particularly in
+                                                                the
+                                                                context of temperature prediction. We evaluated our
+                                                                model on
+                                                                our collected
+                                                                data in Jammu and Kashmir region and reported state of
+                                                                the
+                                                                art results. In addition to that, the CCTM is assessed
+                                                                on
+                                                                two authentic
+                                                                benchmark temperature datasets showing gain in accuracy
+                                                                by
+                                                                12% over existing models. To understand CCTM, two
+                                                                modulation
+                                                                scores
+                                                                are introduced, derived from the tensorial modulation
+                                                                process. These scores are analysed to illuminate the
+                                                                decision-making process of
+                                                                our model, offering valuable insights into the key
+                                                                parameters influencing climate change</i></p>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr bgcolor="">
+                                                <td width="38%" valign="top" align="center"><a
+                                                        href="https://extreme-parkour.github.io/">
+                                                        <video autoplay loop muted src="assets\Videos\parkour.mp4"
+                                                            alt="sym"
+                                                            style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
+                                                            width="90%"></video>
+                                                    </a></td>
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://extreme-parkour.github.io/"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading> Climate Change Parameter Dataset (CCPD): A
+                                                                Benchmark
+                                                                Dataset for Climate
+                                                                Change parameters in Jammu and Kashmir</heading>
+                                                        </a><br>
+                                                        Tajamul Ashraf, Janibul Bashir<br>
+                                                        ICDSA 2023
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://extreme-parkour.github.io/">webpage</a> |
+                                                        <a href="javascript:toggleblock('ccpm-abs')">abstract</a>
+                                                        |
+
+                                                        <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
+
+                                                        <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
+
+                                                        <p align="justify"> <i style="display: none;" id="ccpm-abs">In
+                                                                this
+                                                                paper, we present a Climate Change Parameter Dataset
+                                                                (CCPD)
+                                                                intending to achieve state-of-the-art
+                                                                results in parameters which effect climate change,
+                                                                including
+                                                                forest cover, water bodies, agriculture and
+                                                                vegetation, population, temperature, construction, and
+                                                                air
+                                                                index. The dataset can be used by the research
+                                                                community to validate the claims made in relation to the
+                                                                climate change. Research community has been
+                                                                deeply involved in extending the use case of machine
+                                                                learning algorithms to the effects of climate change.
+                                                                However, the non-availability of sufficient data related
+                                                                to
+                                                                climate change parameters has limited the
+                                                                research in this domain. By presenting this dataset, we
+                                                                want
+                                                                to facilitate the researchers. In this dataset, we
+                                                                provide a large variety of statistical and satellite
+                                                                data
+                                                                acquired by various image processing techniques and
+                                                                on-ground data collection. The data is collected in
+                                                                abundance for a specific region, and then various
+                                                                machine learning techniques are used to extract the
+                                                                useful
+                                                                data related to each parameter separately. We
+                                                                call this amalgam of processed data as CCPD dataset.
+                                                                CCPD
+                                                                dataset contains over 6000 data points for all
+                                                                seven parameters and covers the data from 1960 onwards.
+                                                                We
+                                                                hope this dataset will aid the research
+                                                                community in tackling climate change with the help of
+                                                                AI.</i></p>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr bgcolor="#ffffd0">
+                                                <td width="38%" valign="top" align="center"><a
+                                                        href="https://extreme-parkour.github.io/">
+                                                        <video autoplay loop muted src="assets\Videos\parkour.mp4"
+                                                            alt="sym"
+                                                            style="padding-top:0px;padding-bottom:0px;border-radius:15px;border:1px solid black"
+                                                            width="90%"></video>
+                                                    </a></td>
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://extreme-parkour.github.io/"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading>An Integral Computer
+                                                                Vision System for Apple Detection, Classification, and
+                                                                Semantic Segmentation,</heading>
+                                                        </a><br>
+                                                        Tajamul Ashraf, Naiyer Abbas, Mohammad Haseeb, Nadeem Yousuf,
+                                                        Janibul Bashir<br>
+                                                        ICMV 2022
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://extreme-parkour.github.io/">webpage</a> |
+                                                        <a href="javascript:toggleblock('apple-abs')">abstract</a>
+                                                        |
+
+                                                        <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
+
+                                                        <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
+
+                                                        <p align="justify"> <i style="display: none;" id="apple-abs">The
+                                                                area of Computer Vision has gone through exponential
+                                                                growth and advancement over the past decade. It is
+                                                                mainly due to the introduction of effective
+                                                                deep-learning methodologies and the availability of
+                                                                massive data. This has resulted in the incorporation of
+                                                                intelligent computer vision schemes to automate the
+                                                                different number of tasks. In this paper, we have worked
+                                                                on similar lines. We have proposed an integrated system
+                                                                for the development of robotic arms, considering the
+                                                                current situation in fruit identification,
+                                                                classification, counting, and generating their masks
+                                                                through semantic segmentation. The current method of
+                                                                manually doing these processes is time-consuming and is
+                                                                not feasible for large fields. Due to this, multiple
+                                                                works have been proposed to automate harvesting tasks to
+                                                                minimize the overall overhead. However, there is a lack
+                                                                of an integrated system that can automate all these
+                                                                processes together. As a result, we are proposing one
+                                                                such approach based on different machine learning
+                                                                techniques. For each process, we propose to use the most
+                                                                effective learning technique with computer vision
+                                                                capability. Thus, proposing an integrated intelligent
+                                                                end-to-end computer vision-based system to detect,
+                                                                classify, count, and identify the apples. In this
+                                                                system, we modified the YOLOv3 algorithm to detect and
+                                                                count the apples effectively. The proposed scheme works
+                                                                even under variable lighting conditions. The system was
+                                                                trained and tested using a standard benchmark i.e.,
+                                                                MinneApple. Experimental results show an average
+                                                                accuracy of 91%..</i></p>
+
+
+                                                        </pre>
+                                                    </div>
+                                                </td>
+                                            </tr>
 
 
 
-                            </div>
-                            </tbody>
+
+
+
+
+
+
+
+                                </div>
+                                </tbody>
         </table>
     </div>
     </div>
@@ -1133,10 +1197,10 @@
 
 
     <!-- ========== RESUME ========== -->
-    <div class="docs-section" id="resume">
+    <div class="docs-section" id="timeline">
         <h4>Timeline</h4>
 
-        <p align="justify">Full Resume in <a href=assets/Documents/Tajamul_Resume.pdf target="_blank">PDF</a>.
+        <!-- <p align="justify">Full Resume in <a href=assets/Documents/Tajamul_Resume.pdf target="_blank">PDF</a>. -->
         </p>
 
         <!-- The Timeline -->
@@ -1252,7 +1316,7 @@
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
         <tr>
             <td>
-                <h4>Community</h4>
+                <h4 id="community">Community</h4>
                 <ul align="justify">
                     In my background story, I pivoted into academic lifesyle to pursure my curiousity to conduct
                     research in Computer Vision and Medical Imaging. I even shifted domains, starting from IoT
