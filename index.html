@@ -304,8 +304,16 @@
                                         style="cursor: pointer">TIMELINE</a></li>
                                 <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('publications')"
                                         style="cursor: pointer">PUBLICATIONS</a></li>
-                                <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('blog')"
-                                        style="cursor: pointer">BLOG</a></li>
+                                        <li class="navbar-item">
+                                            <a class="navbar-link" onclick="openPage('blog/home.html')" style="cursor: pointer">BLOG</a>
+                                        </li>
+                                        
+                                        <script>
+                                            function openPage(pageName) {
+                                                window.location.href = pageName;
+                                            }
+                                        </script>
+                                        
                                 <li class="navbar-item"><a class="navbar-link" onclick="scrollToSection('community')"
                                         style="cursor: pointer">Community</a></li>
                             </ul>
