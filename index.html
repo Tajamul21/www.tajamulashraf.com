@@ -87,7 +87,8 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            margin-top: 40px;
+            margin-top: 4px;
+            bottom: 0;
             font-size: 0.9em;
             color: #777;
         }
@@ -282,6 +283,9 @@
 
                                     <a href="https://github.com/Tajamul21">Github</a> |
                                     <a href="https://www.linkedin.com/in/tajamul221/">Linkedln</a> <br />
+                                    <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en">Google
+                                        Scholar</a> |
+                                    <a href="">Bio</a> <br />
                                     <!-- <p align=center style="margin-top:-8px;"><a
                                         href="https://Linkedln.com/pathak2206?ref_src=twsrc%5Etfw"
                                         class="Linkedln-follow-button" data-show-count="false">Follow @pathak2206</a> -->
@@ -311,7 +315,7 @@
                                     </a>
 
                                 <p align="justify">
-                                    <b>"It is always the simple that produces the marvelous." </b>  - Amelia Barr
+                                    <b>"It is always the simple that produces the marvelous." </b> - Amelia Barr
 
                                 </p>
                                 </p>
@@ -466,7 +470,7 @@
 
 
 
-                    
+
 
                     <!-- ========== PUBLICATIONS ========== -->
                     <div class="docs-section" id="research">
@@ -488,8 +492,7 @@
                         <div class="docs-section" id="publications">
                             <div style="display: flex; align-items: center;">
                                 <h4 style="margin: 0;">Publications</h4>
-                                <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en"
-                                    target="_blank">
+                                <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en" target="_blank">
                                     <img src="./assets/Profile Picture/scholar_logo.png" alt="Google Scholar Profile"
                                         style="width: 29px; height: auto; vertical-align: below; top:5px;  position: relative; margin-left: 12px;">
                                 </a>
@@ -511,6 +514,81 @@
                                     <table>
                                         <tbody>
                                             <tr bgcolor="#ffffd0">
+                                                <td width="38%" valign="middle" align="right">
+                                                    <a href="https://dmaster-iitd.github.io/webpage/">
+                                                        <img src="assets/Profile Picture/dmaster.png"
+                                                            alt="Profile Picture"
+                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                    </a>
+                                                </td>
+
+
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading style="justify;">D-MASTER: Mask Annealed
+                                                                Transformer for
+                                                                Unsupervised Domain Adaptation in Breast Cancer
+                                                                Detection from Mammograms</heading>
+
+                                                        </a><br>
+                                                        Tajamul Ashraf, Krithika Rangarajan, Mohit Gambhir, Richa Gabha,
+                                                        Chetan Arora<br>
+                                                        MICCAI 2024 [<a href="">Poster</a>]
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
+                                                        <a
+                                                            href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
+                                                        |
+                                                        <a href="">
+                                                            presentation</a> |
+
+
+                                                        <a href="https://github.com/Tajamul21/D-MASTER">code</a>
+
+                                                        <p align="justify"> <i style="display: none;"
+                                                                id="extreme-parkour-abs">We focus on the problem of
+                                                                Unsupervised Domain Adaptation (UDA) for breast cancer
+                                                                detection from mammograms (BCDM) problem. Recent
+                                                                advancements have shown that masked image modeling
+                                                                serves as a robust pretext task for UDA. However, when
+                                                                applied to crossdomain BCDM, these techniques struggle
+                                                                with breast abnormalities such as masses, asymmetries,
+                                                                and micro-calcifications, in part due to the typically
+                                                                much smaller size of region of interest in comparison to
+                                                                natural images. This often results in more false
+                                                                positives per image (FPI) and significant noise in
+                                                                pseudo-labels typically used to bootstrap such
+                                                                techniques. Recognizing these challenges, we introduce a
+                                                                transformerbased Domain-invariant Mask Annealed Student
+                                                                Teacher autoencoder (D-MASTER) framework. D-MASTER
+                                                                adaptively masks and reconstructs multiscale feature
+                                                                maps, enhancing the model’s ability to capture reliable
+                                                                target domain features. D-MASTER also includes adaptive
+                                                                confidence refinement to filter pseudo-labels, ensuring
+                                                                only high-quality detections are considered. We also
+                                                                provide a bounding box annotated subset of 1000
+                                                                mammograms from the RSNA Breast Screening Dataset
+                                                                (referred to as RSNA-BSD1K) to support further research
+                                                                in BCDM. We evaluate D-MASTER on multiple BCDM datasets
+                                                                acquired from diverse domains. Experimental results show
+                                                                a significant improvement of 9% and 13% in sensitivity
+                                                                at 0.3 FPI over state-of-the-art UDA techniques on
+                                                                publicly available benchmark INBreast and DDSM datasets
+                                                                respectively. We also report an improvement of 11% and
+                                                                17% on In-house and RSNA-BSD1K datasets respectively. To
+                                                                promote reproducible research and address the scarcity
+                                                                of accessible resources in BCDM, we will publicly
+                                                                release source code, and pre-trained D-MASTER model,
+                                                                along with RSNA-BSD1K annotations.</i></p>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr bgcolor="">
                                                 <td width="38%" valign="middle" align="right">
                                                     <a href="https://extreme-parkour.github.io/">
                                                         <img src="assets/Profile Picture/wacv24_transfed.png"
@@ -604,90 +682,82 @@
                                                     </div>
                                                 </td>
                                             </tr>
-
-                                            <tr bgcolor="">
+                                            <tr bgcolor="#ffffd0">
                                                 <td width="38%" valign="middle" align="right">
                                                     <a href="https://extreme-parkour.github.io/">
-                                                        <img src="assets/Profile Picture/cvip.png" alt="Profile Picture"
-                                                        style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:0px solid red; width:85%; height:135px; object-fit:fill;">
+                                                        <img src="assets/Profile Picture/hffed.png"
+                                                            alt="Profile Picture"
+                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                    </a>
                                                 </td>
+
+
                                                 <td width="62%" valign="top">
-                                                    <p><a href="https://extreme-parkour.github.io/"
+                                                    <p><a href="https://tisharepo.github.io/Webpage/"
                                                             id="EXTREME-PARKOUR">
-                                                            <heading>PoseWatch: Advancing Real Time Human Pose Tracking
-                                                                and
-                                                                Juxtaposition with Deep Learning</heading>
+                                                            <heading>HF-Fed: Hierarchical Based Customized Federated
+                                                                Learning Framework for X-Ray Imaging</heading>
+
                                                         </a><br>
-                                                        Tajamul Ashraf, Balaji Prabu BV, and Omkar SN<br>
-                                                        CVIP 2023
+                                                        Tajamul Ashraf, Tisha Madame<br>
+                                                        MICCAI DeepBreath 2024 [<a href="">Poster</a>]
                                                     </p>
 
                                                     <div class="paper" id="extreme-parkour">
-                                                        <a href="">webpage</a> |
-                                                        <a href="javascript:toggleblock('hpjt-abs')">abstract</a>
+                                                        <a href="https://tisharepo.github.io/Webpage/">webpage</a> |
+                                                        <a
+                                                            href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
                                                         |
+                                                        <a href="">
+                                                            presentation</a> |
 
-                                                        <a href="https://arxiv.org/abs/2309.14341">presentation</a> |
-                                                        <a href="https://github.com/chengxuxin/extreme-parkour">code</a>
+
+                                                        <a href="https://github.com/Tajamul21/HF-Fed">code</a>
 
                                                         <p align="justify"> <i style="display: none;"
-                                                                id="hpjt-abs">Human
-                                                                pose estimation is the
-                                                                process of continuously monitoring a person's action and
-                                                                movement to track and monitor the activity
-                                                                of a person or an object. Human pose estimation is
-                                                                usually
-                                                                done by capturing the key points which describe the pose
-                                                                of
-                                                                a person. A guiding
-                                                                practicing framework that enables people to learn and
-                                                                exercise activities like yoga, fittness, dancing, etc.,
-                                                                might
-                                                                be built using human posture recognition remotely and
-                                                                accurately without the help of a personal
-                                                                trainer. This work has proposed a framework to detect
-                                                                and
-                                                                recognize
-                                                                various yoga and exercise poses to help the individual
-                                                                practice the same
-                                                                correctly. A popular Blaze-pose model extracts key
-                                                                points
-                                                                from the student end and compares the same with the
-                                                                instructor pose. The extracted
-                                                                key points are fed to the Human Pose Juxtaposition model
-                                                                (HPJT) to
-                                                                compare the student pose with the instructor. The model
-                                                                will
-                                                                assess the
-                                                                correctness of the pose by comparing the extracted key
-                                                                points and give
-                                                                feedback to students if any corrections need to be made.
-                                                                The
-                                                                proposed
-                                                                model is trained with 40+ yoga and exercise poses, and
-                                                                evaluated the
-                                                                model's performance with the mAP, and the model achieved
-                                                                an
-                                                                accuracy
-                                                                of 99.04%. The results proved that any person could use
-                                                                the
-                                                                proposed
-                                                                framework in real-time to practice exercise, yoga,
-                                                                dance,
-                                                                etc. At their respective location without the help of a
-                                                                physical instructor with precision
-                                                                and accuracy, leading to a healthy life.
-                                                            </i></p>
-
-
-
-
-
+                                                                id="extreme-parkour-abs">In clinical applications, X-Ray
+                                                                technology plays a crucial role in noninvasive
+                                                                examinations like mammography, providing essential
+                                                                anatomical information about patients. However, the
+                                                                inherent radiation risk associated with X-Ray procedures
+                                                                raises significant concerns. X-Ray reconstruction is
+                                                                crucial in medical imaging for creating detailed visual
+                                                                representations of internal structures, and facilitating
+                                                                diagnosis and treatment without invasive procedures.
+                                                                Recent advancements in deep learning (DL) have shown
+                                                                promise in X-Ray reconstruction. Nevertheless,
+                                                                conventional DL methods often necessitate the
+                                                                centralized aggregation of substantial large datasets
+                                                                for training, following specific scanning protocols.
+                                                                This requirement results in notable domain shifts and
+                                                                privacy issues. To address these challenges, we
+                                                                introduce the Hierarchical Framework based Federated
+                                                                Learning method (HF-Fed) for customized X-Ray Imaging.
+                                                                HF-Fed addresses the challenges in X-Ray imaging
+                                                                optimization by decomposing the problem into two
+                                                                components: local data adaptation and holistic X-Ray
+                                                                Imaging. It employs a hospital-specific hierarchical
+                                                                framework and a shared common imaging network called
+                                                                Network of Networks (NoN) for these tasks. The emphasis
+                                                                of the NoN is on acquiring stable features from a
+                                                                variety of data distributions. A hierarchical
+                                                                hypernetwork extracts domain-specific hyperparameters,
+                                                                conditioning the NoN for customized X-Ray
+                                                                reconstruction. Experimental results demonstrate
+                                                                HF-Fed’s competitive performance, offering a promising
+                                                                solution for enhancing X-Ray imaging without the need
+                                                                for data sharing. This study significantly contributes
+                                                                to the evolving body of literature on the potential
+                                                                advantages of federated learning in the healthcare
+                                                                sector. It offers valuable insights for policymakers and
+                                                                healthcare providers holistically.</i></p>
 
 
                                                     </div>
                                                 </td>
                                             </tr>
+
+
 
 
                                         </tbody>
@@ -699,18 +769,171 @@
                                         <tbody>
                                             <tr bgcolor="#ffffd0">
                                                 <td width="38%" valign="middle" align="right">
-                                                    <a href="https://extreme-parkour.github.io/">
-                                                        <img src="assets/Profile Picture/news_pht_240229_2.jpg"
+                                                    <a href="https://dmaster-iitd.github.io/webpage/">
+                                                        <img src="assets/Profile Picture/dmaster.png"
                                                             alt="Profile Picture"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:2px solid green; width:80%; height:115px; object-fit:fill;">
+                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                                                     </a>
                                                 </td>
+
+
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading style="justify;">D-MASTER: Mask Annealed
+                                                                Transformer for
+                                                                Unsupervised Domain Adaptation in Breast Cancer
+                                                                Detection from Mammograms</heading>
+
+                                                        </a><br>
+                                                        Tajamul Ashraf, Krithika Rangarajan, Mohit Gambhir, Richa Gabha,
+                                                        Chetan Arora<br>
+                                                        MICCAI 2024 [<a href="">Poster</a>]
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
+                                                        <a
+                                                            href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
+                                                        |
+                                                        <a href="">
+                                                            presentation</a> |
+
+
+                                                        <a href="https://github.com/Tajamul21/D-MASTER">code</a>
+
+                                                        <p align="justify"> <i style="display: none;"
+                                                                id="extreme-parkour-abs">We focus on the problem of
+                                                                Unsupervised Domain Adaptation (UDA) for breast cancer
+                                                                detection from mammograms (BCDM) problem. Recent
+                                                                advancements have shown that masked image modeling
+                                                                serves as a robust pretext task for UDA. However, when
+                                                                applied to crossdomain BCDM, these techniques struggle
+                                                                with breast abnormalities such as masses, asymmetries,
+                                                                and micro-calcifications, in part due to the typically
+                                                                much smaller size of region of interest in comparison to
+                                                                natural images. This often results in more false
+                                                                positives per image (FPI) and significant noise in
+                                                                pseudo-labels typically used to bootstrap such
+                                                                techniques. Recognizing these challenges, we introduce a
+                                                                transformerbased Domain-invariant Mask Annealed Student
+                                                                Teacher autoencoder (D-MASTER) framework. D-MASTER
+                                                                adaptively masks and reconstructs multiscale feature
+                                                                maps, enhancing the model’s ability to capture reliable
+                                                                target domain features. D-MASTER also includes adaptive
+                                                                confidence refinement to filter pseudo-labels, ensuring
+                                                                only high-quality detections are considered. We also
+                                                                provide a bounding box annotated subset of 1000
+                                                                mammograms from the RSNA Breast Screening Dataset
+                                                                (referred to as RSNA-BSD1K) to support further research
+                                                                in BCDM. We evaluate D-MASTER on multiple BCDM datasets
+                                                                acquired from diverse domains. Experimental results show
+                                                                a significant improvement of 9% and 13% in sensitivity
+                                                                at 0.3 FPI over state-of-the-art UDA techniques on
+                                                                publicly available benchmark INBreast and DDSM datasets
+                                                                respectively. We also report an improvement of 11% and
+                                                                17% on In-house and RSNA-BSD1K datasets respectively. To
+                                                                promote reproducible research and address the scarcity
+                                                                of accessible resources in BCDM, we will publicly
+                                                                release source code, and pre-trained D-MASTER model,
+                                                                along with RSNA-BSD1K annotations.</i></p>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr bgcolor="">
+                                                <td width="38%" valign="middle" align="right">
+                                                    <a href="https://extreme-parkour.github.io/">
+                                                        <img src="assets/Profile Picture/hffed.png"
+                                                            alt="Profile Picture"
+                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                    </a>
+                                                </td>
+
+
+                                                <td width="62%" valign="top">
+                                                    <p><a href="https://tisharepo.github.io/Webpage/"
+                                                            id="EXTREME-PARKOUR">
+                                                            <heading>HF-Fed: Hierarchical Based Customized Federated
+                                                                Learning Framework for X-Ray Imaging</heading>
+
+                                                        </a><br>
+                                                        Tajamul Ashraf, Tisha Madame<br>
+                                                        MICCAI DeepBreath 2024 [<a href="">Poster</a>]
+                                                    </p>
+
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://tisharepo.github.io/Webpage/">webpage</a> |
+                                                        <a
+                                                            href="javascript:toggleblock('extreme-parkour-abs')">abstract</a>
+                                                        |
+                                                        <a href="">
+                                                            presentation</a> |
+
+
+                                                        <a href="https://github.com/Tajamul21/HF-Fed">code</a>
+
+                                                        <p align="justify"> <i style="display: none;"
+                                                                id="extreme-parkour-abs">In clinical applications, X-Ray
+                                                                technology plays a crucial role in noninvasive
+                                                                examinations like mammography, providing essential
+                                                                anatomical information about patients. However, the
+                                                                inherent radiation risk associated with X-Ray procedures
+                                                                raises significant concerns. X-Ray reconstruction is
+                                                                crucial in medical imaging for creating detailed visual
+                                                                representations of internal structures, and facilitating
+                                                                diagnosis and treatment without invasive procedures.
+                                                                Recent advancements in deep learning (DL) have shown
+                                                                promise in X-Ray reconstruction. Nevertheless,
+                                                                conventional DL methods often necessitate the
+                                                                centralized aggregation of substantial large datasets
+                                                                for training, following specific scanning protocols.
+                                                                This requirement results in notable domain shifts and
+                                                                privacy issues. To address these challenges, we
+                                                                introduce the Hierarchical Framework based Federated
+                                                                Learning method (HF-Fed) for customized X-Ray Imaging.
+                                                                HF-Fed addresses the challenges in X-Ray imaging
+                                                                optimization by decomposing the problem into two
+                                                                components: local data adaptation and holistic X-Ray
+                                                                Imaging. It employs a hospital-specific hierarchical
+                                                                framework and a shared common imaging network called
+                                                                Network of Networks (NoN) for these tasks. The emphasis
+                                                                of the NoN is on acquiring stable features from a
+                                                                variety of data distributions. A hierarchical
+                                                                hypernetwork extracts domain-specific hyperparameters,
+                                                                conditioning the NoN for customized X-Ray
+                                                                reconstruction. Experimental results demonstrate
+                                                                HF-Fed’s competitive performance, offering a promising
+                                                                solution for enhancing X-Ray imaging without the need
+                                                                for data sharing. This study significantly contributes
+                                                                to the evolving body of literature on the potential
+                                                                advantages of federated learning in the healthcare
+                                                                sector. It offers valuable insights for policymakers and
+                                                                healthcare providers holistically.</i></p>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr bgcolor="">
+                                                <td width="38%" valign="middle" align="right">
+                                                    <a href="https://extreme-parkour.github.io/">
+                                                        <img src="assets/Profile Picture/wacv24_transfed.png"
+                                                            alt="Profile Picture"
+                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                    </a>
+                                                </td>
+
+
                                                 <td width="62%" valign="top">
                                                     <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
                                                             id="EXTREME-PARKOUR">
                                                             <heading>TransFED: A way to epitomize Transformer based
                                                                 Focal
                                                                 Modulation using Federated Learning</heading>
+
                                                         </a><br>
                                                         Tajamul Ashraf, Fuzayil Mir, Iqra Altaf Gillani<br>
                                                         WACV 2024 [<a
@@ -1362,55 +1585,55 @@
 
     </div>
     <div class="l-container">
-                        <h4>Languages I can connect in</h4> <br>
+        <h4>Languages I can connect in</h4> <br>
 
-                        <div class="ss-container">
+        <div class="ss-container">
 
-                            <div class="language">
-                                <p>English</p>
-                                <div class="progress-wrapper">
-                                    <div class="progress-bar progress-bar-english"></div>
-                                </div> <br>
-                            </div>
-                            <div class="language ">
-                                <p>Kashmiri</p>
-                                <div class="progress-wrapper">
-                                    <div class="progress-bar progress-bar-kashmiri"></div>
-                                </div> <br>
-                            </div>
+            <div class="language">
+                <p>English</p>
+                <div class="progress-wrapper">
+                    <div class="progress-bar progress-bar-english"></div>
+                </div> <br>
+            </div>
+            <div class="language ">
+                <p>Kashmiri</p>
+                <div class="progress-wrapper">
+                    <div class="progress-bar progress-bar-kashmiri"></div>
+                </div> <br>
+            </div>
 
-                            <div class="language ">
-                                <p>Urdu</p>
-                                <div class="progress-wrapper">
-                                    <div class="progress-bar progress-bar-urdu"></div>
-                                </div> <br>
-                            </div>
+            <div class="language ">
+                <p>Urdu</p>
+                <div class="progress-wrapper">
+                    <div class="progress-bar progress-bar-urdu"></div>
+                </div> <br>
+            </div>
 
-                            <div class="language ">
-                                <p>Hindi</p>
-                                <div class="progress-wrapper">
-                                    <div class="progress-bar progress-bar-hindi"></div>
-                                </div> <br>
-                            </div>
+            <div class="language ">
+                <p>Hindi</p>
+                <div class="progress-wrapper">
+                    <div class="progress-bar progress-bar-hindi"></div>
+                </div> <br>
+            </div>
 
-                            <div class="language ">
-                                <p>Arabic</p>
-                                <div class="progress-wrapper">
-                                    <div class="progress-bar progress-bar-arabic"></div>
-                                </div> <br>
-                            </div>
+            <div class="language ">
+                <p>Arabic</p>
+                <div class="progress-wrapper">
+                    <div class="progress-bar progress-bar-arabic"></div>
+                </div> <br>
+            </div>
 
-                            <div class="language ">
-                                <p>Persian</p>
-                                <div class="progress-wrapper">
-                                    <div class="progress-bar progress-bar-persian"></div>
-                                </div> <br>
-                            </div>
-                        </div>
+            <div class="language ">
+                <p>Persian</p>
+                <div class="progress-wrapper">
+                    <div class="progress-bar progress-bar-persian"></div>
+                </div> <br>
+            </div>
+        </div>
 
-                    </div>
+    </div>
 
-        
+
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
         <tr>
             <td>
