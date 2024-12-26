@@ -354,6 +354,35 @@ h4 {
         border-bottom-color: #33c3f0;
     }
 }
+/* General Styling */
+.scholar-link {
+    display: inline-block;
+    position: relative; /* Allows dynamic adjustment */
+}
+
+.scholar-logo {
+    width: 29px;
+    height: auto;
+    vertical-align: middle; /* Centers the icon relative to text */
+    margin-left: 12px; /* Adds spacing */
+}
+
+/* For Larger Screens */
+@media (min-width: 750px) {
+    .scholar-logo {
+        top: 5px; /* Adjust icon position relative to larger screens */
+        margin-left: 20px; /* Increase spacing for better alignment */
+    }
+}
+
+/* For Smaller Screens */
+@media (max-width: 749px) {
+    .scholar-logo {
+        width: 24px; /* Smaller icon size for mobile screens */
+        margin-left: 8px; /* Reduce spacing */
+        top: 3px; /* Adjust icon's vertical position */
+    }
+}
 
 
 .social-icon {

@@ -69,7 +69,34 @@
 
 
     <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+    <style>
+        /* General styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+    
+        /* Ensure the profile image column is hidden on mobile */
+        @media (max-width: 600px) {
 
+            
+    
+            .profile-image-container {
+                display: none; /* Hides the image column */
+            }
+            .text-container {
+                width: 95%; /* Forces the text column to take full width */
+                display: block; /* Ensures block-level layout */
+                text-align: justify; /* Justifies the text for readability */
+            }
+            tr {
+                display: block; /* Ensures the row spans full width */
+            }
+        }
+    </style>
+    
+    
     <style type="text/css">
         /* Design Modified from: Jon Barron and Saurabh Gupta. Thanks to Jeff Donahue for email scamble.*/
 
@@ -187,7 +214,7 @@
             body,
             td,
             th {
-                font-size: 16px;
+                font-size: 17px;
             }
 
             heading {
@@ -322,13 +349,6 @@
                                 </p>
 
 
-                                <!-- Please read this excellent set of <a href="https://www.cs.cmu.edu/~rsalakhu/FAQ.html" target="_blank">FAQs by Ruslan</a> before emailing me as they pretty much apply to joining <a href="#ResearchGroup">our group</a> as well.<br></p> -->
-
-                                <!-- I was member of <a href="https://bair.berkeley.edu/">Berkeley AI Research Lab</a>, advised by <a href="http://www.cs.berkeley.edu/~trevor/">Trevor Darrell</a> and <a href="http://www.cs.berkeley.edu/~efros/">Alyosha Efros</a>. -->
-                                <!-- <p align="justify">I work in Artificial Intelligence at the intersection of Computer Vision, Machine Learning & Robotics. My ultimate goal is to build agents with a human-like ability to <i>generalize</i> in real and diverse environments. I believe understanding how to <i>continually</i> develop knowledge and acquire new skills from just raw sensory data will play a vital role in achieving this goal. I draw inspiration from psychology to build practical systems at the interface of vision, learning and robotics that can learn using <i>data as its own supervision</i>. -->
-                                <!-- My research is supported by fellowships from <a href="https://research.fb.com/announcing-the-2018-cohort-of-facebook-fellows-and-emerging-scholars/" target="_blank">Facebook</a>, <a href="https://research.nvidia.com/grad_fellows/2017/DeepakPathak" target="_blank">Nvidia</a>, and <a href="https://snapresearchfellowship.splashthat.com/" target="_blank">Snapchat</a>.</p> -->
-
-                                <!-- <p align="justify"> Earlier, I received a Bachelors in CS at IIT Kanpur, working with <a href="http://www.cse.iitk.ac.in/users/amit/">Amitabha Mukerjee</a>. My homepage from that time is archived <a href="iitk_website/index.html">here</a>. I have also spent time at <a href="https://www.ri.cmu.edu/">CMU RI</a>, <a href="https://research.fb.com/category/facebook-ai-research/">Facebook AI Research</a> (Seattle, Pittsburgh), and <a href="https://www.microsoft.com/en-us/research/">Microsoft Research</a> (NYC).</p> -->
                             </td>
                         </tr>
                     </table>
@@ -370,16 +390,20 @@
                                     <li> Dec 2024 - Nominated as Diversity Intern by Microsoft Canada! [<a href="https://www.youtube.com/shorts/neUuDhjiJRM" target="_blank">Video</a>].
                                     <li> Oct 2024 - Recieved the <a href="https://home.iitd.ac.in/" target="_blank">RISE
                                             MICCAI</a> travel grant to attent MICCAI 2024.
-                                    <li> May 2024 - <a
+                                    <li> Oct 2024 - <a
                                             href="https://conferences.miccai.org/2024/Registration/GRANTS-AND-AWARDS.html"
                                             target="_blank">HF-Fed</a> paper is accepted as <span
                                             style="color: rgb(243, 18, 97);">oral</span> in <a
                                             href="https://conferences.miccai.org/2024/en/" target="_blank"> MICCAI
-                                            2024</a> workshop. [<span style="color: rgb(100, 108, 1);"><a href="assets/Documents/Certificate of Best Paper_Tajamul.pdf">Best Student
-                                            Paper Award</a></span>]</li>
+                                            2024</a> workshop.  <span style="color: red; font-weight: bold;">
+                                                <a href="assets/Documents/Certificate of Best Paper_Tajamul.pdf" style="color: red; font-weight: bold;">
+                                                    (Best Student Paper Award!)
+                                                </a>
+                                            </span>
+                                            </li>
 
 
-                                    <li> June 2024 - Serving as a reviewer for <a href="https://home.iitd.ac.in/"
+                                    <li> Aug 2024 - Serving as a reviewer for <a href="https://home.iitd.ac.in/"
                                             target="_blank">WACV'25</a>.</li>
                                     <li> June 2024 - Completion of my Master's synopsis at <a
                                             href="https://home.iitd.ac.in/" target="_blank">IIT
@@ -499,10 +523,10 @@
                         <div class="docs-section" id="publications">
                             <div style="display: flex; align-items: center;">
                                 <h4 style="margin: 0;">Publications</h4>
-                                <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en" target="_blank">
-                                    <img src="./assets/Profile Picture/scholar_logo.png" alt="Google Scholar Profile"
-                                        style="width: 29px; height: auto; vertical-align: below; top:5px;  position: relative; margin-left: 12px;">
+                                <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en" target="_blank" class="scholar-link">
+                                    <img src="./assets/Profile Picture/scholar_logo.png" alt="Google Scholar Profile" class="scholar-logo">
                                 </a>
+                                
                             </div>
 
 
@@ -521,101 +545,72 @@
                                     <table>
                                         <tbody>
                                             <tr bgcolor="#ffffd0">
-                                                <td width="38%" valign="middle" align="right">
-                                                    <a href="https://dmaster-iitd.github.io/webpage/">
-                                                        <img src="assets/Profile Picture/dmaster.png"
-                                                            alt="Profile Picture"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-                                                <td width="62%" valign="top">
-                                                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html" 
-                                                        id="EXTREME-PARKOUR" style="text-align: justify; font-weight: bold;">
-                                                        D-MASTER: Mask Annealed Transformer for Unsupervised Domain Adaptation in Breast Cancer Detection from Mammograms
-                                                     </a>
-                                                     
-                                                        </a><br>
-                                                        <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir, Richa Gabha,
-                                                        Chetan Arora<br>
-                                                        MICCAI 2024 [<a href="">Poster</a>]
+                                            <td width="38%" valign="middle" align="right" class="profile-image-container">
+                                                <a href="https://dmaster-iitd.github.io/webpage/">
+                                                    <img src="assets/Profile Picture/dmaster.png"
+                                                         alt="Profile Picture"
+                                                         class="profile-image"
+                                                         style="display:block; margin:auto; padding:0; border-radius:15px; border:1px solid rgb(158, 10, 27); max-width:85%; height:auto; object-fit:contain;">
+                                                </a>
+                                            </td>
+                                    
+                                            <!-- Text Column -->
+                                            <td width="62%" valign="top" class="text-container">
+                                                <p align="justify" style="margin-bottom: 0;">
+                                                    <a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html" 
+                                                       id="EXTREME-PARKOUR" style="text-align: justify;">
+                                                        <b>D-MASTER: Mask Annealed Transformer for Unsupervised Domain Adaptation in Breast Cancer Detection from Mammograms
+                                                    </b></a>
+                                                    <br>
+                                                    <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir, Richa Gabha, Chetan Arora<br>
+                                                    MICCAI 2024 [<a href="">Poster</a>]
+                                                </p>
+                                    
+                                                <div class="paper" id="extreme-parkour">
+                                                    <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
+                                                    <a href="javascript:toggleblock('dmaster')">abstract</a> |
+                                                    <a href="">presentation</a> |
+                                                    <a href="https://github.com/Tajamul21/D-MASTER">code</a>
+                                    
+                                                    <p align="justify">
+                                                        <i style="display: none;" id="dmaster">
+                                                            We focus on the problem of Unsupervised Domain Adaptation (UDA) for breast cancer detection from mammograms (BCDM).
+                                                            Recent advancements have shown that masked image modeling serves as a robust pretext task for UDA. However, when
+                                                            applied to cross-domain BCDM, these techniques struggle with breast abnormalities such as masses, asymmetries,
+                                                            and micro-calcifications. Recognizing these challenges, we introduce a transformer-based Domain-invariant Mask 
+                                                            Annealed Student Teacher autoencoder (D-MASTER) framework. D-MASTER adaptively masks and reconstructs multiscale
+                                                            feature maps, enhancing the model’s ability to capture reliable target domain features. Experimental results show
+                                                            a significant improvement over state-of-the-art techniques on multiple datasets. To promote reproducible research,
+                                                            we will publicly release source code and pre-trained models.
+                                                        </i>
                                                     </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
-                                                        <a href="javascript:toggleblock('dmaster')">abstract</a>
-                                                        |
-                                                        <a href="">
-                                                            presentation</a> |
-
-
-                                                        <a href="https://github.com/Tajamul21/D-MASTER">code</a>
-
-                                                        <p align="justify"> <i style="display: none;" id="dmaster">We
-                                                                focus on the problem of
-                                                                Unsupervised Domain Adaptation (UDA) for breast cancer
-                                                                detection from mammograms (BCDM) problem. Recent
-                                                                advancements have shown that masked image modeling
-                                                                serves as a robust pretext task for UDA. However, when
-                                                                applied to crossdomain BCDM, these techniques struggle
-                                                                with breast abnormalities such as masses, asymmetries,
-                                                                and micro-calcifications, in part due to the typically
-                                                                much smaller size of region of interest in comparison to
-                                                                natural images. This often results in more false
-                                                                positives per image (FPI) and significant noise in
-                                                                pseudo-labels typically used to bootstrap such
-                                                                techniques. Recognizing these challenges, we introduce a
-                                                                transformerbased Domain-invariant Mask Annealed Student
-                                                                Teacher autoencoder (D-MASTER) framework. D-MASTER
-                                                                adaptively masks and reconstructs multiscale feature
-                                                                maps, enhancing the model’s ability to capture reliable
-                                                                target domain features. D-MASTER also includes adaptive
-                                                                confidence refinement to filter pseudo-labels, ensuring
-                                                                only high-quality detections are considered. We also
-                                                                provide a bounding box annotated subset of 1000
-                                                                mammograms from the RSNA Breast Screening Dataset
-                                                                (referred to as RSNA-BSD1K) to support further research
-                                                                in BCDM. We evaluate D-MASTER on multiple BCDM datasets
-                                                                acquired from diverse domains. Experimental results show
-                                                                a significant improvement of 9% and 13% in sensitivity
-                                                                at 0.3 FPI over state-of-the-art UDA techniques on
-                                                                publicly available benchmark INBreast and DDSM datasets
-                                                                respectively. We also report an improvement of 11% and
-                                                                17% on In-house and RSNA-BSD1K datasets respectively. To
-                                                                promote reproducible research and address the scarcity
-                                                                of accessible resources in BCDM, we will publicly
-                                                                release source code, and pre-trained D-MASTER model,
-                                                                along with RSNA-BSD1K annotations.</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                </div>
+                                            </td>
+                                        </tr>
                                             <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right">
+                                                <td width="38%" valign="middle" align="right" class="profile-image-container">
                                                     <a href="https://extreme-parkour.github.io/">
                                                         <img src="assets/Profile Picture/wacv24_transfed.png"
                                                             alt="Profile Picture"
+                                                            class="profile-image"
                                                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                                                     </a>
                                                 </td>
 
 
-                                                <td width="62%" valign="top">
-                                                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                        id="EXTREME-PARKOUR" style="text-align: justify; font-weight: bold;">
-                                                            TransFED: A way to epitomize Transformer based
-                                                                Focal
-                                                                Modulation using Federated Learning</a>
+                                                <td width="62%" valign="top" class="text-container">
+                                                    <p align="justify" style="margin-bottom: 0;"><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                                                        id="EXTREME-PARKOUR" style="text-align: justify;">
+                                                            <b>TransFED: A way to epitomize Transformer based Focal Modulation using Federated Learning</b></a>
 
                                                         </a><br>
                                                         <b>Tajamul Ashraf</b>, Fuzayil Mir, Iqra Altaf Gillani<br>
                                                         WACV 2024 [<a
                                                             href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>]
                                                     </p>
-
+                                                   
                                                     <div class="paper" id="extreme-parkour">
-                                                        <a
-                                                            href="https://fuzayilmir.github.io/webpage_transfed/">webpage</a>
+                                                        <a href="https://fuzayilmir.github.io/webpage_transfed/">webpage</a>
                                                         |
                                                         <a href="javascript:toggleblock('transfed')">abstract</a>
                                                         |
@@ -686,24 +681,27 @@
                                                 </td>
                                             </tr>
                                             <tr bgcolor="#ffffd0">
-                                                <td width="38%" valign="middle" align="right">
+                                                <td width="38%" valign="middle" align="right" class="profile-image-container">
+
                                                     <a href="https://github.com/Tajamul21/HF-Fed">
                                                         <img src="assets/Profile Picture/hffed.png"
                                                             alt="Profile Picture"
+                                                            class="profile-image"
                                                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                                                     </a>
                                                 </td>
 
 
                                                 <td width="62%" valign="top">
-                                                    <p><a href="https://tisharepo.github.io/Webpage/"
+                                                    <p align="justify" style="margin-bottom: 0;"><a href="https://tisharepo.github.io/Webpage/"
                                                         id="EXTREME-PARKOUR" style="text-align: justify; font-weight: bold;">
                                                             HF-Fed: Hierarchical Based Customized Federated
                                                                 Learning Framework for X-Ray Imaging</a>
 
                                                         </a><br>
                                                         <b>Tajamul Ashraf</b>, Tisha Madame<br>
-                                                        MICCAI DeepBreath 2024 [<a href="">Poster</a>]
+                                                        MICCAI DeepBreath 2024 [<a href="">Oral</a>] <span style="color: red;"><b>Best Student Paper Award!</b></span>
+
                                                     </p>
 
                                                     <div class="paper" id="extreme-parkour">
@@ -770,24 +768,25 @@
                                     <table>
                                         <tbody>
                                             <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right">
+                                                <td width="38%" valign="middle" align="right" class="profile-image-container">
                                                     <a href="https://extreme-parkour.github.io/">
                                                         <img src="assets/Profile Picture/phase_seg.png"
                                                             alt="Profile Picture"
+                                                            class="profile-iagge"
                                                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                                                     </a>
                                                 </td>
 
 
                                                 <td width="62%" valign="top">
-                                                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                                                    <p align="justify" style="margin-bottom: 0;"><a href="https://arxiv.org/abs/2411.16794"
                                                             id="EXTREME-PARKOUR">
-                                                            <heading>
+                                                        
 
-                                                                Phase-Informed Tool Segmentation for Manual
-                                                                Small-Incision Cataract Surgery</heading>
+                                                                <b>Phase-Informed Tool Segmentation for Manual
+                                                                Small-Incision Cataract Surgery</b>
 
-                                                        </a><br>
+                                                        </a>
                                                         Bhuvan Sachdeva, Naren Akash,  <b>Tajamul Ashraf</b>, Simon Muller,
                                                         Thomas Schultz, Maximilian WM Wintergerst, Niharika Singri
                                                         Prasad, Kaushik Murali, Mohit Jain<br>
@@ -841,17 +840,20 @@
 
 
                                             <tr bgcolor="#ffffd0">
-                                                <td width="38%" valign="middle" align="right">
+                                                <td width="38%" valign="middle" align="right" class="profile-image-container">
                                                     <a href="h">
-                                                        <img src="assets/Profile Picture/fate.png" alt="Profile Picture"
+                                                        <img src="assets/Profile Picture/fate.png" 
+                                                        alt="Profile Picture"
+                                                        class="profile-image"
                                                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                                                     </a>
                                                 </td>
                                                 <td width="62%" valign="top">
-                                                    <p><a href="" id="EXTREME-PARKOUR">
-                                                            <heading>FATE: Focal-modulated Attention Encoder for
-                                                                temperature prediction</heading>
-                                                        </a><br>
+                                                    <p align="justify" style="margin-bottom: 0;"><a href="" id="EXTREME-PARKOUR">
+                                                            <b>FATE: Focal-modulated Attention Encoder for
+                                                                temperature prediction</b>
+                                                        </a>
+                                                        <br>
                                                         <b>Tajamul Ashraf</b>, Janibul Bashir<br>
                                                         ArXiv 2024<a href="https://arxiv.org/abs/2408.11336"></a>
                                                     </p>
@@ -908,95 +910,72 @@
                                                     </div>
                                                 </td>
                                             </tr>
-                                            <td width="38%" valign="middle" align="right">
-                                                <a href="https://dmaster-iitd.github.io/webpage/">
-                                                    <img src="assets/Profile Picture/dmaster.png" alt="Profile Picture"
-                                                        style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                </a>
-                                            </td>
-
-
-                                            <td width="62%" valign="top">
-                                                <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                        id="EXTREME-PARKOUR">
-                                                        <heading style="justify;">D-MASTER: Mask Annealed
-                                                            Transformer for
-                                                            Unsupervised Domain Adaptation in Breast Cancer
-                                                            Detection from Mammograms</heading>
-
-                                                    </a><br>
-                                                    <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir, Richa Gabha,
-                                                    Chetan Arora<br>
-                                                    MICCAI 2024 [<a href="">Poster</a>]
-                                                </p>
-
-                                                <div class="paper" id="extreme-parkour">
-                                                    <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
-                                                    <a href="javascript:toggleblock('dmaster')">abstract</a>
-                                                    |
-                                                    <a href="">
-                                                        presentation</a> |
-
-
-                                                    <a href="https://github.com/Tajamul21/D-MASTER">code</a>
-
-                                                    <p align="justify"> <i style="display: none;" id="dmaster">We focus
-                                                            on the problem of
-                                                            Unsupervised Domain Adaptation (UDA) for breast cancer
-                                                            detection from mammograms (BCDM) problem. Recent
-                                                            advancements have shown that masked image modeling
-                                                            serves as a robust pretext task for UDA. However, when
-                                                            applied to crossdomain BCDM, these techniques struggle
-                                                            with breast abnormalities such as masses, asymmetries,
-                                                            and micro-calcifications, in part due to the typically
-                                                            much smaller size of region of interest in comparison to
-                                                            natural images. This often results in more false
-                                                            positives per image (FPI) and significant noise in
-                                                            pseudo-labels typically used to bootstrap such
-                                                            techniques. Recognizing these challenges, we introduce a
-                                                            transformerbased Domain-invariant Mask Annealed Student
-                                                            Teacher autoencoder (D-MASTER) framework. D-MASTER
-                                                            adaptively masks and reconstructs multiscale feature
-                                                            maps, enhancing the model’s ability to capture reliable
-                                                            target domain features. D-MASTER also includes adaptive
-                                                            confidence refinement to filter pseudo-labels, ensuring
-                                                            only high-quality detections are considered. We also
-                                                            provide a bounding box annotated subset of 1000
-                                                            mammograms from the RSNA Breast Screening Dataset
-                                                            (referred to as RSNA-BSD1K) to support further research
-                                                            in BCDM. We evaluate D-MASTER on multiple BCDM datasets
-                                                            acquired from diverse domains. Experimental results show
-                                                            a significant improvement of 9% and 13% in sensitivity
-                                                            at 0.3 FPI over state-of-the-art UDA techniques on
-                                                            publicly available benchmark INBreast and DDSM datasets
-                                                            respectively. We also report an improvement of 11% and
-                                                            17% on In-house and RSNA-BSD1K datasets respectively. To
-                                                            promote reproducible research and address the scarcity
-                                                            of accessible resources in BCDM, we will publicly
-                                                            release source code, and pre-trained D-MASTER model,
-                                                            along with RSNA-BSD1K annotations.</i></p>
-
-
-                                                </div>
-                                            </td>
+                                            <tr bgcolor="">
+                                                <td width="38%" valign="middle" align="right" class="profile-image-container">
+                                                    <a href="https://dmaster-iitd.github.io/webpage/">
+                                                        <img src="assets/Profile Picture/dmaster.png"
+                                                             alt="Profile Picture"
+                                                             class="profile-image"
+                                                             style="display:block; margin:auto; padding:0; border-radius:15px; border:1px solid rgb(158, 10, 27); max-width:85%; height:auto; object-fit:contain;">
+                                                    </a>
+                                                </td>
+                                        
+                                                <!-- Text Column -->
+                                                <td width="62%" valign="top" class="text-container">
+                                                    <p align="justify" style="margin-bottom: 0;">
+                                                        <a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html" 
+                                                           id="EXTREME-PARKOUR" style="text-align: justify;">
+                                                            <b>D-MASTER: Mask Annealed Transformer for Unsupervised Domain Adaptation in Breast Cancer Detection from Mammograms
+                                                        </b></a>
+                                                        <br>
+                                                        <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir, Richa Gabha, Chetan Arora<br>
+                                                        MICCAI 2024 [<a href="">Poster</a>]
+                                                    </p>
+                                        
+                                                    <div class="paper" id="extreme-parkour">
+                                                        <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
+                                                        <a href="javascript:toggleblock('dmaster')">abstract</a> |
+                                                        <a href="">presentation</a> |
+                                                        <a href="https://github.com/Tajamul21/D-MASTER">code</a>
+                                        
+                                                        <p align="justify">
+                                                            <i style="display: none;" id="dmaster">
+                                                                We focus on the problem of Unsupervised Domain Adaptation (UDA) for breast cancer detection from mammograms (BCDM).
+                                                                Recent advancements have shown that masked image modeling serves as a robust pretext task for UDA. However, when
+                                                                applied to cross-domain BCDM, these techniques struggle with breast abnormalities such as masses, asymmetries,
+                                                                and micro-calcifications. Recognizing these challenges, we introduce a transformer-based Domain-invariant Mask 
+                                                                Annealed Student Teacher autoencoder (D-MASTER) framework. D-MASTER adaptively masks and reconstructs multiscale
+                                                                feature maps, enhancing the model’s ability to capture reliable target domain features. Experimental results show
+                                                                a significant improvement over state-of-the-art techniques on multiple datasets. To promote reproducible research,
+                                                                we will publicly release source code and pre-trained models.
+                                                            </i>
+                                                        </p>
+                                                    </div>
+                                                </td>
+                                            </tr>
             </tr>
             <tr bgcolor="#ffffd0">
-                <td width="38%" valign="middle" align="right">
+                <td width="38%" valign="middle" align="right" class="profile-image-container">
+
                     <a href="https://github.com/Tajamul21/HF-Fed">
-                        <img src="assets/Profile Picture/hffed.png" alt="Profile Picture"
+                        <img src="assets/Profile Picture/hffed.png"
+                            alt="Profile Picture"
+                            class="profile-image"
                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                     </a>
                 </td>
 
 
                 <td width="62%" valign="top">
-                    <p><a href="https://tisharepo.github.io/Webpage/" id="EXTREME-PARKOUR">
-                            <heading>HF-Fed: Hierarchical Based Customized Federated
-                                Learning Framework for X-Ray Imaging</heading>
+                    <p align="justify" style="margin-bottom: 0;"><a href="https://tisharepo.github.io/Webpage/"
+                        id="EXTREME-PARKOUR" style="text-align: justify; font-weight: bold;">
+                            HF-Fed: Hierarchical Based Customized Federated
+                                Learning Framework for X-Ray Imaging</a>
 
                         </a><br>
                         <b>Tajamul Ashraf</b>, Tisha Madame<br>
-                        MICCAI DeepBreath 2024 [<a href="">Poster</a>]
+                        MICCAI DeepBreath 2024 [<a href="">Oral</a>] <span style="color: red;"><b>Best Student Paper Award!</b></span>
+
                     </p>
 
                     <div class="paper" id="extreme-parkour">
@@ -1009,7 +988,8 @@
 
                         <a href="https://github.com/Tajamul21/HF-Fed">code</a>
 
-                        <p align="justify"> <i style="display: none;" id="hffed">In clinical applications, X-Ray
+                        <p align="justify"> <i style="display: none;" id="hffed">In
+                                clinical applications, X-Ray
                                 technology plays a crucial role in noninvasive
                                 examinations like mammography, providing essential
                                 anatomical information about patients. However, the
@@ -1052,28 +1032,32 @@
             </tr>
 
             <tr bgcolor="">
-                <td width="38%" valign="middle" align="right">
+                <td width="38%" valign="middle" align="right" class="profile-image-container">
                     <a href="https://extreme-parkour.github.io/">
-                        <img src="assets/Profile Picture/wacv24_transfed.png" alt="Profile Picture"
+                        <img src="assets/Profile Picture/wacv24_transfed.png"
+                            alt="Profile Picture"
+                            class="profile-image"
                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                     </a>
                 </td>
 
 
-                <td width="62%" valign="top">
-                    <p><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                            id="EXTREME-PARKOUR">
-                            <heading>TransFED: A way to epitomize Transformer based
+                <td width="62%" valign="top" class="text-container">
+                    <p align="justify" style="margin-bottom: 0;"><a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                        id="EXTREME-PARKOUR" style="text-align: justify;">
+                            <b>TransFED: A way to epitomize Transformer based
                                 Focal
-                                Modulation using Federated Learning</heading>
+                                Modulation using Federated Learning</b></a>
 
                         </a><br>
                         <b>Tajamul Ashraf</b>, Fuzayil Mir, Iqra Altaf Gillani<br>
-                        WACV 2024 [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>]
+                        WACV 2024 [<a
+                            href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>]
                     </p>
-
+                   
                     <div class="paper" id="extreme-parkour">
-                        <a href="https://fuzayilmir.github.io/webpage_transfed/">webpage</a> |
+                        <a href="https://fuzayilmir.github.io/webpage_transfed/">webpage</a>
+                        |
                         <a href="javascript:toggleblock('transfed')">abstract</a>
                         |
                         <a href="assets\Documents\wacv\WACV_Final_ppt.pdf">
@@ -1082,7 +1066,8 @@
 
                         <a href="https://github.com/Tajamul21/TransFed">code</a>
 
-                        <p align="justify"> <i style="display: none;" id="transfed">Federated learning has emerged
+                        <p align="justify"> <i style="display: none;"
+                                id="transfed">Federated learning has emerged
                                 as a
                                 promising paradigm for collaborative machine learning,
                                 enabling multiple clients to train a model while
@@ -1142,18 +1127,32 @@
                 </td>
             </tr>
 
+
+
+
+
+
+
+
+
+
+
+
+
             <tr bgcolor="#ffffd0">
-                <td width="38%" valign="middle" align="right">
+                <td width="38%" valign="middle" align="right" class="profile-image-container">
                     <a href="https://link.springer.com/chapter/10.1007/978-3-031-58181-6_2">
-                        <img src="assets/Profile Picture/posewatch.png" alt="Profile Picture"
+                        <img src="assets/Profile Picture/posewatch.png" 
+                        alt="Profile Picture"
+                        class="profile-imageg"
                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                     </a>
                 </td>
                 <td width="62%" valign="top">
-                    <p><a href="https://link.springer.com/chapter/10.1007/978-3-031-58181-6_2" id="EXTREME-PARKOUR">
-                            <heading>PoseWatch: Advancing Real Time Human Pose Tracking
+                    <p align="justify" style="margin-bottom: 0;"><a href="https://link.springer.com/chapter/10.1007/978-3-031-58181-6_2" id="EXTREME-PARKOUR">
+                            <b>PoseWatch: Advancing Real Time Human Pose Tracking
                                 and
-                                Juxtaposition with Deep Learning</heading>
+                                Juxtaposition with Deep Learning</b>
                         </a><br>
                         <b>Tajamul Ashraf</b>, Balaji Prabu BV, and Omkar SN<br>
                         CVIP 2023
@@ -1223,18 +1222,19 @@
 
 
             <tr bgcolor="">
-                <td width="38%" valign="middle" align="right">
+                <td width="38%" valign="middle" align="right" class="profile-image-container">
                     <a href="https://extreme-parkour.github.io/">
                         <img src="assets/Profile Picture/ccpd.png" alt="Profile Picture"
+                        class="profile-image"
                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                     </a>
                 </td>
                 <td width="62%" valign="top">
-                    <p><a href="https://link.springer.com/chapter/10.1007/978-981-99-7862-5_1" id="EXTREME-PARKOUR">
-                            <heading> Climate Change Parameter Dataset (CCPD): A
+                    <p align="justify" style="margin-bottom: 0;"><a href="https://link.springer.com/chapter/10.1007/978-981-99-7862-5_1" id="EXTREME-PARKOUR">
+                            <b> Climate Change Parameter Dataset (CCPD): A
                                 Benchmark
                                 Dataset for Climate
-                                Change parameters in Jammu and Kashmir</heading>
+                                Change parameters in Jammu and Kashmir</b>
                         </a><br>
                         <b>Tajamul Ashraf</b>, Janibul Bashir<br>
                         ICDSA 2023
@@ -1293,20 +1293,21 @@
             </tr>
 
             <tr bgcolor="#ffffd0">
-                <td width="38%" valign="middle" align="right">
+                <td width="38%" valign="middle" align="right" class="profile-image-container">
                     <a
                         href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12701/127011H/An-integral-computer-vision-system-for-apple-detection-classification-and/10.1117/12.2680881.short">
 
                         <img src="assets/Profile Picture/apples_cv.png" alt="Profile Picture"
+                        class="profile-image"
                             style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                     </a>
                 </td>
                 <td width="62%" valign="top">
-                    <p><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12701/127011H/An-integral-computer-vision-system-for-apple-detection-classification-and/10.1117/12.2680881.short"
+                    <p align="justify" style="margin-bottom: 0;"><a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12701/127011H/An-integral-computer-vision-system-for-apple-detection-classification-and/10.1117/12.2680881.short"
                             id="EXTREME-PARKOUR">
-                            <heading>An Integral Computer
+                            <b>An Integral Computer
                                 Vision System for Apple Detection, Classification, and
-                                Semantic Segmentation,</heading>
+                                Semantic Segmentation,</b>
                         </a><br>
                         <b>Tajamul Ashraf</b>, Naiyer Abbas, Mohammad Haseeb, Nadeem Yousuf,
                         Janibul Bashir<br>
