@@ -19,17 +19,22 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'> -->
 
-    <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href=assets\CSS\normalize.css>
     <link rel="stylesheet" href=assets\CSS\skeleton.css>
     <link rel="stylesheet" href=assets/CSS/my_css.css>
 
-
+    <style>
+        /* Slightly narrower */
+        .container{
+          width: 90%;     /* down from 95 % */
+          max-width: 900px;  /* cap a bit smaller */
+        }
+        
+        /* keep text readable but not too big */
+        body{ font-size:16px; }
+        </style>
+        
 
     <!-- JQueryqa
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -78,7 +83,7 @@
 
 
         /* Ensure the profile image column is hidden on mobile */
-        @media (max-width: 600px) {
+        @media (max-width: 300px) {
 
 
 
@@ -88,7 +93,7 @@
             }
 
             .text-container {
-                width: 95%;
+                width: 105%;
                 /* Forces the text column to take full width */
                 display: block;
                 /* Ensures block-level layout */
@@ -254,6 +259,71 @@
             border: none;
         }
     </style>
+    <style>
+        /* List container */
+        .news-scrollbox {
+            max-height: 25rem;
+            /* keep your original height */
+            overflow-y: auto;
+            padding-right: .25rem;
+            /* adjust if the bar overlaps text */
+
+            /* Firefox (works in FF ≥ 64) */
+            scrollbar-width: auto;
+            /* "thin" | "auto" */
+            scrollbar-color: #888 transparent;
+        }
+
+        /* WebKit browsers (Chrome, Edge, Safari) */
+        .news-scrollbox::-webkit-scrollbar {
+            width: .55rem;
+            /* ← wider bar */
+        }
+
+        .news-scrollbox::-webkit-scrollbar-track {
+            background: transparent;
+            /* track colour */
+        }
+
+        .news-scrollbox::-webkit-scrollbar-thumb {
+            background: #888;
+            /* bar colour */
+            border-radius: .4rem;
+            /* smoother corners */
+            /* optional inset shadow for subtle depth */
+            box-shadow: inset 0 0 2px rgba(35, 148, 7, 0.35);
+        }
+    </style>
+    <style>
+        /* Put this once in your page-level CSS */
+        .pub-scrollbox {
+            max-height: 67rem;
+            /* tune until ~10 rows fit on your screen */
+            overflow-y: auto;
+            /* scrollbar appears after row 10          */
+            padding-right: .25rem;
+            /* keeps text from touching the scrollbar  */
+
+            /* Firefox: slimmer bar that matches WebKit */
+            scrollbar-width: thin;
+            scrollbar-color: #888 transparent;
+        }
+
+        /* WebKit (Chrome / Edge / Safari) */
+        .pub-scrollbox::-webkit-scrollbar {
+            width: .55rem;
+        }
+
+        .pub-scrollbox::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: .4rem;
+        }
+
+        .pub-scrollbox::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    </style>
+
 
 
     <link rel="shortcut icon" href="https://www.cs.cmu.edu/sites/default/files/favicon_0.ico"
@@ -403,91 +473,53 @@
                         <tr>
                             <td>
                                 <h4>News</h4>
-                                <ul>
-                                    <li>Feb 2025 - Serving as a reviewer for <a href="https://acmmm2025.org/"
-                                            target="_blank">ACM MM'25</a>, <a
-                                            href="https://conferences.miccai.org/2025/en/default.asp"
-                                            target="_blank">MICCAI'25</a>, <a href="https://home.iitd.ac.in/"
-                                            target="_blank">WACV'25</a>.</li>
-                                    <li> Dec 2024 - Nominated as Diversity Intern by Microsoft Canada! [<a
-                                            href="https://www.youtube.com/shorts/neUuDhjiJRM"
-                                            target="_blank">Video</a>].
-                                    <li> Oct 2024 - Recieved the <a href="https://home.iitd.ac.in/" target="_blank">RISE
-                                            MICCAI</a> travel grant to attent MICCAI 2024.
-                                    <li> Oct 2024 - <a
-                                            href="https://conferences.miccai.org/2024/Registration/GRANTS-AND-AWARDS.html"
-                                            target="_blank">HF-Fed</a> paper is accepted as <span
-                                            style="color: rgb(243, 18, 97);">oral</span> in <a
-                                            href="https://conferences.miccai.org/2024/en/" target="_blank"> MICCAI
-                                            2024</a> workshop. <span style="color: red; font-weight: bold;">
-                                            <a href="assets/Documents/Certificate of Best Paper_Tajamul.pdf"
-                                                style="color: red; font-weight: bold;">
-                                                (Best Student Paper Award!)
-                                            </a>
-                                        </span>
+                                <ul class="news-scrollbox">
+                                    <li>Feb 2025 – Serving as a reviewer for
+                                        <a href="https://acmmm2025.org/" target="_blank">ACM MM’25</a>,
+                                        <a href="https://conferences.miccai.org/2025/en/default.asp"
+                                            target="_blank">MICCAI’25</a>,
+                                        <a href="https://wacv2025.thecvf.com/" target="_blank">WACV’25</a>.
                                     </li>
 
+                                    <li>Dec 2024 – Nominated as Diversity Intern by Microsoft Canada!
+                                        [<a href="https://www.youtube.com/shorts/neUuDhjiJRM" target="_blank">Video</a>]
+                                    </li>
 
-                                    <!-- <li> Aug 2024 - Serving as a reviewer for <a href="https://home.iitd.ac.in/"
-                                            target="_blank">WACV'25</a>.</li> -->
-                                    <li> June 2024 - Completion of my Master's synopsis at <a
-                                            href="https://home.iitd.ac.in/" target="_blank">IIT
-                                            DELHI</a>.</li>
-                                    <li> May 2024 - <a href="https://arxiv.org/abs/2407.06585"
-                                            target="_blank">D-MASTER</a> paper is accepted in <a
-                                            href="https://conferences.miccai.org/2024/en/" target="_blank">MICCAI
-                                            2024</a>.</li>
-                                    <li> Nov 2023 - One <a href="assets/Documents/wacv/transfed.pdf"
-                                            target="_blank">paper</a> accepted in <a href="https://wacv2024.thecvf.com/"
+                                    <li>Oct 2024 – Received the
+                                        <a href="https://www.rise-miccai.org/" target="_blank">RISE MICCAI</a> travel
+                                        grant
+                                        to attend MICCAI 2024.
+                                    </li>
+
+                                    <li>Oct 2024 – <a href="https://conferences.miccai.org/2024/en/"
+                                            target="_blank">HF-Fed</a>
+                                        accepted as <span style="color:#f31261;">oral</span> at MICCAI 2024 workshop.
+                                        <a href="assets/Documents/Certificate of Best Paper_Tajamul.pdf"
+                                            style="color:red;font-weight:bold;">
+                                            (Best Student Paper Award!)</a>
+                                    </li>
+
+                                    <li>June 2024 – Completed Master’s synopsis at <a href="https://home.iitd.ac.in/"
+                                            target="_blank">IIT Delhi</a>.</li>
+
+                                    <li>May 2024 – <a href="https://arxiv.org/abs/2407.06585"
+                                            target="_blank">D-MASTER</a> accepted at MICCAI 2024.</li>
+
+                                    <li>Nov 2023 – Paper accepted at <a href="https://wacv2024.thecvf.com/"
                                             target="_blank">WACV 2024</a>.</li>
-                                    <a href="javascript:toggleblock('news')">---- show more ----</a>
-                                    <div id="news" style="display:none">
 
-
-
-                                        <li> July 2023 - One <a href="assets/Documents/cvip/022.pdf"
-                                                target="_blank">paper</a> accepted in <a
-                                                href="https://iitjammu.ac.in/cvip2023/index.html" target="_blank">CVIP
-                                                2023</a>.</li>
-                                        <li> Mar 2023 - One <a href="assets/Documents/icdsa/paper.pdf"
-                                                target="_blank">paper</a> accepted in<a
-                                                href="https://scrs.in/conference/icdsa23" target="_blank"> ICDSA
-                                                2023</a>.
-                                        </li>
-
-
-                                        <li> Jan 2023 - Served as reviewer for <a
-                                                href="https://iitjammu.ac.in/cvip2023/index.html" target="_blank">CVIP
-                                                2022</a>,<a href="https://vnit.ac.in/cvip2022/">23</a>
-                                            and <a href="https://ieee-hpec.org/" target="_blank">HPEC 2023</a></li>
-
-                                        <li>Aug 2022 - Started Masters in Computer Science at <a
-                                                href="https://home.iitd.ac.in/" target="_blank">IIT
-                                                DELHI</a>.</li>
-
-
-                                        <li>June 2022 - Graduated from <a href="https://www.nitsri.ac.in/"
-                                                target="_blank">NIT Srinagar</a> with <a
-                                                href="https://mvp.microsoft.com/studentambassadors" target="_blank">Gold
-                                                MSLA</a>.</li>
-                                        <li>Feb 2021 - Won India's largest National Entrepreneurship Challenge [<a
-                                                href="https://www.ecell.in/nec/" target="_blank">NEC</a>] at <a
-                                                href="https://www.iitb.ac.in/" target="_blank">IIT Bombay</a>.</li>
-
-                                        <li>Jan 2021 - Wrote an <a
-                                                href="https://www.thekashmirmonitor.net/hult-prize-a-futuristic-approach-to-entrepreneurship/"
-                                                target="_blank">article</a> on a futuristic approach to
-                                            entrepreneurship.</li>
-
-                                        <li>Nov 2020 - Organized a <a href="" target="_blank">workshop</a> on
-                                            entrepreneurship, research, and innovation at NIT Srinagar.</li>
-
-                                        <li>Sep 2020 - Organized a <a href="" target="_blank">workshop</a> on emerging
-                                            technologies under <a href="" target="_blank">MSLA program</a>.</li>
-                                        <li>Aug 2020 - Organized a career counseling session on <a
-                                                href="https://www.risingkashmir.com/IEEE-organizes-career-counseling-session-on-GRE-preparation-at-NIT-Srinagar--95357"
-                                                target="_blank">GRE preparation</a> at NIT Srinagar.</li>
-                                    </div>
+                                    <!-- everything below will require scrolling to see -->
+                                    <li>July 2023 – Paper accepted at <a
+                                            href="https://iitjammu.ac.in/cvip2023/index.html" target="_blank">CVIP
+                                            2023</a>.</li>
+                                    <li>Mar 2023 – Paper accepted at <a href="https://scrs.in/conference/icdsa23"
+                                            target="_blank">ICDSA 2023</a>.</li>
+                                    <li>Jan 2023 – Reviewer for CVIP 2022/23 and HPEC 2023.</li>
+                                    <li>Aug 2022 – Started Master’s at IIT Delhi.</li>
+                                    <li>June 2022 – Graduated from NIT Srinagar with Gold MSLA.</li>
+                                    <li>Feb 2021 – Won India’s largest National Entrepreneurship Challenge at IIT
+                                        Bombay.</li>
+                                    <!-- … keep adding as needed … -->
                                 </ul>
                             </td>
 
@@ -809,429 +841,509 @@
                                 </div>
 
                                 <div class="tab-pane" id="publication-all">
-                                    <table>
-                                        <tbody>
+                                    <div class="pub-scrollbox">
+                                        <table>
+                                            <tbody>
 
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://arxiv.org/abs/2502.21321">
-                                                        <img src="assets/Profile Picture/GT.png"
-                                                            alt="Profile Picture" class="profile-iagge"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-                                                <td width="62%" valign="top">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://arxiv.org/abs/2504.15404"
-                                                            id="EXTREME-PARKOUR">
-
-
-                                                            <b>Context Aware Grounded Teacher for Source Free Object
-                                                                Detection</b>
-
+                                                <tr bgcolor="">
+                                                    <td width="38%" valign="middle" align="right"
+                                                        class="profile-image-container">
+                                                        <a href="https://arxiv.org/abs/2502.21321">
+                                                            <img src="assets/Profile Picture/GT.png"
+                                                                alt="Profile Picture" class="profile-iagge"
+                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
                                                         </a>
-                                                        <br>
-                                                        <b>Tajamul Ashraf</b>, Rajes Manna, Partha Sarathi Purkayastha,
-                                                        Tavaheed Tariq, Janibul Bashir<br>
-                                                        Arxiv 2025
-                                                        <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://arxiv.org/abs/2504.15404">webpage</a> |
-                                                        <a href="javascript:toggleblock('gt')">abstract</a>
-                                                        |
+                                                    </td>
 
 
-
-                                                        <a href="https://github.com/Tajamul21/Grounded_Teacher">code</a>
-
-                                                        <p align="justify"> <i style="display: none;" id="gt">We focus
-                                                                on the Source Free Object Detection (SFOD) problem, when
-                                                                source data is unavailable during adaptation, and the
-                                                                model must adapt to the unlabeled target domain. In
-                                                                medical imaging, several approaches have leveraged a
-                                                                semi-supervised student-teacher architecture to bridge
-                                                                domain discrepancy. Context imbalance in labeled
-                                                                training data and significant domain shifts between
-                                                                domains can lead to biased teacher models that produce
-                                                                inaccurate pseudolabels, degrading the student model's
-                                                                performance and causing a mode collapse. Class
-                                                                imbalance, particularly when one class significantly
-                                                                outnumbers another, leads to contextual bias. To tackle
-                                                                the problem of context bias and the significant
-                                                                performance drop of the student model in the SFOD
-                                                                setting, we introduce Grounded Teacher (GT) as a
-                                                                standard framework. In this study, we model contextual
-                                                                relationships using a dedicated relational context
-                                                                module and leverage it to mitigate inherent biases in
-                                                                the model. This approach enables us to apply
-                                                                augmentations to closely related classes, across and
-                                                                within domains, enhancing the performance of
-                                                                underrepresented classes while keeping the effect on
-                                                                dominant classes minimal. We further improve the quality
-                                                                of predictions by implementing an expert foundational
-                                                                branch to supervise the student model. We validate the
-                                                                effectiveness of our approach in mitigating context bias
-                                                                under the SFOD setting through experiments on three
-                                                                medical datasets supported by comprehensive ablation
-                                                                studies. All relevant resources, including preprocessed
-                                                                data, trained model weights, and code, are publicly
-                                                                available.</i></p>
+                                                    <td width="62%" valign="top">
+                                                        <p align="justify" style="margin-bottom: 0;"><a
+                                                                href="https://arxiv.org/abs/2504.15404"
+                                                                id="EXTREME-PARKOUR">
 
 
-                                                    </div>
-                                                </td>
-                                            </tr>
+                                                                <b>Context Aware Grounded Teacher for Source Free Object
+                                                                    Detection</b>
 
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://arxiv.org/abs/2502.21321">
-                                                        <img src="assets/Profile Picture/llm_post.jpg"
-                                                            alt="Profile Picture" class="profile-iagge"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-                                                <td width="62%" valign="top">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://arxiv.org/abs/2502.21321"
-                                                            id="EXTREME-PARKOUR">
-
-
-                                                            <b>LLM Post-Training: A Deep Dive into Reasoning Large
-                                                                Language Models</b>
-
-                                                        </a>
-                                                        <br>
-                                                        Komal Kumar*, <b>Tajamul Ashraf*</b>, Omkar Thawakar, Rao
-                                                        Muhammad
-                                                        Anwer, Hisham
-                                                        Cholakkal, Mubarak Shah, Ming-Hsuan Yang, Phillip H.S. Torr,
-                                                        Fahad Shahbaz Khan, Salman Khan<br>
-                                                        Arxiv 2025
-                                                        <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
-                                                        <a href="javascript:toggleblock('llm')">abstract</a>
-                                                        |
-
-
-
-                                                        <a
-                                                            href="https://github.com/mbzuai-oryx/Awesome-LLM-Post-training">code</a>
-
-                                                        <p align="justify"> <i style="display: none;" id="llm">Large
-                                                                Language Models (LLMs) have transformed the natural
-                                                                language processing landscape and brought to life
-                                                                diverse applications. Pretraining on vast web-scale data
-                                                                has laid the foundation for these models, yet the
-                                                                research community is now increasingly shifting focus
-                                                                toward post-training techniques to achieve further
-                                                                breakthroughs. While pretraining provides a broad
-                                                                linguistic foundation, post-training methods enable LLMs
-                                                                to refine their knowledge, improve reasoning, enhance
-                                                                factual accuracy, and align more effectively with user
-                                                                intents and ethical considerations. Fine-tuning,
-                                                                reinforcement learning, and test-time scaling have
-                                                                emerged as critical strategies for optimizing LLMs
-                                                                performance, ensuring robustness, and improving
-                                                                adaptability across various real-world tasks. This
-                                                                survey provides a systematic exploration of
-                                                                post-training methodologies, analyzing their role in
-                                                                refining LLMs beyond pretraining, addressing key
-                                                                challenges such as catastrophic forgetting, reward
-                                                                hacking, and inference-time trade-offs. We highlight
-                                                                emerging directions in model alignment, scalable
-                                                                adaptation, and inference-time reasoning, and outline
-                                                                future research directions. We also provide a public
-                                                                repository to continually track developments in this
-                                                                fast-evolving field.</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr bgcolor="#ffffd0">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://ieeexplore.ieee.org/abstract/document/10880901/">
-                                                        <img src="assets/Profile Picture/K-means_result.png"
-                                                            alt="Profile Picture" class="profile-iagge"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-                                                <td width="62%" valign="top">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://arxiv.org/abs/2502.21321"
-                                                            id="EXTREME-PARKOUR">
-
-
-                                                            <b>Enhancing Climate Change Understanding: A Novel Deep
-                                                                Learning Framework with the Climate
-                                                                Change Parameter Model. </b>
-
-                                                        </a>
-                                                        <br>
-                                                        <b>Tajamul Ashraf</b>, Janibul Bashir<br>
-                                                        MoSICom 2024
-                                                        <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
-                                                        <a href="javascript:toggleblock('mosicom')">abstract</a>
-                                                        |
-
-
-
-                                                        <a
-                                                            href="https://github.com/mbzuai-oryx/Awesome-LLM-Post-training">code</a>
-
-                                                        <p align="justify"> <i style="display: none;" id="mosicom">One
-                                                                of
-                                                                the severe and pressing problems which humanity is
-                                                                facing in the 21st Century is climate change. It is
-                                                                adversely affecting the entire globe as is evident with
-                                                                the rising ocean levels, accelerated melting of
-                                                                glaciers, frequent storms, and many more. The need of
-                                                                the hour is to limit climate change by reducing
-                                                                greenhouse gas emissions. Machine learning algorithms
-                                                                have proven to be extremely effective in numerous
-                                                                scenarios and the experts are working to extend their
-                                                                uses to limit the effects of climate change. The domain
-                                                                is vast but in the current literature, the works in this
-                                                                domain are very limited. In this paper, we have tried to
-                                                                work in this particular direction by applying deep
-                                                                learning methodologies to analyze the effect of
-                                                                different climate factors on overall climate change. We
-                                                                proposed a novel climate change parameter model to
-                                                                predict the correlation between different climate
-                                                                parameters. We evaluated our scheme by validating the
-                                                                model on the data specific to the Jammu and Kashmir
-                                                                region and the model loss was found to be under 2%. In
-                                                                addition, based on our model we proposed some reactive
-                                                                strategies that can be implemented to keep the climate
-                                                                change effects under control..</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://extreme-parkour.github.io/">
-                                                        <img src="assets/Profile Picture/phase_seg.png"
-                                                            alt="Profile Picture" class="profile-iagge"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-
-
-                                                <td width="62%" valign="top">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://arxiv.org/abs/2411.16794"
-                                                            id="EXTREME-PARKOUR">
-
-
-                                                            <b>Phase-Informed Tool Segmentation for Manual
-                                                                Small-Incision Cataract Surgery</b>
-
-                                                        </a>
-                                                        <br>
-                                                        Bhuvan Sachdeva, Naren Akash, <b>Tajamul Ashraf</b>, Simon
-                                                        Muller,
-                                                        Thomas Schultz, Maximilian WM Wintergerst, Niharika Singri
-                                                        Prasad, Kaushik Murali, Mohit Jain<br>
-                                                        Arxiv 2024
-                                                        <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://arxiv.org/abs/2411.16794">webpage</a> |
-                                                        <a href="javascript:toggleblock('phase')">abstract</a>
-                                                        |
-                                                        <a href="">
-                                                            presentation</a> |
-
-
-                                                        <a href="">code</a>
-
-                                                        <p align="justify"> <i style="display: none;"
-                                                                id="phase">Cataract surgery is the most common
-                                                                surgical procedure globally, with a disproportionately
-                                                                higher burden in developing countries. While automated
-                                                                surgical video analysis has been explored in general
-                                                                surgery, its application to ophthalmic procedures
-                                                                remains limited. Existing works primarily focus on Phaco
-                                                                cataract surgery, an expensive technique not accessible
-                                                                in regions where cataract treatment is most needed. In
-                                                                contrast, Manual Small-Incision Cataract Surgery (MSICS)
-                                                                is the preferred low-cost, faster alternative in
-                                                                high-volume settings and for challenging cases. However,
-                                                                no dataset exists for MSICS. To address this gap, we
-                                                                introduce Sankara-MSICS, the first comprehensive dataset
-                                                                containing 53 surgical videos annotated for 18 surgical
-                                                                phases and 3,527 frames with 13 surgical tools at the
-                                                                pixel level. We benchmark this dataset on
-                                                                state-of-the-art models and present ToolSeg, a novel
-                                                                framework that enhances tool segmentation by introducing
-                                                                a phase-conditional decoder and a simple yet effective
-                                                                semi-supervised setup leveraging pseudo-labels from
-                                                                foundation models. Our approach significantly improves
-                                                                segmentation performance, achieving a 23.77% to 38.10%
-                                                                increase in mean Dice scores, with a notable boost for
-                                                                tools that are less prevalent and small. Furthermore, we
-                                                                demonstrate that ToolSeg generalizes to other surgical
-                                                                settings, showcasing its effectiveness on the CaDIS
-                                                                dataset.</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-                                            <tr bgcolor="#ffffd0">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="h">
-                                                        <img src="assets/Profile Picture/fate.png" alt="Profile Picture"
-                                                            class="profile-image"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-                                                <td width="62%" valign="top">
-                                                    <p align="justify" style="margin-bottom: 0;"><a href=""
-                                                            id="EXTREME-PARKOUR">
-                                                            <b>FATE: Focal-modulated Attention Encoder for
-                                                                temperature prediction</b>
-                                                        </a>
-                                                        <br>
-                                                        <b>Tajamul Ashraf</b>, Janibul Bashir<br>
-                                                        ArXiv 2024<a href="https://arxiv.org/abs/2408.11336"></a>
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="">webpage</a> |
-                                                        <a href="javascript:toggleblock('fate')">abstract</a>
-                                                        |
-
-                                                        <!-- <a href="">presentation</a> | -->
-
-                                                        <a href="https://github.com/Tajamul21/FATE">code</a>
-
-                                                        <p align="justify"> <i style="display: none;" id="fate">One
-                                                                of the biggest issues facing humanity in the
-                                                                twenty-first century is climate change, as shown by the
-                                                                increasing sea levels, melting glaciers, and frequent
-                                                                storms. Accurate temperature forecasting is crucial for
-                                                                understanding and mitigating its impacts. Cutting-edge
-                                                                data-driven models for temperature forecasting typically
-                                                                employ recurrent neural networks(CNNs), with certain
-                                                                models integrating attention mechanisms. However RNNs
-                                                                sequential processing limits parallelization, especially
-                                                                for longer sequences. In order to do this, we provide a
-                                                                brand-new method for temperature prediction that is
-                                                                based on the FocalNet Transformer architecture. By
-                                                                functioning in a multi-tensor format, the suggested
-                                                                Focal-modulation Attention Encoder (FATE) framework
-                                                                leverages the spatial and temporal nuances of
-                                                                meteorological data characteristics by integrating
-                                                                tensorized modulation. Comparative assessments against
-                                                                existing transformer encoder architectures, 3D CNNs,
-                                                                LSTM, and ConvLSTM demonstrate our model’s superior
-                                                                ability to capture nuanced patterns inherent in the
-                                                                data, particularly in the context of temperature
-                                                                prediction. We also introduce a new labeled dataset,
-                                                                Climate change Parameter dataset (CCPD), which
-                                                                encompasses 40 years of data from J&K region on seven
-                                                                key parameters that influence climate change, supporting
-                                                                further research in this area. Experiments on two
-                                                                real-world benchmark temperature datasets from weather
-                                                                stations in the USA, Canada, and Europe demonstrate
-                                                                accuracy improvements of 12%, 23%, and 28% respectively,
-                                                                compared to existing SOTA models. In addition, we
-                                                                achieved state-of-the-art results on our CCPD dataset
-                                                                with a 24% improvement. To understand FATE, we introduce
-                                                                two modulation scores from the tensorial modulation
-                                                                process. These scores clarify our model’s decision
-                                                                making and key climate change parameters. For
-                                                                reproducible research, we will release the source code,
-                                                                pre-trained FATE model, and CCPD dataset.</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://dmaster-iitd.github.io/webpage/">
-                                                        <img src="assets/Profile Picture/dmaster.png"
-                                                            alt="Profile Picture" class="profile-image"
-                                                            style="display:block; margin:auto; padding:0; border-radius:15px; border:1px solid rgb(158, 10, 27); max-width:85%; height:auto; object-fit:contain;">
-                                                    </a>
-                                                </td>
-
-                                                <!-- Text Column -->
-                                                <td width="62%" valign="top" class="text-container">
-                                                    <p align="justify" style="margin-bottom: 0;">
-                                                        <a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                            id="EXTREME-PARKOUR" style="text-align: justify;">
-                                                            <b>D-MASTER: Mask Annealed Transformer for Unsupervised
-                                                                Domain Adaptation in Breast Cancer Detection from
-                                                                Mammograms
-                                                            </b></a>
-                                                        <br>
-                                                        <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir, Richa
-                                                        Gabha, Chetan Arora<br>
-                                                        MICCAI 2024 [<a href="">Poster</a>]
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
-                                                        <a href="javascript:toggleblock('dmaster')">abstract</a> |
-                                                        <a href="">presentation</a> |
-                                                        <a href="https://github.com/Tajamul21/D-MASTER">code</a>
-
-                                                        <p align="justify">
-                                                            <i style="display: none;" id="dmaster">
-                                                                We focus on the problem of Unsupervised Domain
-                                                                Adaptation (UDA) for breast cancer detection from
-                                                                mammograms (BCDM). Recent advancements have shown that
-                                                                masked image modeling serves as a robust pretext task
-                                                                for UDA. However, when applied to cross-domain BCDM,
-                                                                these techniques struggle with breast abnormalities such
-                                                                as masses, asymmetries, and micro-calcifications.
-                                                                Recognizing these challenges, we introduce a
-                                                                transformer-based Domain-invariant Mask Annealed Student
-                                                                Teacher autoencoder (D-MASTER) framework. D-MASTER
-                                                                adaptively masks and reconstructs multiscale feature
-                                                                maps, enhancing the model’s ability to capture reliable
-                                                                target domain features. Experimental results show a
-                                                                significant improvement over state-of-the-art techniques
-                                                                on multiple datasets. To promote reproducible research,
-                                                                we will publicly release source code and pre-trained
-                                                                models.
-                                                            </i>
+                                                            </a>
+                                                            <br>
+                                                            <b>Tajamul Ashraf</b>, Rajes Manna, Partha Sarathi
+                                                            Purkayastha,
+                                                            Tavaheed Tariq, Janibul Bashir<br>
+                                                            Arxiv 2025
+                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
                                                         </p>
-                                                    </div>
-                                                </td>
-                                            </tr>
+
+                                                        <div class="paper" id="extreme-parkour">
+                                                            <a href="https://arxiv.org/abs/2504.15404">webpage</a> |
+                                                            <a href="javascript:toggleblock('gt')">abstract</a>
+                                                            |
+
+
+
+                                                            <a
+                                                                href="https://github.com/Tajamul21/Grounded_Teacher">code</a>
+
+                                                            <p align="justify"> <i style="display: none;" id="gt">We
+                                                                    focus
+                                                                    on the Source Free Object Detection (SFOD) problem,
+                                                                    when
+                                                                    source data is unavailable during adaptation, and
+                                                                    the
+                                                                    model must adapt to the unlabeled target domain. In
+                                                                    medical imaging, several approaches have leveraged a
+                                                                    semi-supervised student-teacher architecture to
+                                                                    bridge
+                                                                    domain discrepancy. Context imbalance in labeled
+                                                                    training data and significant domain shifts between
+                                                                    domains can lead to biased teacher models that
+                                                                    produce
+                                                                    inaccurate pseudolabels, degrading the student
+                                                                    model's
+                                                                    performance and causing a mode collapse. Class
+                                                                    imbalance, particularly when one class significantly
+                                                                    outnumbers another, leads to contextual bias. To
+                                                                    tackle
+                                                                    the problem of context bias and the significant
+                                                                    performance drop of the student model in the SFOD
+                                                                    setting, we introduce Grounded Teacher (GT) as a
+                                                                    standard framework. In this study, we model
+                                                                    contextual
+                                                                    relationships using a dedicated relational context
+                                                                    module and leverage it to mitigate inherent biases
+                                                                    in
+                                                                    the model. This approach enables us to apply
+                                                                    augmentations to closely related classes, across and
+                                                                    within domains, enhancing the performance of
+                                                                    underrepresented classes while keeping the effect on
+                                                                    dominant classes minimal. We further improve the
+                                                                    quality
+                                                                    of predictions by implementing an expert
+                                                                    foundational
+                                                                    branch to supervise the student model. We validate
+                                                                    the
+                                                                    effectiveness of our approach in mitigating context
+                                                                    bias
+                                                                    under the SFOD setting through experiments on three
+                                                                    medical datasets supported by comprehensive ablation
+                                                                    studies. All relevant resources, including
+                                                                    preprocessed
+                                                                    data, trained model weights, and code, are publicly
+                                                                    available.</i></p>
+
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr bgcolor="">
+                                                    <td width="38%" valign="middle" align="right"
+                                                        class="profile-image-container">
+                                                        <a href="https://arxiv.org/abs/2502.21321">
+                                                            <img src="assets/Profile Picture/llm_post.jpg"
+                                                                alt="Profile Picture" class="profile-iagge"
+                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                        </a>
+                                                    </td>
+
+
+                                                    <td width="62%" valign="top">
+                                                        <p align="justify" style="margin-bottom: 0;"><a
+                                                                href="https://arxiv.org/abs/2502.21321"
+                                                                id="EXTREME-PARKOUR">
+
+
+                                                                <b>LLM Post-Training: A Deep Dive into Reasoning Large
+                                                                    Language Models</b>
+
+                                                            </a>
+                                                            <br>
+                                                            Komal Kumar*, <b>Tajamul Ashraf*</b>, Omkar Thawakar, Rao
+                                                            Muhammad
+                                                            Anwer, Hisham
+                                                            Cholakkal, Mubarak Shah, Ming-Hsuan Yang, Phillip H.S. Torr,
+                                                            Fahad Shahbaz Khan, Salman Khan<br>
+                                                            Arxiv 2025
+                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
+                                                        </p>
+
+                                                        <div class="paper" id="extreme-parkour">
+                                                            <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
+                                                            <a href="javascript:toggleblock('llm')">abstract</a>
+                                                            |
+
+
+
+                                                            <a
+                                                                href="https://github.com/mbzuai-oryx/Awesome-LLM-Post-training">code</a>
+
+                                                            <p align="justify"> <i style="display: none;" id="llm">Large
+                                                                    Language Models (LLMs) have transformed the natural
+                                                                    language processing landscape and brought to life
+                                                                    diverse applications. Pretraining on vast web-scale
+                                                                    data
+                                                                    has laid the foundation for these models, yet the
+                                                                    research community is now increasingly shifting
+                                                                    focus
+                                                                    toward post-training techniques to achieve further
+                                                                    breakthroughs. While pretraining provides a broad
+                                                                    linguistic foundation, post-training methods enable
+                                                                    LLMs
+                                                                    to refine their knowledge, improve reasoning,
+                                                                    enhance
+                                                                    factual accuracy, and align more effectively with
+                                                                    user
+                                                                    intents and ethical considerations. Fine-tuning,
+                                                                    reinforcement learning, and test-time scaling have
+                                                                    emerged as critical strategies for optimizing LLMs
+                                                                    performance, ensuring robustness, and improving
+                                                                    adaptability across various real-world tasks. This
+                                                                    survey provides a systematic exploration of
+                                                                    post-training methodologies, analyzing their role in
+                                                                    refining LLMs beyond pretraining, addressing key
+                                                                    challenges such as catastrophic forgetting, reward
+                                                                    hacking, and inference-time trade-offs. We highlight
+                                                                    emerging directions in model alignment, scalable
+                                                                    adaptation, and inference-time reasoning, and
+                                                                    outline
+                                                                    future research directions. We also provide a public
+                                                                    repository to continually track developments in this
+                                                                    fast-evolving field.</i></p>
+
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr bgcolor="#ffffd0">
+                                                    <td width="38%" valign="middle" align="right"
+                                                        class="profile-image-container">
+                                                        <a
+                                                            href="https://ieeexplore.ieee.org/abstract/document/10880901/">
+                                                            <img src="assets/Profile Picture/K-means_result.png"
+                                                                alt="Profile Picture" class="profile-iagge"
+                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                        </a>
+                                                    </td>
+
+
+                                                    <td width="62%" valign="top">
+                                                        <p align="justify" style="margin-bottom: 0;"><a
+                                                                href="https://arxiv.org/abs/2502.21321"
+                                                                id="EXTREME-PARKOUR">
+
+
+                                                                <b>Enhancing Climate Change Understanding: A Novel Deep
+                                                                    Learning Framework with the Climate
+                                                                    Change Parameter Model. </b>
+
+                                                            </a>
+                                                            <br>
+                                                            <b>Tajamul Ashraf</b>, Janibul Bashir<br>
+                                                            MoSICom 2024
+                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
+                                                        </p>
+
+                                                        <div class="paper" id="extreme-parkour">
+                                                            <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
+                                                            <a href="javascript:toggleblock('mosicom')">abstract</a>
+                                                            |
+
+
+
+                                                            <a
+                                                                href="https://github.com/mbzuai-oryx/Awesome-LLM-Post-training">code</a>
+
+                                                            <p align="justify"> <i style="display: none;"
+                                                                    id="mosicom">One
+                                                                    of
+                                                                    the severe and pressing problems which humanity is
+                                                                    facing in the 21st Century is climate change. It is
+                                                                    adversely affecting the entire globe as is evident
+                                                                    with
+                                                                    the rising ocean levels, accelerated melting of
+                                                                    glaciers, frequent storms, and many more. The need
+                                                                    of
+                                                                    the hour is to limit climate change by reducing
+                                                                    greenhouse gas emissions. Machine learning
+                                                                    algorithms
+                                                                    have proven to be extremely effective in numerous
+                                                                    scenarios and the experts are working to extend
+                                                                    their
+                                                                    uses to limit the effects of climate change. The
+                                                                    domain
+                                                                    is vast but in the current literature, the works in
+                                                                    this
+                                                                    domain are very limited. In this paper, we have
+                                                                    tried to
+                                                                    work in this particular direction by applying deep
+                                                                    learning methodologies to analyze the effect of
+                                                                    different climate factors on overall climate change.
+                                                                    We
+                                                                    proposed a novel climate change parameter model to
+                                                                    predict the correlation between different climate
+                                                                    parameters. We evaluated our scheme by validating
+                                                                    the
+                                                                    model on the data specific to the Jammu and Kashmir
+                                                                    region and the model loss was found to be under 2%.
+                                                                    In
+                                                                    addition, based on our model we proposed some
+                                                                    reactive
+                                                                    strategies that can be implemented to keep the
+                                                                    climate
+                                                                    change effects under control..</i></p>
+
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="">
+                                                    <td width="38%" valign="middle" align="right"
+                                                        class="profile-image-container">
+                                                        <a href="https://extreme-parkour.github.io/">
+                                                            <img src="assets/Profile Picture/phase_seg.png"
+                                                                alt="Profile Picture" class="profile-iagge"
+                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                        </a>
+                                                    </td>
+
+
+
+
+                                                    <td width="62%" valign="top">
+                                                        <p align="justify" style="margin-bottom: 0;"><a
+                                                                href="https://arxiv.org/abs/2411.16794"
+                                                                id="EXTREME-PARKOUR">
+
+
+                                                                <b>Phase-Informed Tool Segmentation for Manual
+                                                                    Small-Incision Cataract Surgery</b>
+
+                                                            </a>
+                                                            <br>
+                                                            Bhuvan Sachdeva, Naren Akash, <b>Tajamul Ashraf</b>, Simon
+                                                            Muller,
+                                                            Thomas Schultz, Maximilian WM Wintergerst, Niharika Singri
+                                                            Prasad, Kaushik Murali, Mohit Jain<br>
+                                                            Arxiv 2024
+                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
+                                                        </p>
+
+                                                        <div class="paper" id="extreme-parkour">
+                                                            <a href="https://arxiv.org/abs/2411.16794">webpage</a> |
+                                                            <a href="javascript:toggleblock('phase')">abstract</a>
+                                                            |
+                                                            <a href="">
+                                                                presentation</a> |
+
+
+                                                            <a href="">code</a>
+
+                                                            <p align="justify"> <i style="display: none;"
+                                                                    id="phase">Cataract surgery is the most common
+                                                                    surgical procedure globally, with a
+                                                                    disproportionately
+                                                                    higher burden in developing countries. While
+                                                                    automated
+                                                                    surgical video analysis has been explored in general
+                                                                    surgery, its application to ophthalmic procedures
+                                                                    remains limited. Existing works primarily focus on
+                                                                    Phaco
+                                                                    cataract surgery, an expensive technique not
+                                                                    accessible
+                                                                    in regions where cataract treatment is most needed.
+                                                                    In
+                                                                    contrast, Manual Small-Incision Cataract Surgery
+                                                                    (MSICS)
+                                                                    is the preferred low-cost, faster alternative in
+                                                                    high-volume settings and for challenging cases.
+                                                                    However,
+                                                                    no dataset exists for MSICS. To address this gap, we
+                                                                    introduce Sankara-MSICS, the first comprehensive
+                                                                    dataset
+                                                                    containing 53 surgical videos annotated for 18
+                                                                    surgical
+                                                                    phases and 3,527 frames with 13 surgical tools at
+                                                                    the
+                                                                    pixel level. We benchmark this dataset on
+                                                                    state-of-the-art models and present ToolSeg, a novel
+                                                                    framework that enhances tool segmentation by
+                                                                    introducing
+                                                                    a phase-conditional decoder and a simple yet
+                                                                    effective
+                                                                    semi-supervised setup leveraging pseudo-labels from
+                                                                    foundation models. Our approach significantly
+                                                                    improves
+                                                                    segmentation performance, achieving a 23.77% to
+                                                                    38.10%
+                                                                    increase in mean Dice scores, with a notable boost
+                                                                    for
+                                                                    tools that are less prevalent and small.
+                                                                    Furthermore, we
+                                                                    demonstrate that ToolSeg generalizes to other
+                                                                    surgical
+                                                                    settings, showcasing its effectiveness on the CaDIS
+                                                                    dataset.</i></p>
+
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+
+                                                <tr bgcolor="#ffffd0">
+                                                    <td width="38%" valign="middle" align="right"
+                                                        class="profile-image-container">
+                                                        <a href="h">
+                                                            <img src="assets/Profile Picture/fate.png"
+                                                                alt="Profile Picture" class="profile-image"
+                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
+                                                        </a>
+                                                    </td>
+                                                    <td width="62%" valign="top">
+                                                        <p align="justify" style="margin-bottom: 0;"><a href=""
+                                                                id="EXTREME-PARKOUR">
+                                                                <b>FATE: Focal-modulated Attention Encoder for
+                                                                    temperature prediction</b>
+                                                            </a>
+                                                            <br>
+                                                            <b>Tajamul Ashraf</b>, Janibul Bashir<br>
+                                                            ArXiv 2024<a href="https://arxiv.org/abs/2408.11336"></a>
+                                                        </p>
+
+                                                        <div class="paper" id="extreme-parkour">
+                                                            <a href="">webpage</a> |
+                                                            <a href="javascript:toggleblock('fate')">abstract</a>
+                                                            |
+
+                                                            <!-- <a href="">presentation</a> | -->
+
+                                                            <a href="https://github.com/Tajamul21/FATE">code</a>
+
+                                                            <p align="justify"> <i style="display: none;" id="fate">One
+                                                                    of the biggest issues facing humanity in the
+                                                                    twenty-first century is climate change, as shown by
+                                                                    the
+                                                                    increasing sea levels, melting glaciers, and
+                                                                    frequent
+                                                                    storms. Accurate temperature forecasting is crucial
+                                                                    for
+                                                                    understanding and mitigating its impacts.
+                                                                    Cutting-edge
+                                                                    data-driven models for temperature forecasting
+                                                                    typically
+                                                                    employ recurrent neural networks(CNNs), with certain
+                                                                    models integrating attention mechanisms. However
+                                                                    RNNs
+                                                                    sequential processing limits parallelization,
+                                                                    especially
+                                                                    for longer sequences. In order to do this, we
+                                                                    provide a
+                                                                    brand-new method for temperature prediction that is
+                                                                    based on the FocalNet Transformer architecture. By
+                                                                    functioning in a multi-tensor format, the suggested
+                                                                    Focal-modulation Attention Encoder (FATE) framework
+                                                                    leverages the spatial and temporal nuances of
+                                                                    meteorological data characteristics by integrating
+                                                                    tensorized modulation. Comparative assessments
+                                                                    against
+                                                                    existing transformer encoder architectures, 3D CNNs,
+                                                                    LSTM, and ConvLSTM demonstrate our model’s superior
+                                                                    ability to capture nuanced patterns inherent in the
+                                                                    data, particularly in the context of temperature
+                                                                    prediction. We also introduce a new labeled dataset,
+                                                                    Climate change Parameter dataset (CCPD), which
+                                                                    encompasses 40 years of data from J&K region on
+                                                                    seven
+                                                                    key parameters that influence climate change,
+                                                                    supporting
+                                                                    further research in this area. Experiments on two
+                                                                    real-world benchmark temperature datasets from
+                                                                    weather
+                                                                    stations in the USA, Canada, and Europe demonstrate
+                                                                    accuracy improvements of 12%, 23%, and 28%
+                                                                    respectively,
+                                                                    compared to existing SOTA models. In addition, we
+                                                                    achieved state-of-the-art results on our CCPD
+                                                                    dataset
+                                                                    with a 24% improvement. To understand FATE, we
+                                                                    introduce
+                                                                    two modulation scores from the tensorial modulation
+                                                                    process. These scores clarify our model’s decision
+                                                                    making and key climate change parameters. For
+                                                                    reproducible research, we will release the source
+                                                                    code,
+                                                                    pre-trained FATE model, and CCPD dataset.</i></p>
+
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr bgcolor="">
+                                                    <td width="38%" valign="middle" align="right"
+                                                        class="profile-image-container">
+                                                        <a href="https://dmaster-iitd.github.io/webpage/">
+                                                            <img src="assets/Profile Picture/dmaster.png"
+                                                                alt="Profile Picture" class="profile-image"
+                                                                style="display:block; margin:auto; padding:0; border-radius:15px; border:1px solid rgb(158, 10, 27); max-width:85%; height:auto; object-fit:contain;">
+                                                        </a>
+                                                    </td>
+
+                                                    <!-- Text Column -->
+                                                    <td width="62%" valign="top" class="text-container">
+                                                        <p align="justify" style="margin-bottom: 0;">
+                                                            <a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
+                                                                id="EXTREME-PARKOUR" style="text-align: justify;">
+                                                                <b>D-MASTER: Mask Annealed Transformer for Unsupervised
+                                                                    Domain Adaptation in Breast Cancer Detection from
+                                                                    Mammograms
+                                                                </b></a>
+                                                            <br>
+                                                            <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir,
+                                                            Richa
+                                                            Gabha, Chetan Arora<br>
+                                                            MICCAI 2024 [<a href="">Poster</a>]
+                                                        </p>
+
+                                                        <div class="paper" id="extreme-parkour">
+                                                            <a
+                                                                href="https://dmaster-iitd.github.io/webpage/">webpage</a>
+                                                            |
+                                                            <a href="javascript:toggleblock('dmaster')">abstract</a> |
+                                                            <a href="">presentation</a> |
+                                                            <a href="https://github.com/Tajamul21/D-MASTER">code</a>
+
+                                                            <p align="justify">
+                                                                <i style="display: none;" id="dmaster">
+                                                                    We focus on the problem of Unsupervised Domain
+                                                                    Adaptation (UDA) for breast cancer detection from
+                                                                    mammograms (BCDM). Recent advancements have shown
+                                                                    that
+                                                                    masked image modeling serves as a robust pretext
+                                                                    task
+                                                                    for UDA. However, when applied to cross-domain BCDM,
+                                                                    these techniques struggle with breast abnormalities
+                                                                    such
+                                                                    as masses, asymmetries, and micro-calcifications.
+                                                                    Recognizing these challenges, we introduce a
+                                                                    transformer-based Domain-invariant Mask Annealed
+                                                                    Student
+                                                                    Teacher autoencoder (D-MASTER) framework. D-MASTER
+                                                                    adaptively masks and reconstructs multiscale feature
+                                                                    maps, enhancing the model’s ability to capture
+                                                                    reliable
+                                                                    target domain features. Experimental results show a
+                                                                    significant improvement over state-of-the-art
+                                                                    techniques
+                                                                    on multiple datasets. To promote reproducible
+                                                                    research,
+                                                                    we will publicly release source code and pre-trained
+                                                                    models.
+                                                                </i>
+                                                            </p>
+                                                        </div>
+                                                    </td>
+                                                </tr>
             </tr>
             <tr bgcolor="#ffffd0">
                 <td width="38%" valign="middle" align="right" class="profile-image-container">
@@ -1623,7 +1735,7 @@
     </div>
     </div>
     </div>
-
+    </div>
 
 
 
@@ -1889,8 +2001,8 @@
 
 
     </div>
-    <div class="l-container">
-        <h4>Languages I can connect in</h4> <br>
+    <!-- <div class="l-container">
+        <h5>Languages I know</h5> <br>
 
         <div class="ss-container">
 
@@ -1936,7 +2048,7 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
 
 
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
@@ -1979,11 +2091,9 @@
 
     <div class="footer" style="text-align: justify;">
         <p>
-            This website design is inspired by templates available
-            <a href="https://www.cs.cmu.edu/~dpathak/">here</a> and
-            <a href="https://jonbarron.info/">here</a>. Kindly avoid using scraping tools.
-            If you'd like to explore or use this template, the source code is available on my GitHub:
-            <a href="https://github.com/Tajamul21/www.tajamulashraf.com">[code]</a>.
+            This site adapts design elements from <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a> and <a
+                href="https://jonbarron.info/">Jon Barron</a>; please avoid scraping, and find the full source on GitHub
+            <a href="https://github.com/Tajamul21/www.tajamulashraf.com">here</a>.
         </p>
         <span id="current-date" style="display: block; margin: 13px 0;"></span>
         <p style="margin-top: 5px;">&copy; 2024, Tajamul Ashraf</p>
