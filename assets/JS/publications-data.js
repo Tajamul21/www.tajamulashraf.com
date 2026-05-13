@@ -8,7 +8,7 @@
  */
 window.PUBLICATIONS = {
   "topics": [
-    "Multimodal Agents",
+    "Agents",
     "Reasoning",
     "AI for Health",
     "AI for Science",
@@ -49,7 +49,7 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "Multimodal Agents",
+        "Agents",
         "AI for Health",
         "Reasoning",
         "Benchmarks",
@@ -96,7 +96,7 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "Multimodal Agents",
+        "Agents",
         "Reasoning",
         "Benchmarks",
         "Grounding"
@@ -232,9 +232,7 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Health",
-        "Multimodal Agents",
-        "Reasoning"
+        "AI for Health"
       ],
       "abstract": "MIRA improves medical retrieval-augmented generation by fusing visual and textual modalities, dynamically managing retrieved context, and supporting factual multimodal reasoning in medical VQA and report-generation tasks."
     },
@@ -264,7 +262,7 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/TITAN"
         }
       ],
-      "topics": [],
+      "topics": ["grounding"],
       "abstract": "TITAN addresses source-free domain adaptive object detection by partitioning target samples and using query-token based adversarial learning to reduce domain gaps without source data during adaptation."
     },
     {
@@ -378,7 +376,7 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/TransFed"
         }
       ],
-      "topics": [],
+      "topics": ["AI for Science"],
       "abstract": "TransFed studies focal modulation in federated learning and introduces a transformer-based framework with learn-to-customize mechanisms for heterogeneous client distributions."
     },
     {
@@ -404,7 +402,7 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/PoseWatch-Advancing-Real-Time-Human-Pose-Tracking-and-Juxtaposition-with-Deep-Learning"
         }
       ],
-      "topics": [],
+      "topics": ["AI for Science"],
       "abstract": "PoseWatch advances real-time human pose tracking and juxtaposition with deep learning, supporting activity monitoring and movement analysis through human keypoint estimation."
     },
     {
@@ -460,7 +458,7 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/Detection-Classification-and-Semantic_Segmentation-of-apples"
         }
       ],
-      "topics": [],
+      "topics": ["grounding"],
       "abstract": "This work presents an integrated computer vision system for apple detection, classification, and semantic segmentation, supporting visual understanding for agricultural applications."
     }
   ]
