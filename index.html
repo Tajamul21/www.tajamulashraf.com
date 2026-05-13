@@ -2,14 +2,27 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TZF697MT9Z"></script>
+    <!-- Google tag (gtag.js) loaded after first paint so images and text are not delayed. -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-TZF697MT9Z');
+        (function () {
+            function loadGtag() {
+                if (window.__gtagLoaded) return;
+                window.__gtagLoaded = true;
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TZF697MT9Z';
+                document.head.appendChild(script);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadGtag, { timeout: 3000 });
+            } else {
+                window.addEventListener('load', function () { setTimeout(loadGtag, 1200); });
+            }
+        }());
     </script>
 
     <!-- Basic Page Needs
@@ -27,11 +40,28 @@
     <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" as="image" href="assets/Profile Picture/155.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/Profile%20Picture/papers/agentx-fast-260.webp" type="image/webp"
+        imagesrcset="assets/Profile%20Picture/papers/agentx-fast-260.webp 260w, assets/Profile%20Picture/papers/agentx-fast-520.webp 520w, assets/Profile%20Picture/papers/agentx-fast-760.webp 760w"
+        imagesizes="260px" fetchpriority="high" data-publication-preload="agent-x">
+    <link rel="preload" as="image" href="assets/Profile%20Picture/papers/titan_iccv-fast-260.webp" type="image/webp"
+        imagesrcset="assets/Profile%20Picture/papers/titan_iccv-fast-260.webp 260w, assets/Profile%20Picture/papers/titan_iccv-fast-520.webp 520w, assets/Profile%20Picture/papers/titan_iccv-fast-760.webp 760w"
+        imagesizes="260px" fetchpriority="high" data-publication-preload="titan">
+    <link rel="preload" as="image" href="assets/Profile%20Picture/papers/dmaster-fast-260.webp" type="image/webp"
+        imagesrcset="assets/Profile%20Picture/papers/dmaster-fast-260.webp 260w, assets/Profile%20Picture/papers/dmaster-fast-520.webp 520w, assets/Profile%20Picture/papers/dmaster-fast-760.webp 760w"
+        imagesizes="260px" fetchpriority="high" data-publication-preload="d-master">
+    <link rel="preload" as="image" href="assets/Profile%20Picture/papers/transfed-fast-260.webp" type="image/webp"
+        imagesrcset="assets/Profile%20Picture/papers/transfed-fast-260.webp 260w, assets/Profile%20Picture/papers/transfed-fast-520.webp 520w, assets/Profile%20Picture/papers/transfed-fast-760.webp 760w"
+        imagesizes="260px" fetchpriority="high" data-publication-preload="transfed">
+    <link rel="preload" as="script" href="assets/JS/publications-data.js?v=fast3">
+    <link rel="preload" as="script" href="assets/JS/publications.js?v=fast3">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
 
 
-    <link rel="stylesheet" href=assets\CSS\normalize.css>
-    <link rel="stylesheet" href=assets\CSS\skeleton.css>
-    <link rel="stylesheet" href=assets/CSS/my_css.css>
+    <link rel="stylesheet" href="assets/CSS/normalize.css">
+    <link rel="stylesheet" href="assets/CSS/skeleton.css">
+    <link rel="stylesheet" href="assets/CSS/my_css.css">
 
     <style>
         /* Slightly narrower */
@@ -51,38 +81,34 @@
 
     <!-- JQueryqa
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src=assets\JS\jquery-3.1.1.min.js></script>
+    <script defer src="assets/JS/jquery-3.1.1.min.js"></script>
 
 
-    <script src="assets\JS\nav_scroll.js"> </script>
-
-    <!-- Font-Awesome
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href=assets\CSS\font-awesome.min.css>
-
-    <!-- Academicons
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href=assets\CSS\academicons.min.css>
-
+    <script defer src="assets/JS/nav_scroll.js"> </script>
     <!-- Skeleton tabs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href=assets\CSS\skeleton-tabs.css>
-    <script src=assets\JS\skeleton-tabs.js></script>
+    <link rel="stylesheet" href="assets/CSS/skeleton-tabs.css">
+    <script defer src="assets/JS/skeleton-tabs.js"></script>
 
     <!-- Timeline
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href=assets\CSS\timeline.css>
+    <link rel="stylesheet" href="assets/CSS/timeline.css">
+    <link rel="stylesheet" href="assets/CSS/responsive.css?v=fast3">
 
     <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!--<link rel="stylesheet" href=/msaveski/libs/external/github-prettify-theme.css>-->
-    <script src=assets\JS\my_js.js></script>
+    <!--<link rel="stylesheet" href="/msaveski/libs/external/github-prettify-theme.css">-->
+    <script defer src="assets/JS/my_js.js"></script>
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href=favicon.ico>
-    <link rel="shortcut icon" type="image/png" href=/msaveski/libs/icon.png>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </noscript>
 
 
 
@@ -339,25 +365,43 @@
 
 
 
-    <link rel="shortcut icon" href="https://www.cs.cmu.edu/sites/default/files/favicon_0.ico"
-        type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <script type="text/javascript" src="js/hidebib.js"></script>
     <title>Tajamul Ashraf</title>
     <meta name="Tajamul Ashraf's Homepage" http-equiv="Content-Type" content="Tajamul Ashraf's Homepage">
-    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic'
-        rel='stylesheet' type='text/css'>
-    <!-- Start : Google Analytics Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style"
+        href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic"
+            rel="stylesheet" type="text/css">
+    </noscript>
+    <!-- Start : legacy Google Analytics Code, delayed to avoid blocking image paint -->
     <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-64069893-1', 'auto');
-        ga('send', 'pageview');
+        (function () {
+            window.GoogleAnalyticsObject = 'ga';
+            window.ga = window.ga || function () { (window.ga.q = window.ga.q || []).push(arguments); };
+            window.ga.l = 1 * new Date();
+            ga('create', 'UA-64069893-1', 'auto');
+            ga('send', 'pageview');
+            function loadLegacyAnalytics() {
+                if (window.__legacyGaLoaded) return;
+                window.__legacyGaLoaded = true;
+                var script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.google-analytics.com/analytics.js';
+                document.head.appendChild(script);
+            }
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadLegacyAnalytics, { timeout: 3500 });
+            } else {
+                window.addEventListener('load', function () { setTimeout(loadLegacyAnalytics, 1500); });
+            }
+        }());
     </script>
-    <!-- End : Google Analytics Code -->
+    <!-- End : legacy Google Analytics Code -->
     <!-- Scramble Script by Jeff Donahue -->
     <script src="js/scramble.js"></script>
 
@@ -386,61 +430,59 @@
                             </font>
                             <script>
                                 emailScramble = new scrambledString(document.getElementById('email'),
-                                    'emailScramble', 'akar.ujm@afahsltaust.edu.sa',
-                                    [13, 16, 2, 12, 8, 6, 3, 5, 15, 4, 14, 17, 11, 10, 7, 1, 9, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28]);
+                                    'emailScramble', 'aar.ujm@afhsltantu.edu.sg',
+                                    [13, 2, 12, 8, 6, 3, 5, 15, 4, 14, 11, 10, 7, 1, 9, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]);
                             </script>
                         </p>
 
                         <tr>
                             <td width="32%" valign="top" style="padding-bottom: 0x;"> <a
-                                    href="assets\Profile Picture/155.jpg"><img src="assets\Profile Picture/155.jpg"
-                                        width="100%" style="border-radius:15px"></a>
+                                    href="assets/Profile Picture/155.jpg"><img src="assets/Profile Picture/155.jpg"
+                                        width="100%" height="auto" loading="eager" decoding="async" fetchpriority="high"
+                                        style="border-radius:15px" alt="Tajamul Ashraf profile photo"></a>
                                 <p align=center style="margin-bottom: 0px;">
                                     <a href="assets/Documents/CV.pdf">CV</a> |
 
-                                    <a href="https://github.com/Tajamul21">Github</a> |
-                                    <a href="https://www.linkedin.com/in/tajamul221/">Linkedln</a> <br />
+                                    <a href="https://github.com/Tajamul21">GitHub</a> |
+                                    <a href="https://www.linkedin.com/in/tajamul221/">LinkedIn</a> <br />
                                     <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en">Google
                                         Scholar</a> |
                                     <a onclick="openPage('blog/index.html')" style="cursor: pointer">Blog</a> <br />
 
-                                    <script async src="https://platform.Linkedln.com/widgets.js"
-                                        charset="utf-8"></script>
                                 </p>
                                 </p>
                             </td>
                             <td width="68%" valign="top" align="justify" style="padding-bottom: 0px;">
                                 <p align="justify">
-                                    I am currently a Research Consultant at
-                                    <a href="https://www.kaust.edu.sa/" target="_blank">King Abdullah University of
-                                        Science and Technology (KAUST)</a>. I am also a Research Affiliate at <a
-                                        href="https://www.yale.edu/" target="_blank">Yale University</a> working on
-                                    multimodal timeseries modelling.
 
-                                    Previously, I was a Research Engineer at
-                                    <a href="https://mbzuai.ac.ae/" target="_blank">MBZUAI</a>, working in the
-                                    <a href="https://www.ival-mbzuai.com/" target="_blank">Intelligent Visual Analytics
-                                        Lab</a> (IVAL).
-
-                                    Before that, I was a Research Intern at
-                                    <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/"
-                                        target="_blank">Microsoft Research India</a> in Bengaluru.
-
-                                    I completed my Master's degree in Computer Science from the
-                                    <a href="https://home.iitd.ac.in/" target="_blank">Indian Institute of Technology
-                                        Delhi</a>.
-
-                                    My academic journey began with a Bachelor's degree in Information Technology from
-                                    the
-                                    <a href="https://www.nitsri.ac.in/" target="_blank">National Institute of
-                                        Technology, Srinagar</a>.
+                                    I am currently a Research Manager at
+                                    <a href="https://www.ntu.edu.sg/" target="_blank" rel="noopener noreferrer">Nanyang
+                                        Technological University, Singapore</a>,
+                                    working under the supervision of
+                                    <a href="https://personal.ntu.edu.sg/adamskong/" target="_blank"
+                                        rel="noopener noreferrer">Prof. Adams Wai-Kin Kong</a>.
+                                    My current research is part of a joint initiative with
+                                    <a href="https://www.interpol.int/en/How-we-work/Innovation/INTERPOL-Innovation-Centre"
+                                        target="_blank" rel="noopener noreferrer">INTERPOL Singapore</a>,
+                                    with a focus on video and temporal understanding.
+                        
+                                
+                                    I received my Master's degree in Information Technology from the
+                                    <a href="https://www.iitd.ac.in/" target="_blank" rel="noopener noreferrer">Indian
+                                        Institute of Technology Delhi</a> during which I had the privilege to intern at <a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/" target="_blank" rel="noopener noreferrer">Microsoft Research</a>. My Master's thesis was awarded the
+                                    and my Bachelor's degree in Information Technology from the
+                                    <a href="https://nitsri.ac.in/" target="_blank" rel="noopener noreferrer">National
+                                        Institute of Technology, Srinagar</a>.
+                              
                                 </p>
 
                                 <p align="justify">
-                                    Outside of work, I enjoy playing badminton and swimming quite often. I'm also
-                                    passionate about making a positive impact on the society which led me to initiate <a
-                                        href="https://www.ralithmilith.org/" target="_blank">Ralith Milith</a>, an
-                                    anti-drug society in Kashmir.
+                                    Outside research, I enjoy badminton and swimming. I am also passionate about
+                                    creating positive social impact, which led me to initiate <a
+                                        href="https://www.ralithmilith.org/" target="_blank">Ralith
+                                        Milith</a>, an
+                                    anti-drug society in Kashmir. When I am not training models, I am usually training
+                                    my badminton reflexes.
                                     </a>
 
                                 <p align="justify">
@@ -642,15 +684,12 @@
                     <div class="docs-section" id="research">
                         <h4 id="research">Research</h4>
                         <p align="justify">
-                            My research interests lie at the intersection of multimodal systems in vision and language
-                            domains, with a focus on enhancing reasoning and decision-making capabilities. I am
-                            particularly interested in addressing the challenges faced by large multi-modal models
-                            across
-                            discriminative, generative, and perceptual understanding tasks, especially in
-                            Out-Of-Distribution (OOD) and federated scenarios. My work explores domain
-                            adaptation, reinforcement learning, causal reasoning, and knowledge distillation techniques
-                            to improve the robustness and generalization of AI models in complex, real-world
-                            environments such as healthcare and robotics.
+                            My research focuses on agents, with an emphasis on reasoning,
+                            grounding, and decision-making. I study how large multimodal models generalize across
+                            discriminative, generative, and perceptual tasks, particularly under out-of-distribution and
+                            federated settings. My work explores domain adaptation, reinforcement learning, and
+                            data-efficient learning to improve robustness and scalability. I am especially interested in
+                            building reliable agents for real-world applications in healthcare and embodied AI.
                         </p>
 
 
@@ -662,7 +701,7 @@
                                 <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en" target="_blank"
                                     class="scholar-link">
                                     <img src="./assets/Profile Picture/scholar_logo.png" alt="Google Scholar Profile"
-                                        class="scholar-logo">
+                                        class="scholar-logo" width="512" height="512" loading="lazy" decoding="async">
                                 </a>
 
                             </div>
@@ -674,7 +713,7 @@
                                 style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
                                 <ul class="tab-nav" style="margin: 0;">
                                     <li>
-                                        <div class="button active" data-ref="#publication-selected">Selected</div>
+                                        <div class="button active" data-ref="#publication-selected">Representative</div>
                                     </li>
                                     <li>
                                         <div class="button" data-ref="#publication-all">All</div>
@@ -690,1499 +729,35 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" id="publication-selected">
                                     <table>
-                                        <tbody>
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://arxiv.org/abs/2506.21484">
-                                                        <img src="assets/Profile Picture/titan_iccv.png"
-                                                            alt="Profile Picture" class="profile-iagge"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-                                                <td width="62%" valign="middle">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://arxiv.org/abs/2506.21484"
-                                                            id="EXTREME-PARKOUR">
-
-
-                                                            <b>TITAN: Query-Token based Domain Adaptive Adversarial
-                                                                Learning</b>
-
-                                                        </a>
-                                                        <br>
-                                                        <b>Tajamul Ashraf</b>, Janibul Bashir<br>
-                                                        <span
-                                                            style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                            Accepted at ICCV 2025
-                                                        </span>
-                                                        <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
-                                                        <a href="javascript:toggleblock('titan')">abstract</a>
-                                                        |
-
-
-
-                                                        <a href="https://github.com/Tajamul21/TITAN">code</a>
-
-                                                        <p align="justify"> <i style="display: none;" id="titan">
-                                                                We focus on source-free domain adaptive object detection
-                                                                (SF-DAOD) problem when source data is unavailable during
-                                                                adaptation and the model must adapt to unlabeled target
-                                                                domain. Majority of approaches for the problem employ
-                                                                a self-supervised approach using a student-teacher (ST)
-                                                                framework where pseudo-labels are generated via a
-                                                                sourcepretrained model for further fine-tuning. We
-                                                                observe that the
-                                                                performance of a student model often degrades
-                                                                drastically,
-                                                                due to collapse of teacher model primarily caused by
-                                                                high
-                                                                noise in pseudo-labels, resulting from domain bias,
-                                                                discrepancies, and a significant domain shift across
-                                                                domains. To
-                                                                obtain reliable pseudo-labels, we propose a Target-based
-                                                                Iterative Query-Token Adversarial Network (TITAN) which
-                                                                separates the target images into two subsets that are
-                                                                similar
-                                                                to the source (easy) and those that are dissimilar
-                                                                (hard). We
-                                                                propose a strategy to estimate variance to partition the
-                                                                target domain. This approach leverages the insight that
-                                                                higher
-                                                                detection variances correspond to higher recall and
-                                                                greater
-                                                                similarity to the source domain. Also, we incorporate
-                                                                querytoken based adversarial modules into a
-                                                                student-teacher baseline framework to reduce the domain
-                                                                gaps between two feature representations. Experiments
-                                                                conducted on four natural
-                                                                imaging datasets and two challenging medical datasets
-                                                                have
-                                                                substantiated the superior performance of TITAN compared
-                                                                to existing state-of-the-art (SOTA) methodologies. We
-                                                                report
-                                                                an mAP improvement of +22.7, +22.2, +21.1 and +3.7
-                                                                percent over the current SOTA on C2F, C2B, S2C, and K2C
-                                                                benchmarks respectively.
-                                                                .</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://arxiv.org/pdf/2507.07902">
-                                                        <img src="assets/Profile Picture/mira_mm.png"
-                                                            alt="Profile Picture" class="profile-iagge"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-                                                <td width="62%" valign="top">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://arxiv.org/pdf/2507.07902"
-                                                            id="EXTREME-PARKOUR">
-
-
-                                                            <b>MIRA: A Novel Framework for Fusing Modalities in Medical
-                                                                RAG</b>
-
-                                                        </a>
-                                                        <br>
-                                                        Jinhong Wang*, <b>Tajamul Ashraf*</b>, Zongyan Han, Jorma
-                                                        Laaksonen, Rao Mohammad Anwer<br>
-                                                        <span
-                                                            style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                            Accepted at ACM Multimedia 2025
-                                                        </span>
-                                                        <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://mbzuai-oryx.github.io/MIRA/">webpage</a> |
-                                                        <a href="javascript:toggleblock('mira')">abstract</a>
-                                                        |
-
-
-
-                                                        <a href="https://github.com/mbzuai-oryx/MIRA">code</a>
-
-                                                        <p align="justify"> <i style="display: none;"
-                                                                id="mira">Multimodal Large Language Models (MLLMs) have
-                                                                significantly advanced AI-assisted medical diagnosis,
-                                                                but they often generate factually inconsistent responses
-                                                                that deviate from established medical knowledge.
-                                                                Retrieval-Augmented Generation (RAG) enhances factual
-                                                                accuracy by integrating external sources, but it
-                                                                presents two key challenges. First, insufficient
-                                                                retrieval can miss critical information, whereas
-                                                                excessive retrieval can introduce irrelevant or
-                                                                misleading content, disrupting model output. Second,
-                                                                even when the model initially provides correct answers,
-                                                                over-reliance on retrieved data can lead to factual
-                                                                errors. To address these issues, we introduce the
-                                                                Multimodal Intelligent Retrieval and Augmentation (MIRA)
-                                                                framework, designed to optimize factual accuracy in
-                                                                MLLM. MIRA consists of two key components: (1) a
-                                                                calibrated Rethinking and Rearrangement module that
-                                                                dynamically adjusts the number of retrieved contexts to
-                                                                manage factual risk, and (2) A medical RAG framework
-                                                                integrating image embeddings and a medical knowledge
-                                                                base with a query-rewrite module for efficient
-                                                                multimodal reasoning. This enables the model to
-                                                                effectively integrate both its inherent knowledge and
-                                                                external references. Our evaluation of publicly
-                                                                available medical VQA and report generation benchmarks
-                                                                demonstrates that MIRA substantially enhances factual
-                                                                accuracy and overall performance, achieving new
-                                                                state-of-the-art results.</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://dmaster-iitd.github.io/webpage/">
-                                                        <img src="assets/Profile Picture/dmaster.png"
-                                                            alt="Profile Picture" class="profile-image"
-                                                            style="display:block; margin:auto; padding:0; border-radius:15px; border:1px solid rgb(158, 10, 27); max-width:85%; height:auto; object-fit:contain;">
-                                                    </a>
-                                                </td>
-
-                                                <!-- Text Column -->
-                                                <td width="62%" valign="top" class="text-container">
-                                                    <p align="justify" style="margin-bottom: 0;">
-                                                        <a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                            id="EXTREME-PARKOUR" style="text-align: justify;">
-                                                            <b>D-MASTER: Mask Annealed Transformer for Unsupervised
-                                                                Domain Adaptation in Breast Cancer Detection from
-                                                                Mammograms
-                                                            </b></a>
-                                                        <br>
-                                                        <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir, Richa
-                                                        Gabha, Chetan Arora<br>
-                                                        <span
-                                                            style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                            Accepted at MICCAI 2024
-                                                        </span>
-
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://dmaster-iitd.github.io/webpage/">webpage</a> |
-                                                        <a href="javascript:toggleblock('dmaster')">abstract</a> |
-                                                        <a href="">presentation</a> |
-                                                        <a href="https://github.com/Tajamul21/D-MASTER">code</a>|
-                                                        <a href="">poster</a>
-
-                                                        <p align="justify">
-                                                            <i style="display: none;" id="dmaster">
-                                                                We focus on the problem of Unsupervised Domain
-                                                                Adaptation (UDA) for breast cancer detection from
-                                                                mammograms (BCDM); recent advancements show that masked
-                                                                image modeling serves as a robust pretext task for UDA,
-                                                                but these techniques struggle with breast abnormalities
-                                                                such as masses, asymmetries, and micro-calcifications;
-                                                                recognizing these challenges, we introduce a
-                                                                transformer-based Domain-invariant Mask Annealed Student
-                                                                Teacher autoencoder (D-MASTER) framework, which
-                                                                adaptively masks and reconstructs multiscale feature
-                                                                maps to enhance the model’s ability to capture reliable
-                                                                target domain features; experimental results show
-                                                                significant improvement over state-of-the-art techniques
-                                                                on multiple datasets, and we will publicly release
-                                                                source code and pre-trained models to promote
-                                                                reproducible research.
-                                                            </i>
-                                                        </p>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-                                                    <a href="https://extreme-parkour.github.io/">
-                                                        <img src="assets/Profile Picture/wacv24_transfed.png"
-                                                            alt="Profile Picture" class="profile-image"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-                                                <td width="62%" valign="top" class="text-container">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                            id="EXTREME-PARKOUR" style="text-align: justify;">
-                                                            <b>TransFED: A way to epitomize Transformer based Focal
-                                                                Modulation using Federated Learning</b></a>
-
-                                                        </a><br>
-                                                        <b>Tajamul Ashraf</b>, Fuzayil Mir, Iqra Altaf Gillani<br>
-                                                        <span
-                                                            style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                            Accepted at WACV 2024
-                                                        </span>
-
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a
-                                                            href="https://fuzayilmir.github.io/webpage_transfed/">webpage</a>
-                                                        |
-                                                        <a href="javascript:toggleblock('transfed')">abstract</a>
-                                                        |
-                                                        <a href="assets\Documents\wacv\WACV_Final_ppt.pdf">
-                                                            presentation</a>
-
-
-                                                        <a href="https://github.com/Tajamul21/TransFed">code</a> |
-
-                                                        <a href="assets/Documents/wacv/wacv24-479.pdf">
-                                                            poster</a> |
-
-                                                        <p align="justify"> <i style="display: none;"
-                                                                id="transfed">Federated learning enables collaborative
-                                                                machine learning while preserving data privacy, and
-                                                                tailored federated learning addresses client
-                                                                heterogeneity for personalized models; this paper
-                                                                investigates the detrimental effects of federated
-                                                                averaging (FedAvg) on focal modulation-based
-                                                                transformers in heterogeneous data scenarios and
-                                                                proposes TransFed, a novel transformer-based federated
-                                                                learning framework with a learn-to-tailor approach using
-                                                                a server-side hyper network to generate client-specific
-                                                                projection matrices for focal modulation layers,
-                                                                demonstrating superior performance on non-IID pneumonia
-                                                                classification datasets and advancing focal modulation
-                                                                in decentralized environments..</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr bgcolor="">
-                                                <td width="38%" valign="middle" align="right"
-                                                    class="profile-image-container">
-
-                                                    <a href="https://github.com/Tajamul21/HF-Fed">
-                                                        <img src="assets/Profile Picture/hffed.png"
-                                                            alt="Profile Picture" class="profile-image"
-                                                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                    </a>
-                                                </td>
-
-
-                                                <td width="62%" valign="top">
-                                                    <p align="justify" style="margin-bottom: 0;"><a
-                                                            href="https://tisharepo.github.io/Webpage/"
-                                                            id="EXTREME-PARKOUR"
-                                                            style="text-align: justify; font-weight: bold;">
-                                                            HF-Fed: Hierarchical Based Customized Federated
-                                                            Learning Framework for X-Ray Imaging</a>
-
-                                                        </a><br>
-                                                        <b>Tajamul Ashraf</b>, Tisha Madame<br>
-
-                                                        <span
-                                                            style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                            Accepted at MICCAI DeepBreath 2024 (Oral)
-                                                        </span>
-                                                        <span style="color: red;"><b>Best Student Paper
-                                                                Award!</b></span>
-
-                                                    </p>
-
-                                                    <div class="paper" id="extreme-parkour">
-                                                        <a href="https://tisharepo.github.io/Webpage/">webpage</a> |
-                                                        <a href="javascript:toggleblock('hffed')">abstract</a>
-                                                        |
-                                                        <a href="">
-                                                            presentation</a> |
-
-
-                                                        <a href="https://github.com/Tajamul21/HF-Fed">code</a>
-
-                                                        <p align="justify"> <i style="display: none;" id="hffed">In
-                                                                clinical applications, X-Ray
-                                                                technology plays a crucial role in noninvasive
-                                                                examinations like mammography, providing essential
-                                                                anatomical information about patients. However, the
-                                                                inherent radiation risk associated with X-Ray procedures
-                                                                raises significant concerns. X-Ray reconstruction is
-                                                                crucial in medical imaging for creating detailed visual
-                                                                representations of internal structures, and facilitating
-                                                                diagnosis and treatment without invasive procedures.
-                                                                Recent advancements in deep learning (DL) have shown
-                                                                promise in X-Ray reconstruction. Nevertheless,
-                                                                conventional DL methods often necessitate the
-                                                                centralized aggregation of substantial large datasets
-                                                                for training, following specific scanning protocols.
-                                                                This requirement results in notable domain shifts and
-                                                                privacy issues. To address these challenges, we
-                                                                introduce the Hierarchical Framework based Federated
-                                                                Learning method (HF-Fed) for customized X-Ray Imaging.
-                                                                HF-Fed addresses the challenges in X-Ray imaging
-                                                                optimization by decomposing the problem into two
-                                                                components: local data adaptation and holistic X-Ray
-                                                                Imaging. It employs a hospital-specific hierarchical
-                                                                framework and a shared common imaging network called
-                                                                Network of Networks (NoN) for these tasks. The emphasis
-                                                                of the NoN is on acquiring stable features from a
-                                                                variety of data distributions. A hierarchical
-                                                                hypernetwork extracts domain-specific hyperparameters,
-                                                                conditioning the NoN for customized X-Ray
-                                                                reconstruction. Experimental results demonstrate
-                                                                HF-Fed’s competitive performance, offering a promising
-                                                                solution for enhancing X-Ray imaging without the need
-                                                                for data sharing. This study significantly contributes
-                                                                to the evolving body of literature on the potential
-                                                                advantages of federated learning in the healthcare
-                                                                sector. It offers valuable insights for policymakers and
-                                                                healthcare providers holistically.</i></p>
-
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-
-
-
+                                        <tbody id="publication-selected-body" data-publication-list="selected">
                                         </tbody>
                                     </table>
                                 </div>
 
                                 <div class="tab-pane" id="publication-all">
+                                    <div id="publication-filter-controls" class="publication-filter-controls"
+                                        aria-label="Filter publications by topic"></div>
+                                    <div id="publication-filter-summary" class="visually-hidden" aria-live="polite">
+                                    </div>
                                     <div class="pub-scrollbox">
                                         <table>
-                                            <tbody>
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a href="https://arxiv.org/pdf/2507.07902">
-                                                            <img src="assets/Profile Picture/mira_mm.png"
-                                                                alt="Profile Picture" class="profile-iagge"
-                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                        </a>
-                                                    </td>
+                                            <tbody id="publication-all-body" data-publication-list="all">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-                                                    <td width="62%" valign="top">
-                                                        <p align="justify" style="margin-bottom: 0;"><a
-                                                                href="https://arxiv.org/pdf/2507.07902"
-                                                                id="EXTREME-PARKOUR">
 
 
-                                                                <b>MIRA: A Novel Framework for Fusing Modalities in
-                                                                    Medical
-                                                                    RAG</b>
 
-                                                            </a>
-                                                            <br>
-                                                            Jinhong Wang*, <b>Tajamul Ashraf*</b>, Zongyan Han, Jorma
-                                                            Laaksonen, Rao Mohammad Anwer<br>
-                                                            <span
-                                                                style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                                Accepted at ACM Multimedia 2025
-                                                            </span>
-                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                        </p>
 
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a href="https://mbzuai-oryx.github.io/MIRA/">webpage</a> |
-                                                            <a href="javascript:toggleblock('mira')">abstract</a>
-                                                            |
 
 
-
-                                                            <a href="https://github.com/mbzuai-oryx/MIRA">code</a>
-
-                                                            <p align="justify"> <i style="display: none;"
-                                                                    id="mira">Multimodal Large Language Models (MLLMs)
-                                                                    have
-                                                                    significantly advanced AI-assisted medical
-                                                                    diagnosis,
-                                                                    but they often generate factually inconsistent
-                                                                    responses
-                                                                    that deviate from established medical knowledge.
-                                                                    Retrieval-Augmented Generation (RAG) enhances
-                                                                    factual
-                                                                    accuracy by integrating external sources, but it
-                                                                    presents two key challenges. First, insufficient
-                                                                    retrieval can miss critical information, whereas
-                                                                    excessive retrieval can introduce irrelevant or
-                                                                    misleading content, disrupting model output. Second,
-                                                                    even when the model initially provides correct
-                                                                    answers,
-                                                                    over-reliance on retrieved data can lead to factual
-                                                                    errors. To address these issues, we introduce the
-                                                                    Multimodal Intelligent Retrieval and Augmentation
-                                                                    (MIRA)
-                                                                    framework, designed to optimize factual accuracy in
-                                                                    MLLM. MIRA consists of two key components: (1) a
-                                                                    calibrated Rethinking and Rearrangement module that
-                                                                    dynamically adjusts the number of retrieved contexts
-                                                                    to
-                                                                    manage factual risk, and (2) A medical RAG framework
-                                                                    integrating image embeddings and a medical knowledge
-                                                                    base with a query-rewrite module for efficient
-                                                                    multimodal reasoning. This enables the model to
-                                                                    effectively integrate both its inherent knowledge
-                                                                    and
-                                                                    external references. Our evaluation of publicly
-                                                                    available medical VQA and report generation
-                                                                    benchmarks
-                                                                    demonstrates that MIRA substantially enhances
-                                                                    factual
-                                                                    accuracy and overall performance, achieving new
-                                                                    state-of-the-art results.</i></p>
-
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a href="https://arxiv.org/abs/2506.21484">
-                                                            <img src="assets/Profile Picture/titan_iccv.png"
-                                                                alt="Profile Picture" class="profile-iagge"
-                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                        </a>
-                                                    </td>
-
-
-                                                    <td width="62%" valign="middle">
-                                                        <p align="justify" style="margin-bottom: 0;"><a
-                                                                href="https://arxiv.org/abs/2506.21484"
-                                                                id="EXTREME-PARKOUR">
-
-
-                                                                <b>TITAN: Query-Token based Domain Adaptive Adversarial
-                                                                    Learning</b>
-
-                                                            </a>
-                                                            <br>
-                                                            <b>Tajamul Ashraf</b>, Janibul Bashir<br>
-                                                            <span
-                                                                style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                                Accepted at ICCV 2025
-                                                            </span>
-                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                        </p>
-
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
-                                                            <a href="javascript:toggleblock('titan1')">abstract</a>
-                                                            |
-
-
-
-                                                            <a href="https://github.com/Tajamul21/TITAN">code</a>
-
-                                                            <p align="justify"> <i style="display: none;" id="titan1">
-                                                                    We focus on source-free domain adaptive object
-                                                                    detection
-                                                                    (SF-DAOD) problem when source data is unavailable
-                                                                    during
-                                                                    adaptation and the model must adapt to unlabeled
-                                                                    target
-                                                                    domain. Majority of approaches for the problem
-                                                                    employ
-                                                                    a self-supervised approach using a student-teacher
-                                                                    (ST)
-                                                                    framework where pseudo-labels are generated via a
-                                                                    sourcepretrained model for further fine-tuning. We
-                                                                    observe that the
-                                                                    performance of a student model often degrades
-                                                                    drastically,
-                                                                    due to collapse of teacher model primarily caused by
-                                                                    high
-                                                                    noise in pseudo-labels, resulting from domain bias,
-                                                                    discrepancies, and a significant domain shift across
-                                                                    domains. To
-                                                                    obtain reliable pseudo-labels, we propose a
-                                                                    Target-based
-                                                                    Iterative Query-Token Adversarial Network (TITAN)
-                                                                    which
-                                                                    separates the target images into two subsets that
-                                                                    are
-                                                                    similar
-                                                                    to the source (easy) and those that are dissimilar
-                                                                    (hard). We
-                                                                    propose a strategy to estimate variance to partition
-                                                                    the
-                                                                    target domain. This approach leverages the insight
-                                                                    that
-                                                                    higher
-                                                                    detection variances correspond to higher recall and
-                                                                    greater
-                                                                    similarity to the source domain. Also, we
-                                                                    incorporate
-                                                                    querytoken based adversarial modules into a
-                                                                    student-teacher baseline framework to reduce the
-                                                                    domain
-                                                                    gaps between two feature representations.
-                                                                    Experiments
-                                                                    conducted on four natural
-                                                                    imaging datasets and two challenging medical
-                                                                    datasets
-                                                                    have
-                                                                    substantiated the superior performance of TITAN
-                                                                    compared
-                                                                    to existing state-of-the-art (SOTA) methodologies.
-                                                                    We
-                                                                    report
-                                                                    an mAP improvement of +22.7, +22.2, +21.1 and +3.7
-                                                                    percent over the current SOTA on C2F, C2B, S2C, and
-                                                                    K2C
-                                                                    benchmarks respectively.
-                                                                    .</i></p>
-
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a href="https://arxiv.org/abs/2502.21321">
-                                                            <img src="assets/Profile Picture/GT.png"
-                                                                alt="Profile Picture" class="profile-iagge"
-                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                        </a>
-                                                    </td>
-
-
-                                                    <td width="62%" valign="top">
-                                                        <p align="justify" style="margin-bottom: 0;"><a
-                                                                href="https://arxiv.org/abs/2504.15404"
-                                                                id="EXTREME-PARKOUR">
-
-
-                                                                <b>Context Aware Grounded Teacher for Source Free Object
-                                                                    Detection</b>
-
-                                                            </a>
-                                                            <br>
-                                                            <b>Tajamul Ashraf</b>, Rajes Manna, Partha Sarathi
-                                                            Purkayastha,
-                                                            Tavaheed Tariq, Janibul Bashir<br>
-                                                            Arxiv 2025
-                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                        </p>
-
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a href="https://arxiv.org/abs/2504.15404">webpage</a> |
-                                                            <a href="javascript:toggleblock('gt')">abstract</a>
-                                                            |
-
-
-
-                                                            <a
-                                                                href="https://github.com/Tajamul21/Grounded_Teacher">code</a>
-
-                                                            <p align="justify"> <i style="display: none;" id="gt">We
-                                                                    focus
-                                                                    on the Source Free Object Detection (SFOD) problem,
-                                                                    when
-                                                                    source data is unavailable during adaptation, and
-                                                                    the
-                                                                    model must adapt to the unlabeled target domain. In
-                                                                    medical imaging, several approaches have leveraged a
-                                                                    semi-supervised student-teacher architecture to
-                                                                    bridge
-                                                                    domain discrepancy. Context imbalance in labeled
-                                                                    training data and significant domain shifts between
-                                                                    domains can lead to biased teacher models that
-                                                                    produce
-                                                                    inaccurate pseudolabels, degrading the student
-                                                                    model's
-                                                                    performance and causing a mode collapse. Class
-                                                                    imbalance, particularly when one class significantly
-                                                                    outnumbers another, leads to contextual bias. To
-                                                                    tackle
-                                                                    the problem of context bias and the significant
-                                                                    performance drop of the student model in the SFOD
-                                                                    setting, we introduce Grounded Teacher (GT) as a
-                                                                    standard framework. In this study, we model
-                                                                    contextual
-                                                                    relationships using a dedicated relational context
-                                                                    module and leverage it to mitigate inherent biases
-                                                                    in
-                                                                    the model. This approach enables us to apply
-                                                                    augmentations to closely related classes, across and
-                                                                    within domains, enhancing the performance of
-                                                                    underrepresented classes while keeping the effect on
-                                                                    dominant classes minimal. We further improve the
-                                                                    quality
-                                                                    of predictions by implementing an expert
-                                                                    foundational
-                                                                    branch to supervise the student model. We validate
-                                                                    the
-                                                                    effectiveness of our approach in mitigating context
-                                                                    bias
-                                                                    under the SFOD setting through experiments on three
-                                                                    medical datasets supported by comprehensive ablation
-                                                                    studies. All relevant resources, including
-                                                                    preprocessed
-                                                                    data, trained model weights, and code, are publicly
-                                                                    available.</i></p>
-
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a href="https://arxiv.org/abs/2502.21321">
-                                                            <img src="assets/Profile Picture/llm_post.jpg"
-                                                                alt="Profile Picture" class="profile-iagge"
-                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                        </a>
-                                                    </td>
-
-
-                                                    <td width="62%" valign="top">
-                                                        <p align="justify" style="margin-bottom: 0;"><a
-                                                                href="https://arxiv.org/abs/2502.21321"
-                                                                id="EXTREME-PARKOUR">
-
-
-                                                                <b>LLM Post-Training: A Deep Dive into Reasoning Large
-                                                                    Language Models</b>
-
-                                                            </a>
-                                                            <br>
-                                                            Komal Kumar*, <b>Tajamul Ashraf*</b>, Omkar Thawakar, Rao
-                                                            Muhammad
-                                                            Anwer, Hisham
-                                                            Cholakkal, Mubarak Shah, Ming-Hsuan Yang, Phillip H.S. Torr,
-                                                            Fahad Shahbaz Khan, Salman Khan<br>
-                                                            Arxiv 2025
-                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                        </p>
-
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
-                                                            <a href="javascript:toggleblock('llm')">abstract</a>
-                                                            |
-
-
-
-                                                            <a
-                                                                href="https://github.com/mbzuai-oryx/Awesome-LLM-Post-training">code</a>
-
-                                                            <p align="justify"> <i style="display: none;" id="llm">Large
-                                                                    Language Models (LLMs) have transformed the natural
-                                                                    language processing landscape and brought to life
-                                                                    diverse applications. Pretraining on vast web-scale
-                                                                    data
-                                                                    has laid the foundation for these models, yet the
-                                                                    research community is now increasingly shifting
-                                                                    focus
-                                                                    toward post-training techniques to achieve further
-                                                                    breakthroughs. While pretraining provides a broad
-                                                                    linguistic foundation, post-training methods enable
-                                                                    LLMs
-                                                                    to refine their knowledge, improve reasoning,
-                                                                    enhance
-                                                                    factual accuracy, and align more effectively with
-                                                                    user
-                                                                    intents and ethical considerations. Fine-tuning,
-                                                                    reinforcement learning, and test-time scaling have
-                                                                    emerged as critical strategies for optimizing LLMs
-                                                                    performance, ensuring robustness, and improving
-                                                                    adaptability across various real-world tasks. This
-                                                                    survey provides a systematic exploration of
-                                                                    post-training methodologies, analyzing their role in
-                                                                    refining LLMs beyond pretraining, addressing key
-                                                                    challenges such as catastrophic forgetting, reward
-                                                                    hacking, and inference-time trade-offs. We highlight
-                                                                    emerging directions in model alignment, scalable
-                                                                    adaptation, and inference-time reasoning, and
-                                                                    outline
-                                                                    future research directions. We also provide a public
-                                                                    repository to continually track developments in this
-                                                                    fast-evolving field.</i></p>
-
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a
-                                                            href="https://ieeexplore.ieee.org/abstract/document/10880901/">
-                                                            <img src="assets/Profile Picture/K-means_result.png"
-                                                                alt="Profile Picture" class="profile-iagge"
-                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                        </a>
-                                                    </td>
-
-
-                                                    <td width="62%" valign="top">
-                                                        <p align="justify" style="margin-bottom: 0;"><a
-                                                                href="https://arxiv.org/abs/2502.21321"
-                                                                id="EXTREME-PARKOUR">
-
-
-                                                                <b>Enhancing Climate Change Understanding: A Novel Deep
-                                                                    Learning Framework with the Climate
-                                                                    Change Parameter Model. </b>
-
-                                                            </a>
-                                                            <br>
-                                                            <b>Tajamul Ashraf</b>, Janibul Bashir<br>
-                                                            <span
-                                                                style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                                Accepted at MoSICom 2024
-                                                            </span>
-
-                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                        </p>
-
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a href="https://arxiv.org/abs/2502.21321">webpage</a> |
-                                                            <a href="javascript:toggleblock('mosicom')">abstract</a>
-                                                            |
-
-
-
-                                                            <a
-                                                                href="https://github.com/mbzuai-oryx/Awesome-LLM-Post-training">code</a>
-
-                                                            <p align="justify"> <i style="display: none;"
-                                                                    id="mosicom">One
-                                                                    of
-                                                                    the severe and pressing problems which humanity is
-                                                                    facing in the 21st Century is climate change. It is
-                                                                    adversely affecting the entire globe as is evident
-                                                                    with
-                                                                    the rising ocean levels, accelerated melting of
-                                                                    glaciers, frequent storms, and many more. The need
-                                                                    of
-                                                                    the hour is to limit climate change by reducing
-                                                                    greenhouse gas emissions. Machine learning
-                                                                    algorithms
-                                                                    have proven to be extremely effective in numerous
-                                                                    scenarios and the experts are working to extend
-                                                                    their
-                                                                    uses to limit the effects of climate change. The
-                                                                    domain
-                                                                    is vast but in the current literature, the works in
-                                                                    this
-                                                                    domain are very limited. In this paper, we have
-                                                                    tried to
-                                                                    work in this particular direction by applying deep
-                                                                    learning methodologies to analyze the effect of
-                                                                    different climate factors on overall climate change.
-                                                                    We
-                                                                    proposed a novel climate change parameter model to
-                                                                    predict the correlation between different climate
-                                                                    parameters. We evaluated our scheme by validating
-                                                                    the
-                                                                    model on the data specific to the Jammu and Kashmir
-                                                                    region and the model loss was found to be under 2%.
-                                                                    In
-                                                                    addition, based on our model we proposed some
-                                                                    reactive
-                                                                    strategies that can be implemented to keep the
-                                                                    climate
-                                                                    change effects under control..</i></p>
-
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a href="https://extreme-parkour.github.io/">
-                                                            <img src="assets/Profile Picture/phase_seg.png"
-                                                                alt="Profile Picture" class="profile-iagge"
-                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                        </a>
-                                                    </td>
-
-
-
-
-                                                    <td width="62%" valign="top">
-                                                        <p align="justify" style="margin-bottom: 0;"><a
-                                                                href="https://arxiv.org/abs/2411.16794"
-                                                                id="EXTREME-PARKOUR">
-
-
-                                                                <b>Phase-Informed Tool Segmentation for Manual
-                                                                    Small-Incision Cataract Surgery</b>
-
-                                                            </a>
-                                                            <br>
-                                                            Bhuvan Sachdeva, Naren Akash, <b>Tajamul Ashraf</b>, Simon
-                                                            Muller,
-                                                            Thomas Schultz, Maximilian WM Wintergerst, Niharika Singri
-                                                            Prasad, Kaushik Murali, Mohit Jain<br>
-                                                            <span
-                                                                style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                                Accepted at MICCAI 2025 </span>
-
-                                                            <!-- [<a href="assets/Documents/wacv/wacv24-479.pdf">Poster</a>] -->
-                                                        </p>
-
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a href="https://arxiv.org/abs/2411.16794">webpage</a> |
-                                                            <a href="javascript:toggleblock('phase')">abstract</a>
-                                                            |
-                                                            <a href="">
-                                                                presentation</a> |
-
-
-                                                            <a href="">code</a>
-
-                                                            <p align="justify"> <i style="display: none;"
-                                                                    id="phase">Cataract surgery is the most common
-                                                                    surgical procedure globally, with a
-                                                                    disproportionately
-                                                                    higher burden in developing countries. While
-                                                                    automated
-                                                                    surgical video analysis has been explored in general
-                                                                    surgery, its application to ophthalmic procedures
-                                                                    remains limited. Existing works primarily focus on
-                                                                    Phaco
-                                                                    cataract surgery, an expensive technique not
-                                                                    accessible
-                                                                    in regions where cataract treatment is most needed.
-                                                                    In
-                                                                    contrast, Manual Small-Incision Cataract Surgery
-                                                                    (MSICS)
-                                                                    is the preferred low-cost, faster alternative in
-                                                                    high-volume settings and for challenging cases.
-                                                                    However,
-                                                                    no dataset exists for MSICS. To address this gap, we
-                                                                    introduce Sankara-MSICS, the first comprehensive
-                                                                    dataset
-                                                                    containing 53 surgical videos annotated for 18
-                                                                    surgical
-                                                                    phases and 3,527 frames with 13 surgical tools at
-                                                                    the
-                                                                    pixel level. We benchmark this dataset on
-                                                                    state-of-the-art models and present ToolSeg, a novel
-                                                                    framework that enhances tool segmentation by
-                                                                    introducing
-                                                                    a phase-conditional decoder and a simple yet
-                                                                    effective
-                                                                    semi-supervised setup leveraging pseudo-labels from
-                                                                    foundation models. Our approach significantly
-                                                                    improves
-                                                                    segmentation performance, achieving a 23.77% to
-                                                                    38.10%
-                                                                    increase in mean Dice scores, with a notable boost
-                                                                    for
-                                                                    tools that are less prevalent and small.
-                                                                    Furthermore, we
-                                                                    demonstrate that ToolSeg generalizes to other
-                                                                    surgical
-                                                                    settings, showcasing its effectiveness on the CaDIS
-                                                                    dataset.</i></p>
-
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a href="h">
-                                                            <img src="assets/Profile Picture/fate.png"
-                                                                alt="Profile Picture" class="profile-image"
-                                                                style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                                                        </a>
-                                                    </td>
-                                                    <td width="62%" valign="top">
-                                                        <p align="justify" style="margin-bottom: 0;"><a href=""
-                                                                id="EXTREME-PARKOUR">
-                                                                <b>FATE: Focal-modulated Attention Encoder for
-                                                                    temperature prediction</b>
-                                                            </a>
-                                                            <br>
-                                                            <b>Tajamul Ashraf</b>, Janibul Bashir<br>
-                                                            ArXiv 2024<a href="https://arxiv.org/abs/2408.11336"></a>
-                                                        </p>
-
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a href="">webpage</a> |
-                                                            <a href="javascript:toggleblock('fate')">abstract</a>
-                                                            |
-
-                                                            <!-- <a href="">presentation</a> | -->
-
-                                                            <a href="https://github.com/Tajamul21/FATE">code</a>
-
-                                                            <p align="justify"> <i style="display: none;" id="fate">One
-                                                                    of the biggest issues facing humanity in the
-                                                                    twenty-first century is climate change, as shown by
-                                                                    the
-                                                                    increasing sea levels, melting glaciers, and
-                                                                    frequent
-                                                                    storms. Accurate temperature forecasting is crucial
-                                                                    for
-                                                                    understanding and mitigating its impacts.
-                                                                    Cutting-edge
-                                                                    data-driven models for temperature forecasting
-                                                                    typically
-                                                                    employ recurrent neural networks(CNNs), with certain
-                                                                    models integrating attention mechanisms. However
-                                                                    RNNs
-                                                                    sequential processing limits parallelization,
-                                                                    especially
-                                                                    for longer sequences. In order to do this, we
-                                                                    provide a
-                                                                    brand-new method for temperature prediction that is
-                                                                    based on the FocalNet Transformer architecture. By
-                                                                    functioning in a multi-tensor format, the suggested
-                                                                    Focal-modulation Attention Encoder (FATE) framework
-                                                                    leverages the spatial and temporal nuances of
-                                                                    meteorological data characteristics by integrating
-                                                                    tensorized modulation. Comparative assessments
-                                                                    against
-                                                                    existing transformer encoder architectures, 3D CNNs,
-                                                                    LSTM, and ConvLSTM demonstrate our model’s superior
-                                                                    ability to capture nuanced patterns inherent in the
-                                                                    data, particularly in the context of temperature
-                                                                    prediction. We also introduce a new labeled dataset,
-                                                                    Climate change Parameter dataset (CCPD), which
-                                                                    encompasses 40 years of data from J&K region on
-                                                                    seven
-                                                                    key parameters that influence climate change,
-                                                                    supporting
-                                                                    further research in this area. Experiments on two
-                                                                    real-world benchmark temperature datasets from
-                                                                    weather
-                                                                    stations in the USA, Canada, and Europe demonstrate
-                                                                    accuracy improvements of 12%, 23%, and 28%
-                                                                    respectively,
-                                                                    compared to existing SOTA models. In addition, we
-                                                                    achieved state-of-the-art results on our CCPD
-                                                                    dataset
-                                                                    with a 24% improvement. To understand FATE, we
-                                                                    introduce
-                                                                    two modulation scores from the tensorial modulation
-                                                                    process. These scores clarify our model’s decision
-                                                                    making and key climate change parameters. For
-                                                                    reproducible research, we will release the source
-                                                                    code,
-                                                                    pre-trained FATE model, and CCPD dataset.</i></p>
-
-
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr bgcolor="">
-                                                    <td width="38%" valign="middle" align="right"
-                                                        class="profile-image-container">
-                                                        <a href="https://dmaster-iitd.github.io/webpage/">
-                                                            <img src="assets/Profile Picture/dmaster.png"
-                                                                alt="Profile Picture" class="profile-image"
-                                                                style="display:block; margin:auto; padding:0; border-radius:15px; border:1px solid rgb(158, 10, 27); max-width:85%; height:auto; object-fit:contain;">
-                                                        </a>
-                                                    </td>
-
-                                                    <!-- Text Column -->
-                                                    <td width="62%" valign="top" class="text-container">
-                                                        <p align="justify" style="margin-bottom: 0;">
-                                                            <a href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                                                                id="EXTREME-PARKOUR" style="text-align: justify;">
-                                                                <b>D-MASTER: Mask Annealed Transformer for Unsupervised
-                                                                    Domain Adaptation in Breast Cancer Detection from
-                                                                    Mammograms
-                                                                </b></a>
-                                                            <br>
-                                                            <b>Tajamul Ashraf</b>, Krithika Rangarajan, Mohit Gambhir,
-                                                            Richa
-                                                            Gabha, Chetan Arora<br>
-                                                            <span
-                                                                style="color: green; font-weight: bold; font-size: 1.05em;">
-                                                                Accepted at MICCAI 2024
-                                                            </span>
-
-                                                        </p>
-
-                                                        <div class="paper" id="extreme-parkour">
-                                                            <a
-                                                                href="https://dmaster-iitd.github.io/webpage/">webpage</a>
-                                                            |
-                                                            <a href="javascript:toggleblock('dmaster')">abstract</a> |
-                                                            <a href="">presentation</a> |
-                                                            <a href="https://github.com/Tajamul21/D-MASTER">code</a> |
-                                                            <a href="https://github.com/Tajamul21/D-MASTER">poster</a>
-
-                                                            <p align="justify">
-                                                                <i style="display: none;" id="dmaster">
-                                                                    We focus on the problem of Unsupervised Domain
-                                                                    Adaptation (UDA) for breast cancer detection from
-                                                                    mammograms (BCDM). Recent advancements have shown
-                                                                    that
-                                                                    masked image modeling serves as a robust pretext
-                                                                    task
-                                                                    for UDA. However, when applied to cross-domain BCDM,
-                                                                    these techniques struggle with breast abnormalities
-                                                                    such
-                                                                    as masses, asymmetries, and micro-calcifications.
-                                                                    Recognizing these challenges, we introduce a
-                                                                    transformer-based Domain-invariant Mask Annealed
-                                                                    Student
-                                                                    Teacher autoencoder (D-MASTER) framework. D-MASTER
-                                                                    adaptively masks and reconstructs multiscale feature
-                                                                    maps, enhancing the model’s ability to capture
-                                                                    reliable
-                                                                    target domain features. Experimental results show a
-                                                                    significant improvement over state-of-the-art
-                                                                    techniques
-                                                                    on multiple datasets. To promote reproducible
-                                                                    research,
-                                                                    we will publicly release source code and pre-trained
-                                                                    models.
-                                                                </i>
-                                                            </p>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-            </tr>
-            <tr bgcolor="">
-                <td width="38%" valign="middle" align="right" class="profile-image-container">
-
-                    <a href="https://github.com/Tajamul21/HF-Fed">
-                        <img src="assets/Profile Picture/hffed.png" alt="Profile Picture" class="profile-image"
-                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                    </a>
-                </td>
-
-
-                <td width="62%" valign="top">
-                    <p align="justify" style="margin-bottom: 0;"><a href="https://tisharepo.github.io/Webpage/"
-                            id="EXTREME-PARKOUR" style="text-align: justify; font-weight: bold;">
-                            HF-Fed: Hierarchical Based Customized Federated
-                            Learning Framework for X-Ray Imaging</a>
-
-                        </a><br>
-                        <b>Tajamul Ashraf</b>, Tisha Madame<br>
-                        <span style="color: green; font-weight: bold; font-size: 1.05em;">
-                            Accepted at MICCAI DeepBreath 2024 [<a href="">Oral</a>]
-                        </span>
-                        <br>
-                        <span style="color: red;"><b>Best Student Paper
-                                Award!</b></span>
-
-                    </p>
-
-                    <div class="paper" id="extreme-parkour">
-                        <a href="https://tisharepo.github.io/Webpage/">webpage</a> |
-                        <a href="javascript:toggleblock('hffed')">abstract</a>
-                        |
-                        <a href="">
-                            presentation</a> |
-
-
-                        <a href="https://github.com/Tajamul21/HF-Fed">code</a>
-
-                        <p align="justify"> <i style="display: none;" id="hffed">In
-                                clinical applications, X-Ray
-                                technology plays a crucial role in noninvasive
-                                examinations like mammography, providing essential
-                                anatomical information about patients. However, the
-                                inherent radiation risk associated with X-Ray procedures
-                                raises significant concerns. X-Ray reconstruction is
-                                crucial in medical imaging for creating detailed visual
-                                representations of internal structures, and facilitating
-                                diagnosis and treatment without invasive procedures.
-                                Recent advancements in deep learning (DL) have shown
-                                promise in X-Ray reconstruction. Nevertheless,
-                                conventional DL methods often necessitate the
-                                centralized aggregation of substantial large datasets
-                                for training, following specific scanning protocols.
-                                This requirement results in notable domain shifts and
-                                privacy issues. To address these challenges, we
-                                introduce the Hierarchical Framework based Federated
-                                Learning method (HF-Fed) for customized X-Ray Imaging.
-                                HF-Fed addresses the challenges in X-Ray imaging
-                                optimization by decomposing the problem into two
-                                components: local data adaptation and holistic X-Ray
-                                Imaging. It employs a hospital-specific hierarchical
-                                framework and a shared common imaging network called
-                                Network of Networks (NoN) for these tasks. The emphasis
-                                of the NoN is on acquiring stable features from a
-                                variety of data distributions. A hierarchical
-                                hypernetwork extracts domain-specific hyperparameters,
-                                conditioning the NoN for customized X-Ray
-                                reconstruction. Experimental results demonstrate
-                                HF-Fed’s competitive performance, offering a promising
-                                solution for enhancing X-Ray imaging without the need
-                                for data sharing. This study significantly contributes
-                                to the evolving body of literature on the potential
-                                advantages of federated learning in the healthcare
-                                sector. It offers valuable insights for policymakers and
-                                healthcare providers holistically.</i></p>
-
-
-                    </div>
-                </td>
-            </tr>
-
-            <tr bgcolor="">
-                <td width="38%" valign="middle" align="right" class="profile-image-container">
-                    <a href="https://extreme-parkour.github.io/">
-                        <img src="assets/Profile Picture/wacv24_transfed.png" alt="Profile Picture"
-                            class="profile-image"
-                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                    </a>
-                </td>
-
-
-                <td width="62%" valign="top" class="text-container">
-                    <p align="justify" style="margin-bottom: 0;"><a
-                            href="https://openaccess.thecvf.com/content/WACV2024/html/Ashraf_TransFed_A_Way_To_Epitomize_Focal_Modulation_Using_Transformer-Based_Federated_WACV_2024_paper.html"
-                            id="EXTREME-PARKOUR" style="text-align: justify;">
-                            <b>TransFED: A way to epitomize Transformer based
-                                Focal
-                                Modulation using Federated Learning</b></a>
-
-                        </a><br>
-                        <b>Tajamul Ashraf</b>, Fuzayil Mir, Iqra Altaf Gillani<br>
-
-                        <span style="color: green; font-weight: bold; font-size: 1.05em;">
-                            Accepted at WACV 2024 </span>
-
-
-                    </p>
-
-                    <div class="paper" id="extreme-parkour">
-                        <a href="https://fuzayilmir.github.io/webpage_transfed/">webpage</a>
-                        |
-                        <a href="javascript:toggleblock('transfed')">abstract</a>
-                        |
-                        <a href="assets\Documents\wacv\WACV_Final_ppt.pdf">
-                            presentation</a> |
-
-
-                        <a href="https://github.com/Tajamul21/TransFed">code</a> |
-                        <a href="assets/Documents/wacv/wacv24-479.pdf">poster</a>
-
-                        <p align="justify"> <i style="display: none;" id="transfed">Federated learning has emerged as a
-                                promising paradigm for collaborative machine learning, enabling multiple clients to
-                                train a model while preserving data privacy jointly. Tailored federated learning takes
-                                this concept further by accommodating client heterogeneity and facilitating the learning
-                                of personalized models. While the utilization of transformers within federated learning
-                                has attracted significant interest, there remains a need to investigate the effects of
-                                federated learning algorithms on the latest focal modulation-based transformers. In this
-                                paper, we investigate this relationship and uncover the detrimental effects of federated
-                                averaging (FedAvg) algorithms on Focal Modulation, particularly in scenarios with
-                                heterogeneous data. To address this challenge, we propose TransFed, a novel
-                                transformer-based federated learning framework that not only aggregates model parameters
-                                but also learns tailored Focal Modulation for each client. Instead of employing a
-                                conventional customization mechanism that maintains client-specific focal modulation
-                                layers locally, we introduce a learn-to-tailor approach that fosters client
-                                collaboration, enhancing scalability and adaptation in TransFed. Our method incorporates
-                                a hyper network on the server, responsible for learning personalized projection matrices
-                                for the focal modulation layers. This enables the generation of client-specific keys,
-                                values, and queries. Furthermore, we provide an analysis of adaptation bounds for
-                                TransFed using the learn-to-customize mechanism. Through intensive experiments on
-                                datasets related to pneumonia classification, we demonstrate that TransFed, in
-                                combination with the learn-to-tailor approach, achieves superior performance in
-                                scenarios with non-IID data distributions, surpassing existing methods. Overall,
-                                TransFed paves the way for leveraging focal Modulation in federated learning, advancing
-                                the capabilities of focal modulated transformer models in decentralized
-                                environments.</i></p>
-
-
-                    </div>
-                </td>
-            </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <tr bgcolor="">
-                <td width="38%" valign="middle" align="right" class="profile-image-container">
-                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-58181-6_2">
-                        <img src="assets/Profile Picture/posewatch.png" alt="Profile Picture" class="profile-imageg"
-                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                    </a>
-                </td>
-                <td width="62%" valign="top">
-                    <p align="justify" style="margin-bottom: 0;"><a
-                            href="https://link.springer.com/chapter/10.1007/978-3-031-58181-6_2" id="EXTREME-PARKOUR">
-                            <b>PoseWatch: Advancing Real Time Human Pose Tracking
-                                and
-                                Juxtaposition with Deep Learning</b>
-                        </a><br>
-                        <b>Tajamul Ashraf</b>, Balaji Prabu BV, and Omkar SN<br>
-                        <span style="color: green; font-weight: bold; font-size: 1.05em;">
-                            Accepted at CVIP 2023 </span>
-
-                    </p>
-
-                    <div class="paper" id="extreme-parkour">
-                        <!-- <a href="https://extreme-parkour.github.io/">webpage</a> | -->
-                        <a href="javascript:toggleblock('hpjt_-abs')">abstract</a>
-                        |
-
-                        <a href="">presentation</a>
-                        <!-- <a href="https://github.com/chengxuxin/extreme-parkour">code</a> -->
-
-                        <p align="justify"> <i style="display: none;" id="hpjt_-abs">Human
-                                pose estimation is the
-                                process of continuously monitoring a person's action and
-                                movement to track and monitor the activity
-                                of a person or an object. Human pose estimation is
-                                usually
-                                done by capturing the key points which describe the pose
-                                of
-                                a person. A guiding
-                                practicing framework that enables people to learn and
-                                exercise activities like yoga, fittness, dancing, etc.,
-                                might
-                                be built using human posture recognition remotely and
-                                accurately without the help of a personal
-                                trainer. This work has proposed a framework to detect
-                                and
-                                recognize
-                                various yoga and exercise poses to help the individual
-                                practice the same
-                                correctly. A popular Blaze-pose model extracts key
-                                points
-                                from the student end and compares the same with the
-                                instructor pose. The extracted
-                                key points are fed to the Human Pose Juxtaposition model
-                                (HPJT) to
-                                compare the student pose with the instructor. The model
-                                will
-                                assess the
-                                correctness of the pose by comparing the extracted key
-                                points and give
-                                feedback to students if any corrections need to be made.
-                                The
-                                proposed
-                                model is trained with 40+ yoga and exercise poses, and
-                                evaluated the
-                                model's performance with the mAP, and the model achieved
-                                an
-                                accuracy
-                                of 99.04%. The results proved that any person could use
-                                the
-                                proposed
-                                framework in real-time to practice exercise, yoga,
-                                dance,
-                                etc. At their respective location without the help of a
-                                physical instructor with precision
-                                and accuracy, leading to a healthy life.
-                            </i></p>
-
-
-                    </div>
-                </td>
-            </tr>
-
-
-
-            <tr bgcolor="">
-                <td width="38%" valign="middle" align="right" class="profile-image-container">
-                    <a href="https://extreme-parkour.github.io/">
-                        <img src="assets/Profile Picture/ccpd.png" alt="Profile Picture" class="profile-image"
-                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                    </a>
-                </td>
-                <td width="62%" valign="top">
-                    <p align="justify" style="margin-bottom: 0;"><a
-                            href="https://link.springer.com/chapter/10.1007/978-981-99-7862-5_1" id="EXTREME-PARKOUR">
-                            <b> Climate Change Parameter Dataset (CCPD): A
-                                Benchmark
-                                Dataset for Climate
-                                Change parameters in Jammu and Kashmir</b>
-                        </a><br>
-                        <b>Tajamul Ashraf</b>, Janibul Bashir<br>
-                        <span style="color: green; font-weight: bold; font-size: 1.05em;">
-                            Accepted at ICDSA 2023 </span>
-
-                    </p>
-
-                    <div class="paper" id="extreme-parkour">
-                        <!-- <a href="https://extreme-parkour.github.io/">webpage</a> | -->
-                        <a href="javascript:toggleblock('ccpm-abs')">abstract</a>
-                        |
-
-                        <a href="">presentation</a>
-
-                        <!-- <a href="https://github.com/chengxuxin/extreme-parkour">code</a> -->
-
-                        <p align="justify"> <i style="display: none;" id="ccpm-abs">In
-                                this
-                                paper, we present a Climate Change Parameter Dataset
-                                (CCPD)
-                                intending to achieve state-of-the-art
-                                results in parameters which effect climate change,
-                                including
-                                forest cover, water bodies, agriculture and
-                                vegetation, population, temperature, construction, and
-                                air
-                                index. The dataset can be used by the research
-                                community to validate the claims made in relation to the
-                                climate change. Research community has been
-                                deeply involved in extending the use case of machine
-                                learning algorithms to the effects of climate change.
-                                However, the non-availability of sufficient data related
-                                to
-                                climate change parameters has limited the
-                                research in this domain. By presenting this dataset, we
-                                want
-                                to facilitate the researchers. In this dataset, we
-                                provide a large variety of statistical and satellite
-                                data
-                                acquired by various image processing techniques and
-                                on-ground data collection. The data is collected in
-                                abundance for a specific region, and then various
-                                machine learning techniques are used to extract the
-                                useful
-                                data related to each parameter separately. We
-                                call this amalgam of processed data as CCPD dataset.
-                                CCPD
-                                dataset contains over 6000 data points for all
-                                seven parameters and covers the data from 1960 onwards.
-                                We
-                                hope this dataset will aid the research
-                                community in tackling climate change with the help of
-                                AI.</i></p>
-
-
-                    </div>
-                </td>
-            </tr>
-
-            <tr bgcolor="">
-                <td width="38%" valign="middle" align="right" class="profile-image-container">
-                    <a
-                        href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12701/127011H/An-integral-computer-vision-system-for-apple-detection-classification-and/10.1117/12.2680881.short">
-
-                        <img src="assets/Profile Picture/apples_cv.png" alt="Profile Picture" class="profile-image"
-                            style="display:block; margin:auto; padding-top:0px; padding-bottom:0px; border-radius:15px; border:1px solid rgb(10, 158, 10); width:85%; height:135px; object-fit:fill;">
-                    </a>
-                </td>
-                <td width="62%" valign="top">
-                    <p align="justify" style="margin-bottom: 0;"><a
-                            href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12701/127011H/An-integral-computer-vision-system-for-apple-detection-classification-and/10.1117/12.2680881.short"
-                            id="EXTREME-PARKOUR">
-                            <b>An Integral Computer
-                                Vision System for Apple Detection, Classification, and
-                                Semantic Segmentation,</b>
-                        </a><br>
-                        <b>Tajamul Ashraf</b>, Naiyer Abbas, Mohammad Haseeb, Nadeem Yousuf,
-                        Janibul Bashir<br>
-                        <span style="color: green; font-weight: bold; font-size: 1.05em;">
-                            Accepted at ICMV 2022 </span>
-
-                    </p>
-
-                    <div class="paper" id="extreme-parkour">
-
-                        <a href="javascript:toggleblock('apple-abs')">abstract</a>
-                        |
-
-                        <a href="">presentation</a> |
-
-                        <a
-                            href="https://github.com/Tajamul21/Detection-Classification-and-Semantic_Segmentation-of-apples">code</a>
-
-                        <p align="justify"> <i style="display: none;" id="apple-abs">The
-                                area of Computer Vision has gone through exponential
-                                growth and advancement over the past decade. It is
-                                mainly due to the introduction of effective
-                                deep-learning methodologies and the availability of
-                                massive data. This has resulted in the incorporation of
-                                intelligent computer vision schemes to automate the
-                                different number of tasks. In this paper, we have worked
-                                on similar lines. We have proposed an integrated system
-                                for the development of robotic arms, considering the
-                                current situation in fruit identification,
-                                classification, counting, and generating their masks
-                                through semantic segmentation. The current method of
-                                manually doing these processes is time-consuming and is
-                                not feasible for large fields. Due to this, multiple
-                                works have been proposed to automate harvesting tasks to
-                                minimize the overall overhead. However, there is a lack
-                                of an integrated system that can automate all these
-                                processes together. As a result, we are proposing one
-                                such approach based on different machine learning
-                                techniques. For each process, we propose to use the most
-                                effective learning technique with computer vision
-                                capability. Thus, proposing an integrated intelligent
-                                end-to-end computer vision-based system to detect,
-                                classify, count, and identify the apples. In this
-                                system, we modified the YOLOv3 algorithm to detect and
-                                count the apples effectively. The proposed scheme works
-                                even under variable lighting conditions. The system was
-                                trained and tested using a standard benchmark i.e.,
-                                MinneApple. Experimental results show an average
-                                accuracy of 91%..</i></p>
-
-
-                        </pre>
-                    </div>
-                </td>
-            </tr>
-
-
-
-
-
-
-
-
-
-
-    </div>
-    </tbody>
-    </table>
-    </div>
-    </div>
-    </div>
-    </div>
-
-
-
-
-
-
-
-
-    <!-- ========== FEATURED IN ========== -->
-    <!-- <div class="docs-section" id="featured-in">
+                        <!-- ========== FEATURED IN ========== -->
+                        <!-- <div class="docs-section" id="featured-in">
         <h4>News</h4>
         <ul class="tab-nav">
             <li>
@@ -2290,171 +865,198 @@
 
 
 
-    <!-- ========== RESUME ========== -->
-    <div class="docs-section" id="timeline">
-        <h4>Timeline</h4>
+                        <!-- ========== RESUME ========== -->
+                        <div class="docs-section" id="timeline">
+                            <h4>Timeline</h4>
 
-        <!-- <p align="justify">Full Resume in <a href=assets/Documents/Tajamul_Resume.pdf target="_blank">PDF</a>. -->
-        </p>
+                            <!-- <p align="justify">Full Resume in <a href="assets/Documents/Tajamul_Resume.pdf" target="_blank">PDF</a>. -->
+                            </p>
 
-        <!-- The Timeline -->
-        <ul class="timeline">
-            <li>
-                <div class="direction-r">
-                    <div class="flag-wrapper">
-                        <span class="flag">KAUST</span>
-                        <span class="time-wrapper">
-                            <span class="time">Dec 2025 - Present</span>
-                        </span>
-                    </div>
-                    <div class="desc">
-                        <b>Research Consultant</b> <br />
-                        Host: <a href="https://www.bernardghanem.com/" target="_blank">Prof. Bernard Ghanem</a>
-                    </div>
-                </div>
-            </li>
-            <li>
+                            <!-- The Timeline -->
+                            <ul class="timeline">
+                                <li>
+                                    <div class="direction-l">
+                                        <div class="flag-wrapper">
+                                            <span class="flag">NTU</span>
+                                            <span class="time-wrapper">
+                                                <span class="time">Mar 2026 - Present</span>
+                                            </span>
+                                        </div>
+                                        <div class="desc">
+                                            <b>Research manager</b> <br />
+                                            Host: <a href="https://personal.ntu.edu.sg/adamskong/" target="_blank">Prof.
+                                                Adams
+                                                Wai-Kin Kong</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="direction-r">
+                                        <div class="flag-wrapper">
+                                            <span class="flag">KAUST</span>
+                                            <span class="time-wrapper">
+                                                <span class="time">Dec 2025 - Mar 2026</span>
+                                            </span>
+                                        </div>
+                                        <div class="desc">
+                                            <b>Research Consultant</b> <br />
+                                            Host: <a href="https://www.bernardghanem.com/" target="_blank">Prof. Bernard
+                                                Ghanem</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
 
-                <div class="direction-l">
+                                    <div class="direction-l">
 
-                    <div class="flag-wrapper">
-                        <span class="flag">MBZUAI</span>
-                        <span class="time-wrapper"><span class="time"> Jan 2025 -
-                                Nov- 2025</span></span>
-                    </div>
-                    <div class="desc"><b>Research Engineer </b> <br />
-                        Host Lab: <a href="https://www.ival-mbzuai.com/" target="_blank">IVAL</a></div>
-                </div>
-            </li>
-            <li>
-
-
-            </li>
-
-            <li>
-
-                <div class="direction-r">
-
-                    <div class="flag-wrapper">
-                        <span class="flag">MICROSOFT RESEARCH</span>
-                        <span class="time-wrapper"><span class="time"> July 2024 -
-                                Dec 2024</span></span>
-                    </div>
-                    <div class="desc"><b>Research Intern</b> <br />
-                        Advisor(s): <a href="https://www.microsoft.com/en-us/research/people/mohja/" target="_blank">Dr.
-                            Mohit Jain, </a><a href="https://www.microsoft.com/en-us/research/people/kalikab/"
-                            target="_blank">Dr. Kalika Bali</a></div>
-                </div>
-            </li>
-
-            <li>
-
-                <div class="direction-l">
-
-                    <div class="flag-wrapper">
-                        <span class="flag">IIT DELHI</span>
-                        <span class="time-wrapper"><span class="time"> Aug 2022 -
-                                June 2024</span></span>
-                    </div>
-                    <div class="desc"><b>Master's of Science
-                            (Research)</b> <br />
-                        Advisor(s): <a href="https://www.cse.iitd.ac.in/~chetan/" target="_blank">Prof. Chetan
-                            Arora</a></div>
-                </div>
-            </li>
-
-            <li>
-
-                <div class="direction-r">
-
-                    <div class="flag-wrapper">
-                        <span class="flag">LEENA AI </span>
-                        <span class="time-wrapper"><span class="time">May 2022 - July 2022</span></span>
-                    </div>
-                    <div class="desc"><b>Software
-                            Developer</b>
-                        <br /> Product, Engineering and ML
-                        team
-                    </div>
-                </div>
-            </li>
-
-            <li>
-
-                <div class="direction-l">
-
-                    <div class="flag-wrapper">
-                        <span class="flag">ARTPARK
-                            IISc</span>
-                        <span class="time-wrapper"><span class="time">Jan 2022 - May
-                                2022</span></span>
-                    </div>
-                    <div class="desc"><b>Computer Vision
-                            Researcher </b> <br />Mentor:
-                        <a href="">Prof.
-                            Raghu
-                            Krishnapuram</a>
-                    </div>
-                </div>
-            </li>
+                                        <div class="flag-wrapper">
+                                            <span class="flag">MBZUAI</span>
+                                            <span class="time-wrapper"><span class="time"> Jan 2025 -
+                                                    Nov- 2025</span></span>
+                                        </div>
+                                        <div class="desc"><b>Research Engineer </b> <br />
+                                            Host:
+                                            <a href="https://salman-h-khan.github.io/" target="_blank">Prof. Salman
+                                                Khan</a>,
+                                            <a href="https://mbzuai.ac.ae/study/faculty/rao-muhammad-anwer/"
+                                                target="_blank">Prof. Rao
+                                                Anwer</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
 
 
-            <li>
+                                </li>
 
-                <div class="direction-r">
+                                <li>
 
-                    <div class="flag-wrapper">
-                        <span class="flag">IIT
-                            KHARAGPUR</span>
-                        <span class="time-wrapper"><span class="time">Nov 2019 - Mar
-                                2020</span></span>
-                    </div>
-                    <div class="desc"><b>Research Intern
-                        </b>
-                        <br /> Advisor(s): <a href="">Prof. Pabitra Mitra</a>
-                    </div>
-                </div>
-            </li>
+                                    <div class="direction-r">
 
-            <li>
+                                        <div class="flag-wrapper">
+                                            <span class="flag">MICROSOFT RESEARCH</span>
+                                            <span class="time-wrapper"><span class="time"> July 2024 -
+                                                    Dec 2024</span></span>
+                                        </div>
+                                        <div class="desc"><b>Research Intern</b> <br />
+                                            Advisor(s): <a href="https://www.microsoft.com/en-us/research/people/mohja/"
+                                                target="_blank">Dr.
+                                                Mohit Jain, </a><a
+                                                href="https://www.microsoft.com/en-us/research/people/kalikab/"
+                                                target="_blank">Dr. Kalika Bali</a></div>
+                                    </div>
+                                </li>
 
-                <div class="direction-l">
+                                <li>
 
-                    <div class="flag-wrapper">
-                        <span class="flag">NIT
-                            SRINAGAR</span>
-                        <span class="time-wrapper"><span class="time">Aug 2018 -
-                                May 2022</span></span>
-                    </div>
-                    <div class="desc"><b>B-Tech in Information Technology)</b> <br />
-                        Advisor(s): <a href="">Prof. Janibul Bashir</a>
-                    </div>
-                </div>
-            </li>
+                                    <div class="direction-l">
 
-            <li>
+                                        <div class="flag-wrapper">
+                                            <span class="flag">IIT DELHI</span>
+                                            <span class="time-wrapper"><span class="time"> Aug 2022 -
+                                                    June 2024</span></span>
+                                        </div>
+                                        <div class="desc"><b>Master's of Science
+                                                (Research)</b> <br />
+                                            Advisor(s): <a href="https://www.cse.iitd.ac.in/~chetan/"
+                                                target="_blank">Prof. Chetan
+                                                Arora</a></div>
+                                    </div>
+                                </li>
 
-                <div class="direction-r">
+                                <li>
 
-                    <div class="flag-wrapper">
-                        <span class="flag">TYNDALE BISCOE
-                            SCHOOL</span>
-                        <span class="time-wrapper"><span class="time">2016 -
-                                2018</span></span>
-                    </div>
-                    <div class="desc"><b> Higer
-                            Secondary</b>
-                        <br />Class X with 92.6% <br />
-                        Class
-                        XII with
-                        91.8%
-                    </div>
-                </div>
-            </li>
+                                    <div class="direction-r">
+
+                                        <div class="flag-wrapper">
+                                            <span class="flag">LEENA AI </span>
+                                            <span class="time-wrapper"><span class="time">May 2022 - July
+                                                    2022</span></span>
+                                        </div>
+                                        <div class="desc"><b>Software
+                                                Developer</b>
+                                            <br /> Product, Engineering and ML
+                                            team
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+
+                                    <div class="direction-l">
+
+                                        <div class="flag-wrapper">
+                                            <span class="flag">ARTPARK
+                                                IISc</span>
+                                            <span class="time-wrapper"><span class="time">Jan 2022 - May
+                                                    2022</span></span>
+                                        </div>
+                                        <div class="desc"><b>Computer Vision
+                                                Researcher </b> <br />Mentor:
+                                            <a href="">Prof.
+                                                Raghu
+                                                Krishnapuram</a>
+                                        </div>
+                                    </div>
+                                </li>
 
 
-    </div>
-    <!-- <div class="l-container">
+                                <li>
+
+                                    <div class="direction-r">
+
+                                        <div class="flag-wrapper">
+                                            <span class="flag">IIT
+                                                KHARAGPUR</span>
+                                            <span class="time-wrapper"><span class="time">Nov 2019 - Mar
+                                                    2020</span></span>
+                                        </div>
+                                        <div class="desc"><b>Research Intern
+                                            </b>
+                                            <br /> Advisor(s): <a href="">Prof. Pabitra Mitra</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+
+                                    <div class="direction-l">
+
+                                        <div class="flag-wrapper">
+                                            <span class="flag">NIT
+                                                SRINAGAR</span>
+                                            <span class="time-wrapper"><span class="time">Aug 2018 -
+                                                    May 2022</span></span>
+                                        </div>
+                                        <div class="desc"><b>B-Tech in Information Technology)</b> <br />
+                                            Advisor(s): <a href="">Prof. Janibul Bashir</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+
+                                    <div class="direction-r">
+
+                                        <div class="flag-wrapper">
+                                            <span class="flag">TYNDALE BISCOE
+                                                SCHOOL</span>
+                                            <span class="time-wrapper"><span class="time">2016 -
+                                                    2018</span></span>
+                                        </div>
+                                        <div class="desc"><b> Higer
+                                                Secondary</b>
+                                            <br />Class X with 92.6% <br />
+                                            Class
+                                            XII with
+                                            91.8%
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                        </div>
+                        <!-- <div class="l-container">
         <h5>Languages I know</h5> <br>
 
         <div class="ss-container">
@@ -2504,64 +1106,77 @@
     </div> -->
 
 
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-        <tr>
-            <td>
-                <h4 id="community">Community</h4>
-                <ul align="justify">
+                        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
+                            <tr>
+                                <td>
+                                    <h4 id="community">Community</h4>
+                                    <ul align="justify">
 
-                    In my academic journey, I transitioned into a research-focused lifestyle, driven by a deep curiosity
-                    to explore
-                    Computer Vision and Medical Imaging. My path has been dynamic, with a domain shift from
-                    IoT to robotics, reflecting a continuous pursuit of learning and innovation.
-                    I am an advocate for open-source contributions, as they foster collective growth and help both
-                    educators and learners critically engage with the wealth of information available online. The
-                    guidance and support
-                    of my academic mentors and peers have been pivotal in shaping my early career, and their influence
-                    continues to
-                    inspire me.<br>
+                                        In my academic journey, I transitioned into a research-focused lifestyle, driven
+                                        by a deep curiosity
+                                        to explore
+                                        Computer Vision and Medical Imaging. My path has been dynamic, with a domain
+                                        shift from
+                                        IoT to robotics, reflecting a continuous pursuit of learning and innovation.
+                                        I am an advocate for open-source contributions, as they foster collective growth
+                                        and help both
+                                        educators and learners critically engage with the wealth of information
+                                        available online. The
+                                        guidance and support
+                                        of my academic mentors and peers have been pivotal in shaping my early career,
+                                        and their influence
+                                        continues to
+                                        inspire me.<br>
 
-                    Building on this foundation, I am actively mentoring undergraduate and master’s students in
-                    computer vision, and I look forward to supporting more learners in the future. I particularly
-                    encourage students with diverse backgrounds or unconventional academic paths, similar to my own, to
-                    connect and
-                    explore opportunities for growth and research.<br>
-
-
-                    If you are interested, send an introductory email that includes: <br>
-                    - A brief introduction about yourself. <br>
-                    - Your academic background and areas of interest. <br>
-                    - Your CV (optional but preferred). <br>
-                    <!-- [<a href="mailto:tajamul21.ashraf@gmail.com">Email</a>] -->
-
-
-                </ul>
-            </td>
-
-        </tr>
-    </table>
+                                        Building on this foundation, I am actively mentoring undergraduate and master’s
+                                        students in
+                                        computer vision, and I look forward to supporting more learners in the future. I
+                                        particularly
+                                        encourage students with diverse backgrounds or unconventional academic paths,
+                                        similar to my own, to
+                                        connect and
+                                        explore opportunities for growth and research.<br>
 
 
-    <div class="footer" style="text-align: justify;">
-        <p>
-            This site adapts design elements from <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a> and <a
-                href="https://jonbarron.info/">Jon Barron</a>; please avoid scraping, and find the full source on GitHub
-            <a href="https://github.com/Tajamul21/www.tajamulashraf.com">here</a>.
-        </p>
-        <span id="current-date" style="display: block; margin: 13px 0;"></span>
-        <p style="margin-top: 5px;">&copy; 2026, Tajamul Ashraf</p>
-    </div>
-
-    <script>
-        // Set current date
-        document.addEventListener('DOMContentLoaded', (event) => {
-            const date = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('current-date').textContent = date.toLocaleDateString(undefined, options);
-        });
-    </script>
+                                        If you are interested, send an introductory email that includes: <br>
+                                        - A brief introduction about yourself. <br>
+                                        - Your academic background and areas of interest. <br>
+                                        - Your CV (optional but preferred). <br>
+                                        <!-- [<a href="mailto:tajamul21.ashraf@gmail.com">Email</a>] -->
 
 
+                                    </ul>
+                                </td>
+
+                            </tr>
+                        </table>
+
+
+                        <div class="footer" style="text-align: justify;">
+                            <p>
+                                This site adapts design elements from <a href="https://www.cs.cmu.edu/~dpathak/">Deepak
+                                    Pathak</a> and <a href="https://jonbarron.info/">Jon Barron</a>; please avoid
+                                scraping, and find the full source on GitHub
+                                <a href="https://github.com/Tajamul21/www.tajamulashraf.com">here</a>.
+                            </p>
+                            <span id="current-date" style="display: block; margin: 13px 0;"></span>
+                            <p style="margin-top: 5px;">&copy; 2026, Tajamul Ashraf</p>
+                        </div>
+
+                        <script>
+                            // Set current date
+                            document.addEventListener('DOMContentLoaded', (event) => {
+                                const date = new Date();
+                                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                                document.getElementById('current-date').textContent = date.toLocaleDateString(undefined, options);
+                            });
+                        </script>
+
+
+
+                        <script src="assets/JS/publications-data.js?v=fast3"></script>
+                        <script src="assets/JS/publications.js?v=fast3"></script>
+                        <script src="assets/JS/site-enhancements.js"></script>
 
 </body>
 

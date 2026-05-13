@@ -59,5 +59,6 @@ function bubbleSortStep() {
 	this.bubbleSortBookmark = i;
 	if (!this.changed) {
 		clearInterval(this.interval);
+		this.tag.innerHTML = '<a href="mailto:' + this.string + '">' + this.string + '</a>';
 	}
 }

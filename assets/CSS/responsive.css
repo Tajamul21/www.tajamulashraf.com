@@ -1,0 +1,420 @@
+/*
+ * Responsive overrides for the existing template.
+ * These rules only adapt the original table-based layout on smaller screens.
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 900px;
+}
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+}
+
+.navbar-item,
+.navbar-link {
+  white-space: nowrap;
+}
+
+#publications .tab-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#publications td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+#publications .scholar-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+#publications .profile-image-container img {
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: 94% !important;
+    max-width: 100% !important;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .navbar .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 15.5px;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  pageheading {
+    display: block;
+    line-height: 1.15;
+  }
+
+  .navbar-list {
+    justify-content: center;
+    row-gap: 0.4rem;
+  }
+
+  .navbar-link {
+    font-size: 10px;
+    letter-spacing: 0.05rem;
+  }
+
+  .news-scrollbox,
+  .pub-scrollbox {
+    max-height: none !important;
+    overflow: visible !important;
+    padding-right: 0 !important;
+  }
+
+  #publications > div[style*="justify-content: space-between"] {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 0.5rem;
+  }
+
+  #publication-selected table,
+  #publication-all table,
+  #publication-selected tbody,
+  #publication-all tbody,
+  #publication-selected tr,
+  #publication-all tr,
+  #publication-selected td,
+  #publication-all td {
+    display: block;
+    width: 100% !important;
+  }
+
+  #publication-selected tr,
+  #publication-all tr {
+    margin-bottom: 1.35rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  #publication-selected .profile-image-container,
+  #publication-all .profile-image-container {
+    text-align: center !important;
+    padding-bottom: 0.75rem;
+  }
+
+  #publication-selected .profile-image-container img,
+  #publication-all .profile-image-container img {
+    width: 100% !important;
+    max-width: 380px !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  table[width="100%"] {
+    width: 100% !important;
+  }
+
+  td[align="justify"],
+  p[align="justify"],
+  ul[align="justify"] {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .container > table,
+  .container > table > tbody,
+  .container > table > tbody > tr,
+  .container > table > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .container table table,
+  .container table table > tbody,
+  .container table table > tbody > tr,
+  .container table table > tbody > tr > td {
+    display: block;
+    width: 100% !important;
+  }
+
+  .container table table img {
+    height: auto;
+  }
+
+  .footer {
+    align-items: flex-start;
+    gap: 0.45rem;
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    font-size: 14.5px;
+  }
+
+  .navbar-list {
+    gap: 0.25rem 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Modular publication filters and topic chips. */
+.publication-filter-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 16px 0;
+}
+
+.publication-filter-label {
+  color: #555;
+  font-size: 0.92em;
+  margin-right: 2px;
+}
+
+.publication-topic-button {
+  appearance: none;
+  border: 1px solid #d9d9d9;
+  background: #fafafa;
+  border-radius: 999px;
+  color: #333;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 1.35;
+  margin: 0;
+  padding: 4px 10px;
+  text-transform: none;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease;
+}
+
+.publication-topic-button:hover,
+.publication-topic-button:focus {
+  border-color: #777;
+  color: #111;
+}
+
+.publication-topic-button.active {
+  background: #111;
+  border-color: #111;
+  color: #fff;
+  font-weight: 600;
+}
+
+.publication-topic-count {
+  opacity: 0.65;
+}
+
+.publication-year-row td {
+  border-bottom: 1px solid #eee;
+  padding-top: 18px;
+  padding-bottom: 8px;
+}
+
+.publication-year-row h5 {
+  color: #444;
+  font-size: 1.05em;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  margin: 0;
+}
+
+.publication-row td {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.publication-venue {
+  color: green;
+  font-weight: bold;
+  font-size: 1.05em;
+}
+
+.publication-note {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+.paper-topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 5px;
+}
+
+.paper-topic-chip {
+  background: #f2f4f7;
+  border: 1px solid #e4e7ec;
+  border-radius: 999px;
+  color: #555;
+  display: inline-flex;
+  font-size: 10px;
+  line-height: 1.4;
+  padding: 1px 7px;
+}
+
+.publication-empty {
+  color: #666;
+  padding: 18px 0;
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  .publication-filter-controls {
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+
+  .publication-filter-label {
+    flex-basis: 100%;
+  }
+
+  .publication-year-row td {
+    padding-top: 10px;
+  }
+
+  .publication-row td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Topic palette: filters are shown only inside All Publications; colored chips appear on papers. */
+.publication-topic-button,
+.paper-topic-chip {
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.publication-topic-button.topic-all,
+.paper-topic-chip.topic-all {
+  background: #f4f4f5;
+  border-color: #d4d4d8;
+  color: #333;
+}
+
+.publication-topic-button.topic-multimodal-agents,
+.paper-topic-chip.topic-multimodal-agents {
+  background: #dcfce7;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.publication-topic-button.topic-reasoning,
+.paper-topic-chip.topic-reasoning {
+  background: #dbeafe;
+  border-color: #bfdbfe;
+  color: #1e40af;
+}
+
+.publication-topic-button.topic-ai-for-health,
+.paper-topic-chip.topic-ai-for-health {
+  background: #fce7f3;
+  border-color: #fbcfe8;
+  color: #9d174d;
+}
+
+.publication-topic-button.topic-ai-for-science,
+.paper-topic-chip.topic-ai-for-science {
+  background: #ecfccb;
+  border-color: #d9f99d;
+  color: #3f6212;
+}
+
+.publication-topic-button.topic-benchmarks,
+.paper-topic-chip.topic-benchmarks {
+  background: #fef9c3;
+  border-color: #fde68a;
+  color: #854d0e;
+}
+
+.publication-topic-button.topic-grounding,
+.paper-topic-chip.topic-grounding {
+  background: #ede9fe;
+  border-color: #ddd6fe;
+  color: #5b21b6;
+}
+
+.publication-topic-button.topic-surgical-ai,
+.paper-topic-chip.topic-surgical-ai {
+  background: #ffedd5;
+  border-color: #fed7aa;
+  color: #9a3412;
+}
+
+.publication-topic-button.active {
+  background: #111 !important;
+  border-color: #111 !important;
+  color: #fff !important;
+}
+
+/* Performance + mobile readability refinements. */
+.publication-image {
+  background: #f6f6f6;
+}
+
+@media (max-width: 760px) {
+  body,
+  p,
+  li,
+  td,
+  .paper,
+  .paper p,
+  .main-description p,
+  #publications p,
+  #publications td {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  .navbar-list,
+  .navbar-item,
+  .navbar-link,
+  .publication-filter-controls,
+  .paper-topic-chips,
+  .profile-image-container,
+  .footer {
+    text-align: initial !important;
+  }
+}

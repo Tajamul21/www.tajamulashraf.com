@@ -1,39 +1,70 @@
-# www.tajamulashraf.com
+# Tajamul Ashraf Website
 
-This repository contains the source code and assets for my personal website [www.tajamulashraf.com](https://www.tajamulashraf.com/). The website is built using HTML, JavaScript, and includes additional assets and resources.
+This version keeps the original homepage template while making the publication section modular, responsive, and easy to maintain for GitHub Pages.
 
-## Table of Contents
+## GitHub Pages
 
-- [About](#about)
-- [Repository Structure](#repository-structure)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+Upload the files in this folder to the repository root. The `.nojekyll` file is included so GitHub Pages serves static assets directly.
 
-## About
+## Add a publication
 
-This website serves as my personal portfolio, showcasing my projects, publications, and other relevant information. It is publicly accessible at [www.tajamulashraf.com](https://www.tajamulashraf.com/).
+Edit:
 
-## Repository Structure
+```text
+assets/JS/publications-data.js
+```
 
-- `assets`: Contains assets such as images, stylesheets, or any other static files.
-- `js`: JavaScript files used in the website.
-- `Tajamul_Resume.pdf`: My resume in PDF format.
-- `favicon.ico`: Favicon for the website.
-- `index.html`: The main HTML file for the website.
-- `CNAME`: Custom domain configuration for GitHub Pages.
+Append one object inside the `papers` array and update:
 
-## Usage
+- `id`
+- `selected` - set to `true` if it should appear in the Representative tab
+- `year`
+- `title`
+- `authors`
+- `venue`
+- `image`
+- `links`
+- `topics`
+- `abstract`
 
-To view the website, simply visit [www.tajamulashraf.com](https://www.tajamulashraf.com/).
+Example:
 
-If you want to contribute, feel free to fork the repository, make your changes, and submit a pull request.
+```js
+{
+  id: "new-paper-id",
+  selected: true,
+  year: 2026,
+  title: "Paper Title",
+  authors: ["Tajamul Ashraf", "Coauthor Name"],
+  venue: "Conference 2026",
+  image: "assets/Profile Picture/papers/example.webp",
+  imageAlt: "Short image description",
+  links: [
+    { label: "paper", url: "https://example.com/paper" },
+    { label: "code", url: "https://github.com/example/repo" }
+  ],
+  topics: ["Computer Vision", "Medical AI"],
+  abstract: "One concise paragraph about the paper."
+}
+```
 
-## Contributing
+## Publication filters
 
-If you find any issues, have suggestions, or want to contribute, please open an issue or submit a pull request. Contributions are welcome!
+Topic buttons are generated automatically from `assets/JS/publications-data.js`. To add a new topic, add the topic name to a paper's `topics` array and include it in the top-level `topics` list if you want it to appear as a filter button.
 
-## License
+## Main files
 
-This project is licensed under the [MIT License](LICENSE).
+```text
+assets/JS/publications-data.js   # publication content and topics
+assets/JS/publications.js        # publication renderer and topic filters
+assets/JS/site-enhancements.js   # small progressive enhancements
+assets/CSS/responsive.css        # responsive fixes and publication filter styling
+.nojekyll                        # GitHub Pages compatibility
+```
 
+## Notes
+
+- Desktop layout remains controlled by the original template and inline styles.
+- Responsive behavior is added through `assets/CSS/responsive.css`.
+- Publication thumbnails are lightweight WebP/images for fast GitHub Pages loading.
+- ArXiv-only publication rows are not included in the modular publication data.
