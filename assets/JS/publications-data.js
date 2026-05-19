@@ -8,13 +8,16 @@
  */
 window.PUBLICATIONS = {
   "topics": [
-    "Agents",
-    "Reasoning",
-    "AI for Health",
+    "Multimodal Agents",
+    "Vision-Language Reasoning",
+    "Medical AI",
+    "Evaluation & Benchmarks",
+    "Video Understanding",
+    "Embodied AI",
+    "Visual Grounding",
+    "Domain Generalization",
     "AI for Science",
-    "Benchmarks",
-    "Grounding",
-    "Surgical AI"
+    "Federated Learning"
   ],
   "papers": [
     {
@@ -49,11 +52,12 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "Agents",
-        "AI for Health",
-        "Reasoning",
-        "Benchmarks",
-        "Grounding"
+        "Multimodal Agents",
+        "Vision-Language Reasoning",
+        "Embodied AI",
+        "Medical AI",
+        "Evaluation & Benchmarks",
+        "Visual Grounding"
       ],
       "abstract": "CarePilot introduces CareFlow, a benchmark for long-horizon healthcare software automation, and an actor-critic multi-agent framework that combines tool grounding with short- and long-term memory for clinical GUI workflows."
     },
@@ -96,10 +100,11 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "Agents",
-        "Reasoning",
-        "Benchmarks",
-        "Grounding"
+        "Evaluation & Benchmarks",
+        "Multimodal Agents",
+        "Vision-Language Reasoning",
+        "Embodied AI",
+        "Visual Grounding"
       ],
       "abstract": "Agent-X evaluates deep multimodal reasoning in vision-centric agentic tasks. It focuses on multi-step reasoning, tool use, and authentic visual contexts across domains such as web browsing, surveillance, autonomous driving, sports, and math reasoning."
     },
@@ -132,7 +137,8 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Health"
+        "Medical AI",
+        "Domain Generalization"
       ],
       "abstract": "This work presents a calibration-aware semi-supervised framework for fetal head segmentation in ultrasound, with boundary-positive contrast and selective pseudo-supervision designed to improve boundary fidelity under limited annotation."
     },
@@ -166,8 +172,11 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Health",
-        "Surgical AI"
+        "Medical AI",
+        "Video Understanding",
+        "Embodied AI",
+        "Visual Grounding"
+
       ],
       "abstract": "This work introduces phase-informed tool segmentation for manual small-incision cataract surgery and studies how surgical phase context can improve pixel-level tool segmentation in ophthalmic videos."
     },
@@ -198,7 +207,8 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Health"
+        "Medical AI",
+        "Domain Generalization"
       ],
       "abstract": "MedMask is a self-supervised masking framework for breast cancer detection from mammograms. It uses vision foundation models and masked representation learning to improve detection in annotation-scarce medical imaging settings."
     },
@@ -232,7 +242,9 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Health"
+        "Medical AI",
+        "Vision-Language Reasoning",
+        "Visual Grounding"
       ],
       "abstract": "MIRA improves medical retrieval-augmented generation by fusing visual and textual modalities, dynamically managing retrieved context, and supporting factual multimodal reasoning in medical VQA and report-generation tasks."
     },
@@ -262,7 +274,8 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/TITAN"
         }
       ],
-      "topics": ["Grounding"],
+      "topics": ["Domain Generalization",
+        "Visual Grounding"],
       "abstract": "TITAN addresses source-free domain adaptive object detection by partitioning target samples and using query-token based adversarial learning to reduce domain gaps without source data during adaptation."
     },
     {
@@ -284,7 +297,8 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Science"
+        "Domain Generalization",
+        "Visual Grounding"
       ],
       "abstract": "This work studies climate change understanding using a deep learning framework centered on a Climate Change Parameter Model for analyzing and forecasting climate-related indicators."
     },
@@ -318,7 +332,8 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Health"
+        "Medical AI",
+        "Domain Generalization"
       ],
       "abstract": "D-MASTER proposes a mask-annealed transformer framework for unsupervised domain adaptation in breast cancer detection from mammograms, targeting robust cross-domain detection under limited labeled data."
     },
@@ -345,7 +360,9 @@ window.PUBLICATIONS = {
         }
       ],
       "topics": [
-        "AI for Health"
+        "Medical AI",
+        "Federated Learning",
+        "Domain Generalization"
       ],
       "abstract": "HF-Fed is a hierarchical federated learning framework for customized X-ray imaging. It decomposes local data adaptation and global imaging learning to improve medical imaging without centralizing hospital data."
     },
@@ -376,7 +393,11 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/TransFed"
         }
       ],
-      "topics": ["AI for Science"],
+      "topics": [
+        "Federated Learning",
+        "Domain Generalization",
+        "AI for Science"
+      ],
       "abstract": "TransFed studies focal modulation in federated learning and introduces a transformer-based framework with learn-to-customize mechanisms for heterogeneous client distributions."
     },
     {
@@ -402,7 +423,9 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/PoseWatch-Advancing-Real-Time-Human-Pose-Tracking-and-Juxtaposition-with-Deep-Learning"
         }
       ],
-      "topics": ["AI for Science"],
+      "topics": ["Video Understanding",
+        "Embodied AI",
+        "Visual Grounding"],
       "abstract": "PoseWatch advances real-time human pose tracking and juxtaposition with deep learning, supporting activity monitoring and movement analysis through human keypoint estimation."
     },
     {
@@ -429,7 +452,7 @@ window.PUBLICATIONS = {
       ],
       "topics": [
         "AI for Science",
-        "Benchmarks"
+        "Evaluation & Benchmarks"
       ],
       "abstract": "CCPD is a benchmark dataset for climate-change parameters in Jammu and Kashmir, covering factors such as forest cover, water bodies, agriculture, vegetation, population, temperature, construction, and air index."
     },
@@ -458,7 +481,8 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/Detection-Classification-and-Semantic_Segmentation-of-apples"
         }
       ],
-      "topics": ["Grounding"],
+      "topics": ["Visual Grounding",
+        "AI for Science"],
       "abstract": "This work presents an integrated computer vision system for apple detection, classification, and semantic segmentation, supporting visual understanding for agricultural applications."
     }
   ]

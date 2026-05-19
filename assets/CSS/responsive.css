@@ -319,69 +319,110 @@ img {
   width: 1px;
 }
 
-/* Topic palette: filters are shown only inside All Publications; colored chips appear on papers. */
+/* =========================================================
+   Topic palette
+   ========================================================= */
+
 .publication-topic-button,
 .paper-topic-chip {
   border: 1px solid transparent;
   font-weight: 600;
+  transition: all 0.2s ease;
 }
 
+/* All */
 .publication-topic-button.topic-all,
 .paper-topic-chip.topic-all {
-  background: #f4f4f5;
-  border-color: #d4d4d8;
-  color: #333;
+  background: #242222;
+  border-color: #0b0b0b;
+  color: #ffffff;
 }
 
+/* Multimodal Agents - Emerald */
 .publication-topic-button.topic-multimodal-agents,
 .paper-topic-chip.topic-multimodal-agents {
   background: #dcfce7;
-  border-color: #bbf7d0;
+  border-color: #86efac;
   color: #166534;
 }
 
-.publication-topic-button.topic-reasoning,
-.paper-topic-chip.topic-reasoning {
+/* Vision-Language Reasoning - Blue */
+.publication-topic-button.topic-vision-language-reasoning,
+.paper-topic-chip.topic-vision-language-reasoning {
   background: #dbeafe;
-  border-color: #bfdbfe;
-  color: #1e40af;
+  border-color: #93c5fd;
+  color: #1d4ed8;
 }
 
-.publication-topic-button.topic-ai-for-health,
-.paper-topic-chip.topic-ai-for-health {
+/* Medical AI - Pink */
+.publication-topic-button.topic-medical-ai,
+.paper-topic-chip.topic-medical-ai {
   background: #fce7f3;
-  border-color: #fbcfe8;
-  color: #9d174d;
+  border-color: #f9a8d4;
+  color: #be185d;
 }
 
+/* Evaluation & Benchmarks - Amber */
+.publication-topic-button.topic-evaluation-benchmarks,
+.paper-topic-chip.topic-evaluation-benchmarks,
+.publication-topic-button.topic-evaluation-and-benchmarks,
+.paper-topic-chip.topic-evaluation-and-benchmarks,
+.publication-topic-button.topic-evaluation--benchmarks,
+.paper-topic-chip.topic-evaluation--benchmarks {
+  background: #fef3c7;
+  border-color: #ae9841;
+  color: #8f512a;
+}
+
+/* Video Understanding - Cyan */
+.publication-topic-button.topic-video-understanding,
+.paper-topic-chip.topic-video-understanding {
+  background: #cffafe;
+  border-color: #67e8f9;
+  color: #0e7490;
+}
+
+/* Embodied AI - Purple */
+.publication-topic-button.topic-embodied-ai,
+.paper-topic-chip.topic-embodied-ai {
+  background: #ede9fe;
+  border-color: #c4b5fd;
+  color: #7c3aed;
+}
+
+/* Visual Grounding - Violet */
+.publication-topic-button.topic-visual-grounding,
+.paper-topic-chip.topic-visual-grounding {
+  background: #f3e8ff;
+  border-color: #d8b4fe;
+  color: #9333ea;
+}
+
+/* Domain Generalization - Green */
+.publication-topic-button.topic-domain-generalization,
+.paper-topic-chip.topic-domain-generalization {
+  background: #dcfce7;
+  border-color: #86efac;
+  color: #15803d;
+}
+
+/* AI for Science - Lime */
 .publication-topic-button.topic-ai-for-science,
 .paper-topic-chip.topic-ai-for-science {
   background: #ecfccb;
-  border-color: #d9f99d;
-  color: #3f6212;
+  border-color: #bef264;
+  color: #4d7c0f;
 }
 
-.publication-topic-button.topic-benchmarks,
-.paper-topic-chip.topic-benchmarks {
-  background: #fef9c3;
-  border-color: #fde68a;
-  color: #854d0e;
+/* Federated Learning - Indigo */
+.publication-topic-button.topic-federated-learning,
+.paper-topic-chip.topic-federated-learning {
+  background: #e0e7ff;
+  border-color: #a5b4fc;
+  color: #4338ca;
 }
 
-.publication-topic-button.topic-grounding,
-.paper-topic-chip.topic-grounding {
-  background: #ede9fe;
-  border-color: #ddd6fe;
-  color: #5b21b6;
-}
-
-.publication-topic-button.topic-surgical-ai,
-.paper-topic-chip.topic-surgical-ai {
-  background: #ffedd5;
-  border-color: #fed7aa;
-  color: #9a3412;
-}
-
+/* Active filter */
 .publication-topic-button.active {
   background: #111 !important;
   border-color: #111 !important;
