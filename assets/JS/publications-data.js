@@ -262,7 +262,7 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/TITAN"
         }
       ],
-      "topics": ["grounding"],
+      "topics": ["Grounding"],
       "abstract": "TITAN addresses source-free domain adaptive object detection by partitioning target samples and using query-token based adversarial learning to reduce domain gaps without source data during adaptation."
     },
     {
@@ -458,7 +458,7 @@ window.PUBLICATIONS = {
           "url": "https://github.com/Tajamul21/Detection-Classification-and-Semantic_Segmentation-of-apples"
         }
       ],
-      "topics": ["grounding"],
+      "topics": ["Grounding"],
       "abstract": "This work presents an integrated computer vision system for apple detection, classification, and semantic segmentation, supporting visual understanding for agricultural applications."
     }
   ]
