@@ -21,6 +21,42 @@ window.PUBLICATIONS = {
   ],
   "papers": [
     {
+      "id": "grounded-teacher",
+      "selected": true,
+      "year": 2026,
+      "title": "Context Aware Grounded Teacher for Source Free Object Detection",
+      "authors": [
+        "Tajamul Ashraf",
+        "Rajes Manna",
+        "Partha Sarathi Purkayastha",
+        "Tavaheed Tariq",
+        "Janibul Bashir"
+      ],
+      "venue": "International Journal of Computer Vision (IJCV)",
+      "image": "assets/Profile Picture/papers/grounded-teacher.png",
+      "imageAlt": "Grounded Teacher paper thumbnail",
+      "links": [
+        {
+          "label": "webpage",
+          "url": "https://tajamul21.github.io/Grounded_Teacher/"
+        },
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2504.15404"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/Tajamul21/Grounded_Teacher"
+        }
+      ],
+      "topics": [
+        "Visual Grounding",
+        "Domain Generalization",
+        "AI for Science"
+      ],
+      "abstract": "Grounded Teacher introduces a source-free object detection framework that mitigates context bias and teacher-student instability using a relational context module, semantic augmentation, semantic-aware loss, and training-only expert supervision from large vision foundation models."
+    },
+    {
       "id": "carepilot",
       "selected": false,
       "year": 2026,
