@@ -52,7 +52,7 @@ window.PUBLICATIONS = {
       "topics": [
         "Visual Grounding",
         "Domain Generalization",
-        "AI for Science"
+        "Medical AI"
       ],
       "abstract": "Grounded Teacher introduces a source-free object detection framework that mitigates context bias and teacher-student instability using a relational context module, semantic augmentation, semantic-aware loss, and training-only expert supervision from large vision foundation models."
     },
