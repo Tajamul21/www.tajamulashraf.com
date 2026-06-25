@@ -1,282 +1,147 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
-    <title>Bootstrap 4 Blog Template For Developers</title>
-    
-    <!-- Meta -->
+    <title>Journey in Bytes</title>
+    <script>document.title = "Journey in Bytes";</script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico"> 
-    
-    <!-- FontAwesome JS-->
-    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
-    
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
-    
-    <!-- Theme CSS -->  
+    <meta name="author" content="Tajamul">
+    <meta name="theme-color" content="#203f35">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+        integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+        crossorigin="anonymous"></script>
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-    
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <meta name="description" content="Read the latest Journey in Bytes blog post.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+</head>
 
-</head> 
-
-<body>
-    
-    <header class="header text-center">	    
-	    <h1 class="blog-name pt-lg-4 mb-0"><a href="index.html">Anthony's Blog</a></h1>
-        
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
-           
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<div class="profile-section pt-3 pt-lg-0">
-				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image"  loading="lazy" decoding="async">			
-					
-					<div class="bio mb-3">Hi, my name is Anthony Doe. Briefly introduce yourself here. You can also provide a link to the about page.<br><a href="about.html">Find out more about me</a></div><!--//bio-->
-					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
-			        </ul><!--//social-list-->
-			        <hr> 
-				</div><!--//profile-section-->
-				
-				<ul class="navbar-nav flex-column text-left">
-					<li class="nav-item">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item active">
-					    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
-					</li>
-				</ul>
-				
-				<div class="my-2 my-md-3">
-					
-				    <a class="btn btn-primary" href="https://themes.3rdwavemedia.com/" target="_blank">Get in Touch</a>
-				    
-				</div>
-			</div>
-		</nav>
+<body data-page="post">
+    <header class="site-header">
+        <div class="container-wide nav-shell">
+            <a class="brand" href="index.html" aria-label="Journey in Bytes home">
+                <span class="brand-mark" aria-hidden="true"><img class="brand-logo" src="assets/images/blog-logo.png" alt="" width="46" height="46"></span>
+                <span class="brand-text"><strong>Journey in Bytes</strong></span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navigation" data-nav-toggle>
+                <span></span><span></span><span></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <nav id="navigation" class="site-nav" data-nav-menu aria-label="Main navigation">
+                <a class="site-nav-link" data-nav="home" href="index.html">Home</a>
+                <a class="site-nav-link" data-nav="archive" href="blog-list.html">All Posts</a>
+                <a class="site-nav-link" data-nav="post" href="blog-post.html">Latest</a>
+                <a class="site-nav-link" data-nav="about" href="about.html">About</a>
+            </nav>
+        </div>
     </header>
-    
-    <div class="main-wrapper">
-	    
-	    <article class="blog-post px-3 py-5 p-md-5">
-		    <div class="container">
-			    <header class="blog-post-header">
-				    <h2 class="title mb-2">ICLR 2026: My Experience to Rio Claro not Rio de Janeiro</h2>
-				    <div class="meta mb-3"><span class="date">Published 3 months ago</span><span class="time">5 min read</span><span class="comment"><a href="#">4 comments</a></span></div>
-			    </header>
-			    
-			    <div class="blog-post-body">
-				    <figure class="blog-banner">
-				        <a href="https://made4dev.com"><img class="img-fluid" src="assets/images/blog/blog-post-banner.jpg" alt="image" loading="lazy" decoding="async"></a>
-				        <figcaption class="mt-2 text-center image-caption">Image Credit: <a href="https://made4dev.com?ref=devblog" target="_blank">made4dev.com (Premium Programming T-shirts)</a></figcaption>
-				    </figure>
-				    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
-				    
-				    <h3 class="mt-5 mb-3">Code Block Example</h3>
-				    <p>You can get more info at <a href="https://highlightjs.org/" target="_blank">https://highlightjs.org/</a>. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
-				    <pre>
-					    <code>
-function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-             ` class="${cls}"`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
-}
 
-export  $initHighlight;
-					    </code>
-				    </pre>
-				    <h3 class="mt-5 mb-3">Typography</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-				    <h5 class="my-3">Bullet Points:</h5>
-				    <ul class="mb-5">
-					  <li class="mb-2">Lorem ipsum dolor sit amet consectetuer.</li>
-					  <li class="mb-2">Aenean commodo ligula eget dolor.</li>
-					  <li class="mb-2">Aenean massa cum sociis natoque penatibus.</li>
-					</ul>
-					<ol class="mb-5">
-					  <li class="mb-2">Lorem ipsum dolor sit amet consectetuer.</li>
-					  <li class="mb-2">Aenean commodo ligula eget dolor.</li>
-					  <li class="mb-2">Aenean massa cum sociis natoque penatibus.</li>
-					</ol>
-					<h5 class="my-3">Quote Example:</h5>
-					<blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
-						<p class="mb-2">You might not think that programmers are artists, but programming is an extremely creative profession. It's logic-based creativity.</p>
-						<footer class="blockquote-footer">John Romero</footer>
-					</blockquote>
-					
-					<h5 class="my-3">Table Example:</h5>
-					<table class="table table-striped my-5">
-						<thead>
-							<tr>
-								<th scope="col">#</th>
-								<th scope="col">First</th>
-								<th scope="col">Last</th>
-								<th scope="col">Handle</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Mark</td>
-								<td>Otto</td>
-								<td>@mdo</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Jacob</td>
-								<td>Thornton</td>
-								<td>@fat</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Larry</td>
-								<td>the Bird</td>
-								<td>@twitter</td>
-							</tr>
-						</tbody>
-					</table>
-					
-					<h5 class="mb-3">Embed A Tweet:</h5>
-					
-					<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">1969:<br>-what&#39;re you doing with that 2KB of RAM?<br>-sending people to the moon<br><br>2017:<br>-what&#39;re you doing with that 1.5GB of RAM?<br>-running Slack</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/status/926458505355235328?ref_src=twsrc%5Etfw">November 3, 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <main class="main-wrapper site-main">
+        <section class="article-section">
+            <div class="container-wide article-layout no-sidebar">
+                <div class="article-column">
+                    <div class="back-row">
+                        <a href="blog-list.html" class="btn btn-quiet btn-sm">&larr; All posts</a>
+                    </div>
+                    <article class="article-card blog-post" data-post-article>
+                        <div class="alert alert-info">Loading post...</div>
+                    </article>
 
+                    <section class="blog-comments-section comments-panel" id="comments" data-comments-section>
+                        <div class="section-title-bar compact">
+                            <div>
+                                <span class="eyebrow">Discussion</span>
+                                <h3>Comments</h3>
+                            </div>
+                        </div>
 
-				    
-				    <h3 class="mt-5 mb-3">Video Example</h3>
-				    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. </p>
+                        <div class="alert d-none" data-comment-message role="status"></div>
 
-				    <div class="embed-responsive embed-responsive-16by9">
-					   <iframe width="560" height="315" src="https://www.youtube.com/embed/hnCmSXCZEpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
-					</div>
-				   
-			    </div>
-				    
-			    <nav class="blog-nav nav nav-justified my-5">
-				  <a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-				  <a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-				</nav>
-				
-				<div class="blog-comments-section">
-					<div id="disqus_thread"></div>
-					<script>
-					    /**
-					     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-					     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-					     *  PLATFORM OR CMS.
-					     *  
-					     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-					     *  https://disqus.com/admin/universalcode/#configuration-variables
-					     */
-					    /*
-					    var disqus_config = function () {
-					        // Replace PAGE_URL with your page's canonical URL variable
-					        this.page.url = PAGE_URL;  
-					        
-					        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-					        this.page.identifier = PAGE_IDENTIFIER; 
-					    };
-					    */
-					    
-					    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
-					        var d = document, s = d.createElement('script');
-					        
-					        // IMPORTANT: Replace 3wmthemes with your forum shortname!
-					        s.src = 'https://3wmthemes.disqus.com/embed.js';
-					        
-					        s.setAttribute('data-timestamp', +new Date());
-					        (d.head || d.body).appendChild(s);
-					    })();
-					</script>
-					<noscript>
-					    Please enable JavaScript to view the 
-					    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
-					        comments powered by Disqus.
-					    </a>
-					</noscript>
-				</div><!--//blog-comments-section-->
-				
-		    </div><!--//container-->
-	    </article>
-	    
-	    <section class="promo-section theme-bg-light py-5 text-center">
-		    <div class="container">
-			    <h2 class="title">Promo Section Heading</h2>
-			    <p>You can use this section to promote your side projects etc. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. </p>
-                <figure class="promo-figure">
-			        <a href="https://made4dev.com" target="_blank"><img class="img-fluid" src="assets/images/promo-banner.jpg" alt="image" loading="lazy" decoding="async"></a>
-			    </figure>
-		    </div><!--//container-->
-	    </section><!--//promo-section-->
-	    
-	    <footer class="footer text-center py-2 theme-bg-dark">
-		   
-	        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-                <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-		   
-	    </footer>
-    
-    </div><!--//main-wrapper-->
-    
+                        <form data-comment-form class="comment-form" novalidate>
+                            <div class="honeypot-field" aria-hidden="true">
+                                <label>Leave this field empty <input type="text" name="website_url" tabindex="-1"
+                                        autocomplete="off"></label>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label for="display-name">Name</label>
+                                    <input id="display-name" type="text" class="form-control" name="display_name"
+                                        maxlength="80" placeholder="Your name (optional)">
+                                </div>
+                            </div>
+                            <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="anonymous" name="anonymous">
+                                <label class="custom-control-label" for="anonymous">Post as Anonymous</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="comment-text">Comment</label>
+                                <textarea id="comment-text" class="form-control" name="comment_text" rows="5" required
+                                    maxlength="1600" placeholder="Write your comment..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Post comment</button>
+                        </form>
 
-    <!-- *****CONFIGURE STYLE (REMOVE ON YOUR PRODUCTION SITE)****** -->  
-    <div id="config-panel" class="config-panel d-none d-lg-block">
-        <div class="panel-inner">
-            <a id="config-trigger" class="config-trigger config-panel-hide text-center" href="#"><i class="fas fa-cog fa-spin mx-auto" data-fa-transform="down-6" ></i></a>
-            <h5 class="panel-title">Choose Colour</h5>
-            <ul id="color-options" class="list-inline mb-0">
-                <li class="theme-1 active list-inline-item"><a data-style="assets/css/theme-1.css" href="#"></a></li>
-                <li class="theme-2  list-inline-item"><a data-style="assets/css/theme-2.css" href="#"></a></li>
-                <li class="theme-3  list-inline-item"><a data-style="assets/css/theme-3.css" href="#"></a></li>
-                <li class="theme-4  list-inline-item"><a data-style="assets/css/theme-4.css" href="#"></a></li>
-                <li class="theme-5  list-inline-item"><a data-style="assets/css/theme-5.css" href="#"></a></li>
-                <li class="theme-6  list-inline-item"><a data-style="assets/css/theme-6.css" href="#"></a></li>
-                <li class="theme-7  list-inline-item"><a data-style="assets/css/theme-7.css" href="#"></a></li>
-                <li class="theme-8  list-inline-item"><a data-style="assets/css/theme-8.css" href="#"></a></li>
-            </ul>
-            <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
-        </div><!--//panel-inner-->
-    </div><!--//configure-panel-->
+                        <div class="alert alert-light" data-comments-empty>No comments yet. Be the first to comment.
+                        </div>
+                        <div class="comment-list" data-comment-list></div>
+                    </section>
+                </div>
+                <aside class="creator-card" aria-label="Author">
+                    <div class="creator-top">
+                        <img class="creator-photo" src="assets/images/profile.jpg" alt="Tajamul profile photo"
+                            loading="lazy" decoding="async" width="92" height="92">
+                        <div>
+                            <span class="eyebrow">Author</span>
+                            <h2>Tajamul Ashraf</h2>
+                            <p>Full time researcher, part time blogger</p>
+                        </div>
+                    </div>
+                    <div class="social-pills" aria-label="Social links">
+                        <a href="../index.html" aria-label="Personal website"><i class="fas fa-globe"></i></a>
+                        <a href="https://github.com/Tajamul21" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github-alt"></i></a>
+                        <a href="https://www.linkedin.com/in/tajamul221/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://scholar.google.com/citations?user=n6fSkQ4AAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i></a>
+                    </div>
+                    <a class="btn btn-primary btn-contact" data-contact-link href="mailto:tajamul.ashraf@ntu.edu.sg">Get in
+                        Touch</a>
 
-    
-       
-    <!-- Javascript -->          
-    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
-    <script src="assets/plugins/popper.min.js"></script> 
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-    
-    <!-- Page Specific JS -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+                </aside>
+            </div>
+        </section>
 
-    <!-- Custom JS -->
-    <script src="assets/js/blog.js"></script>
-    
-    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-    <script src="assets/js/demo/style-switcher.js"></script>     
-    
+        <section class="more-section">
+            <div class="container-wide more-card">
+                <div>
+                    <span class="eyebrow">Keep reading</span>
+                    <h2>Explore the archive</h2>
+                    <p>Every post is generated from the same easy posts file.</p>
+                </div>
+                <a class="btn btn-primary" href="blog-list.html">Explore all posts</a>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container-wide">
+                <small>Journey in Bytes, Copyright &copy; 2026 Tajamul Ashraf.</small>
+            </div>
+        </footer>
+    </main>
 
+    <script defer src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script defer src="assets/plugins/popper.min.js"></script>
+    <script defer src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script defer src="assets/data/posts.js"></script>
+    <script defer src="assets/js/site-config.js"></script>
+    <script defer src="assets/js/site.js"></script>
 </body>
-</html> 
 
+</html>

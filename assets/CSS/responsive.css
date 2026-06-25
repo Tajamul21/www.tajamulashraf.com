@@ -254,6 +254,15 @@ img {
   padding-bottom: 18px;
 }
 
+.publication-row .profile-image-container {
+  padding-left: 8px;
+  padding-right: 18px;
+}
+
+.publication-row .publication-text-cell {
+  padding-left: 8px;
+}
+
 .publication-venue {
   color: green;
   font-weight: bold;

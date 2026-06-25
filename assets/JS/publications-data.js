@@ -21,6 +21,53 @@ window.PUBLICATIONS = {
   ],
   "papers": [
     {
+      "id": "medspot",
+      "selected": true,
+      "year": 2026,
+      "title": "MedSPOT: A Workflow-Aware Sequential Grounding Benchmark for Clinical GUI",
+      "authors": [
+        "Rozain Shakeel",
+        "Abdul Rahman Mohammad Ali",
+        "Muneeb Mushtaq",
+        "Tausifa Jan Saleem",
+        "Tajamul Ashraf"
+      ],
+      "venue": "ECCV 2026",
+      "image": "assets/Profile Picture/papers/medspot.png",
+      "imageAlt": "MedSPOT clinical GUI grounding benchmark example",
+      "imageVariants": {
+        "type": "image/png",
+        "src260": "assets/Profile Picture/papers/medspot-fast-260.png",
+        "src520": "assets/Profile Picture/papers/medspot-fast-520.png",
+        "src760": "assets/Profile Picture/papers/medspot-fast-760.png"
+      },
+      "links": [
+        {
+          "label": "webpage",
+          "url": "https://rozainmalik.github.io/MedSPOT_web/"
+        },
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2603.19993"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/Tajamul21/MedSPOT"
+        },
+        {
+          "label": "dataset",
+          "url": "https://huggingface.co/datasets/Tajamul21/MedSPOT"
+        }
+      ],
+      "topics": [
+        "Visual Grounding",
+        "Vision-Language Reasoning",
+        "Medical AI",
+        "Evaluation & Benchmarks"
+      ],
+      "abstract": "MedSPOT introduces a workflow-aware sequential grounding benchmark for clinical GUI environments, covering 216 task-driven videos, 597 annotated keyframes, 10 medical software platforms, and a failure-aware evaluation protocol for assessing multimodal model reliability in medical software workflows."
+    },
+    {
       "id": "grounded-teacher",
       "selected": true,
       "year": 2026,
@@ -404,7 +451,7 @@ window.PUBLICATIONS = {
     },
     {
       "id": "transfed",
-      "selected": true,
+      "selected": false,
       "year": 2024,
       "title": "TransFed: A Way to Epitomize Focal Modulation Using Transformer-Based Federated Learning",
       "authors": [

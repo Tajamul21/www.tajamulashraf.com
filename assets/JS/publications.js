@@ -64,15 +64,32 @@
     return (webpage && webpage.url) || (paperLink && paperLink.url) || (links[0] && links[0].url) || "#";
   }
 
-  function publicationImagePaths(image) {
-    var fallback = String(image || "").trim();
+  function imageMimeType(value) {
+    return /\.png$/i.test(value || "") ? "image/png" : "image/webp";
+  }
+
+  function publicationImagePaths(paper) {
+    var fallback = String((paper && paper.image) || "").trim();
+    var variants = paper && paper.imageVariants;
+
+    if (variants) {
+      return {
+        fallback: fallback,
+        src260: variants.src260 || fallback,
+        src520: variants.src520 || fallback,
+        src760: variants.src760 || fallback,
+        type: variants.type || imageMimeType(variants.src260 || fallback)
+      };
+    }
+
     var base = fallback.replace(/\.(png|jpe?g)$/i, "");
 
     return {
       fallback: fallback,
-      webp260: base + "-fast-260.webp",
-      webp520: base + "-fast-520.webp",
-      webp760: base + "-fast-760.webp"
+      src260: base + "-fast-260.webp",
+      src520: base + "-fast-520.webp",
+      src760: base + "-fast-760.webp",
+      type: "image/webp"
     };
   }
 
@@ -82,10 +99,10 @@
 
   function publicationImageSrcset(imagePaths) {
     return [
-      escapeHtml(imageUrl(imagePaths.webp260)) + " 260w",
-      escapeHtml(imageUrl(imagePaths.webp520)) + " 520w",
-      escapeHtml(imageUrl(imagePaths.webp760)) + " 760w"
-    ].join(", ");
+      imagePaths.src260 ? escapeHtml(imageUrl(imagePaths.src260)) + " 260w" : "",
+      imagePaths.src520 ? escapeHtml(imageUrl(imagePaths.src520)) + " 520w" : "",
+      imagePaths.src760 ? escapeHtml(imageUrl(imagePaths.src760)) + " 760w" : ""
+    ].filter(Boolean).join(", ");
   }
 
   function preloadRepresentativeImages() {
@@ -96,14 +113,14 @@
     selectedPapers.forEach(function (paper) {
       if (document.querySelector('link[data-publication-preload="' + paper.id + '"]')) return;
 
-      var imagePaths = publicationImagePaths(paper.image);
-      if (!imagePaths.webp260) return;
+      var imagePaths = publicationImagePaths(paper);
+      if (!imagePaths.src260) return;
 
       var link = document.createElement("link");
       link.rel = "preload";
       link.as = "image";
-      link.type = "image/webp";
-      link.href = imageUrl(imagePaths.webp260);
+      link.type = imagePaths.type;
+      link.href = imageUrl(imagePaths.src260);
       link.setAttribute("imagesrcset", publicationImageSrcset(imagePaths));
       link.setAttribute("imagesizes", "260px");
       link.setAttribute("fetchpriority", "high");
@@ -148,8 +165,9 @@
     var abstractId = "abstract-" + paper.id;
     var url = primaryLink(paper);
     var imageAlt = paper.imageAlt || paper.title;
-    var imagePaths = publicationImagePaths(paper.image);
+    var imagePaths = publicationImagePaths(paper);
     var imageSrcset = publicationImageSrcset(imagePaths);
+    var imageSource = imageSrcset ? '<source type="' + escapeHtml(imagePaths.type) + '" srcset="' + imageSrcset + '" sizes="260px">' : "";
     var isRepresentativeImage = listName === "selected";
     var imageLoading = isRepresentativeImage ? "eager" : "lazy";
     var imageFetchPriority = isRepresentativeImage ? "high" : "low";
@@ -161,17 +179,17 @@
 
     return String.raw`
       <tr bgcolor="" class="publication-row" data-year="${escapeHtml(paper.year)}" data-topics="${escapeHtml((paper.topics || []).join("|"))}">
-        <td width="38%" valign="middle" align="right" class="profile-image-container">
+        <td width="34%" valign="middle" align="right" class="profile-image-container">
           <a href="${escapeHtml(url)}"${linkAttributes(url)}>
             <picture>
-              <source type="image/webp" srcset="${imageSrcset}" sizes="260px">
+              ${imageSource}
               <img src="${escapeHtml(imageUrl(imagePaths.fallback))}" alt="${escapeHtml(imageAlt)}" class="profile-image publication-image" loading="${imageLoading}" decoding="${imageDecoding}" fetchpriority="${imageFetchPriority}" width="520" height="293"
               style="display:block; margin:auto; border-radius:15px; border:1px solid rgb(10, 158, 10); width:260px; max-width:85%; height:auto; aspect-ratio:16/9; object-fit:cover;">
             </picture>
           </a>
         </td>
 
-        <td width="62%" valign="top">
+        <td width="66%" valign="top" class="publication-text-cell">
           <p align="justify" style="margin-bottom: 0;">
             <a href="${escapeHtml(url)}" id="publication-link-${escapeHtml(paper.id)}"${linkAttributes(url)}>
               <b>${escapeHtml(paper.title)}</b>
