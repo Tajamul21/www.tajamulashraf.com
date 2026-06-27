@@ -27,9 +27,43 @@
     });
   }
 
+  function setupNewsToggle() {
+    var list = document.querySelector(".news-scrollbox");
+    if (!list) return;
+    if (!window.matchMedia("(max-width: 760px)").matches) return;
+
+    var visibleCount = 7;
+    var items = Array.prototype.slice.call(list.children).filter(function (child) {
+      return child.tagName && child.tagName.toLowerCase() === "li";
+    });
+    if (items.length <= visibleCount) return;
+
+    var button = document.createElement("button");
+    button.type = "button";
+    button.className = "news-toggle-button";
+
+    function setExpanded(expanded) {
+      items.forEach(function (item, index) {
+        item.hidden = !expanded && index >= visibleCount;
+      });
+      list.classList.toggle("news-expanded", expanded);
+      button.textContent = expanded ? "Show less news" : "More news";
+      button.setAttribute("aria-expanded", expanded ? "true" : "false");
+    }
+
+    button.addEventListener("click", function () {
+      var expanded = button.getAttribute("aria-expanded") === "true";
+      setExpanded(!expanded);
+    });
+
+    setExpanded(false);
+    list.insertAdjacentElement("afterend", button);
+  }
+
   function init() {
     enhanceImages();
     protectExternalLinks();
+    setupNewsToggle();
   }
 
   if (document.readyState === "loading") {

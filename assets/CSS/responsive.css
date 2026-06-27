@@ -70,9 +70,49 @@ img {
     -webkit-text-size-adjust: 100%;
   }
 
+  body,
+  p,
+  li,
+  td,
+  th {
+    font-size: 15.5px !important;
+    line-height: 1.58 !important;
+  }
+
   pageheading {
     display: block;
+    font-size: clamp(32px, 8.5vw, 38px) !important;
     line-height: 1.15;
+    margin-bottom: 0.35rem;
+    text-align: center;
+  }
+
+  #email,
+  #email a {
+    display: inline-block;
+    max-width: 100%;
+    font-size: 13px !important;
+    line-height: 1.35 !important;
+    overflow-wrap: anywhere;
+  }
+
+  .site-title {
+    margin: 0 0 1.6rem 0;
+    text-align: center !important;
+  }
+
+  .hero-copy-cell,
+  .hero-copy-cell p {
+    text-align: justify !important;
+    text-align-last: left;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  .hero-links {
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+    margin-top: 0.65rem !important;
   }
 
   .navbar-list {
@@ -143,6 +183,16 @@ img {
 }
 
 @media (max-width: 560px) {
+  body {
+    background: #fff;
+  }
+
+  .container {
+    width: 100% !important;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .container > table,
   .container > table > tbody,
   .container > table > tbody > tr,
@@ -159,8 +209,42 @@ img {
     width: 100% !important;
   }
 
+  .hero-table {
+    border-spacing: 0;
+  }
+
+  .hero-photo-cell {
+    max-width: 280px;
+    margin: 0 auto 1.4rem;
+    text-align: center !important;
+  }
+
+  .hero-photo-cell img {
+    display: block;
+    width: min(72vw, 280px) !important;
+    margin: 0 auto;
+  }
+
+  .hero-copy-cell {
+    margin-top: 1rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   .container table table img {
     height: auto;
+  }
+
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  .news-scrollbox {
+    padding-left: 1.2rem;
+  }
+
+  .news-scrollbox li {
+    margin-bottom: 0.75rem;
   }
 
   .footer {
@@ -296,6 +380,31 @@ img {
   color: #666;
   padding: 18px 0;
   text-align: left;
+}
+
+.news-toggle-button {
+  appearance: none;
+  background: #111;
+  border: 1px solid #111;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  height: auto;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 0.85rem auto 0;
+  padding: 8px 16px;
+  text-transform: none;
+}
+
+.news-toggle-button:hover,
+.news-toggle-button:focus {
+  background: #333;
+  border-color: #333;
+  color: #fff;
 }
 
 @media (max-width: 760px) {
@@ -448,12 +557,37 @@ img {
   p,
   li,
   td,
+  ul[align="justify"],
   .paper,
   .paper p,
   .main-description p,
   #publications p,
   #publications td {
     text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+
+  ul[align="justify"] {
+    text-align-last: left;
+  }
+
+  .news-scrollbox.news-expanded {
+    max-height: 24rem !important;
+    overflow-y: auto !important;
+    padding-right: 0.4rem !important;
+  }
+
+  .site-title,
+  .hero-links {
+    text-align: center !important;
+    hyphens: none;
+  }
+
+  .hero-copy-cell,
+  .hero-copy-cell p {
+    text-align: justify !important;
+    text-align-last: left;
     text-justify: inter-word;
     hyphens: auto;
   }

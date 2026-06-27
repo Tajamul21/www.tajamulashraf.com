@@ -1,4 +1,4 @@
-const CACHE_NAME = 'journey-in-bytes-v12';
+const CACHE_NAME = 'journey-in-bytes-v13';
 const STATIC_ASSETS = [
   './favicon.ico',
   './assets/images/favicon-32.png',
@@ -10,7 +10,7 @@ const STATIC_ASSETS = [
   './assets/css/custom.css',
   './assets/data/posts.js',
   './assets/js/site-config.js',
-  './assets/js/site.js',
+  './assets/js/site.js?v=13',
   './assets/plugins/jquery-3.3.1.min.js',
   './assets/plugins/popper.min.js',
   './assets/plugins/bootstrap/js/bootstrap.min.js',

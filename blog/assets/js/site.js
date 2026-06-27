@@ -634,11 +634,11 @@
       var lng = Number(location.longitude);
       var label = location.label || location.country || "Reader location";
       var views = Math.max(1, Number(location.views || 1));
-      var radius = Math.min(18, 7 + Math.log(views + 1) * 4);
+      var radius = Math.min(6, 3 + Math.log(views + 1) * 0.9);
       var marker = window.L.circleMarker([lat, lng], {
         radius: radius,
         color: "#203f35",
-        weight: 2,
+        weight: 1,
         fillColor: connected ? "#bb7355" : "#d9ab48",
         fillOpacity: 0.82
       }).bindPopup(
@@ -896,7 +896,7 @@
   function registerServiceWorker() {
     if (!("serviceWorker" in navigator)) return;
     if (window.location.protocol !== "https:" && window.location.hostname !== "localhost") return;
-    navigator.serviceWorker.register("sw.js").catch(function () {
+    navigator.serviceWorker.register("sw.js?v=13").catch(function () {
       // A failed service worker should never block the blog.
     });
   }
