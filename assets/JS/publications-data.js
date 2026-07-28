@@ -21,6 +21,48 @@ window.PUBLICATIONS = {
   ],
   "papers": [
     {
+      "id": "llm-post-training",
+      "selected": false,
+      "year": 2026,
+      "title": "LLM Post-Training: A Deep Dive into Reasoning Large Language Models",
+      "authors": [
+        "Komal Kumar*",
+        "Tajamul Ashraf*",
+        "Omkar Thawakar",
+        "Rao Muhammad Anwer",
+        "Hisham Cholakkal",
+        "Mubarak Shah",
+        "Ming-Hsuan Yang",
+        "Phillip H.S. Torr",
+        "Fahad Shahbaz Khan",
+        "Salman Khan"
+      ],
+      "venue": "IEEE TPAMI",
+      "image": "assets/Profile Picture/papers/llm-post-training.png",
+      "imageAlt": "LLM Post-Training survey paper thumbnail",
+      "imageVariants": {
+        "type": "image/png",
+        "src260": "assets/Profile Picture/papers/llm-post-training-fast-260.png",
+        "src520": "assets/Profile Picture/papers/llm-post-training-fast-520.png",
+        "src760": "assets/Profile Picture/papers/llm-post-training-fast-760.png"
+      },
+      "links": [
+        {
+          "label": "paper",
+          "url": "https://arxiv.org/abs/2502.21321"
+        },
+        {
+          "label": "code",
+          "url": "https://github.com/mbzuai-oryx/Awesome-LLM-Post-training"
+        }
+      ],
+      "topics": [
+        "Vision-Language Reasoning",
+        "Evaluation & Benchmarks"
+      ],
+      "abstract": "LLM Post-Training surveys methods for improving reasoning-oriented large language models beyond pretraining, organizing fine-tuning, reinforcement learning, and test-time scaling strategies while discussing alignment, scalable adaptation, inference-time reasoning, and open challenges such as catastrophic forgetting and reward hacking."
+    },
+    {
       "id": "medspot",
       "selected": true,
       "year": 2026,
