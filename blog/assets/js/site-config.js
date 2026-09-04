@@ -22,7 +22,7 @@ window.BLOG_CONFIG = {
   enableGeoLookup: true,
   geoApiUrl: "https://ipapi.co/json/",
   analyticsDays: 365,
-  mapTileUrl: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+  mapTileUrl: "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_2xd0_1_17ba1db00bd23947376ca408",
   mapTileAttribution: "&copy; OpenStreetMap contributors &copy; CARTO",
   mapDefaultCenter: [20, 0],
   mapDefaultZoom: 2,
