@@ -2,27 +2,35 @@
 <html lang="en">
 
 <head>
+    <!-- Runs before analytics so a browser-local opt-out takes effect immediately. -->
+    <script src="blog/assets/js/tracking-preferences.js?v=1"></script>
     <!-- Google tag (gtag.js) loaded after first paint so images and text are not delayed. -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-TZF697MT9Z');
-        (function () {
-            function loadGtag() {
-                if (window.__gtagLoaded) return;
-                window.__gtagLoaded = true;
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TZF697MT9Z';
-                document.head.appendChild(script);
-            }
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadGtag, { timeout: 3000 });
-            } else {
-                window.addEventListener('load', function () { setTimeout(loadGtag, 1200); });
-            }
-        }());
+        if (window.TA_ANALYTICS_OPTOUT) {
+            window['ga-disable-G-TZF697MT9Z'] = true;
+            window['ga-disable-UA-64069893-1'] = true;
+        }
+        if (!window.TA_ANALYTICS_OPTOUT) {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-TZF697MT9Z');
+            (function () {
+                function loadGtag() {
+                    if (window.__gtagLoaded) return;
+                    window.__gtagLoaded = true;
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-TZF697MT9Z';
+                    document.head.appendChild(script);
+                }
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadGtag, { timeout: 3000 });
+                } else {
+                    window.addEventListener('load', function () { setTimeout(loadGtag, 1200); });
+                }
+            }());
+        }
     </script>
 
     <!-- Basic Page Needs
@@ -389,26 +397,28 @@
     </noscript>
     <!-- Start : legacy Google Analytics Code, delayed to avoid blocking image paint -->
     <script>
-        (function () {
-            window.GoogleAnalyticsObject = 'ga';
-            window.ga = window.ga || function () { (window.ga.q = window.ga.q || []).push(arguments); };
-            window.ga.l = 1 * new Date();
-            ga('create', 'UA-64069893-1', 'auto');
-            ga('send', 'pageview');
-            function loadLegacyAnalytics() {
-                if (window.__legacyGaLoaded) return;
-                window.__legacyGaLoaded = true;
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://www.google-analytics.com/analytics.js';
-                document.head.appendChild(script);
-            }
-            if ('requestIdleCallback' in window) {
-                requestIdleCallback(loadLegacyAnalytics, { timeout: 3500 });
-            } else {
-                window.addEventListener('load', function () { setTimeout(loadLegacyAnalytics, 1500); });
-            }
-        }());
+        if (!window.TA_ANALYTICS_OPTOUT) {
+            (function () {
+                window.GoogleAnalyticsObject = 'ga';
+                window.ga = window.ga || function () { (window.ga.q = window.ga.q || []).push(arguments); };
+                window.ga.l = 1 * new Date();
+                ga('create', 'UA-64069893-1', 'auto');
+                ga('send', 'pageview');
+                function loadLegacyAnalytics() {
+                    if (window.__legacyGaLoaded) return;
+                    window.__legacyGaLoaded = true;
+                    var script = document.createElement('script');
+                    script.async = true;
+                    script.src = 'https://www.google-analytics.com/analytics.js';
+                    document.head.appendChild(script);
+                }
+                if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadLegacyAnalytics, { timeout: 3500 });
+                } else {
+                    window.addEventListener('load', function () { setTimeout(loadLegacyAnalytics, 1500); });
+                }
+            }());
+        }
     </script>
 
     <script src="js/scramble.js"></script>
@@ -1080,6 +1090,9 @@
                         <script src="assets/JS/publications-data.js?v=fast5"></script>
                         <script src="assets/JS/publications.js?v=fast5"></script>
                         <script src="assets/JS/site-enhancements.js?v=fast6"></script>
+                        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+                        <script defer src="blog/assets/js/site-config.js?v=14"></script>
+                        <script defer src="assets/JS/visitor-map-tracker.js?v=1"></script>
 
 </body>
 

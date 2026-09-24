@@ -99,6 +99,15 @@
     }
   }
 
+  function visitorTrackingIsOptedOut() {
+    try {
+      if (window.TA_TRACKING_PREFERENCES && typeof window.TA_TRACKING_PREFERENCES.isOptedOut === "function") {
+        return window.TA_TRACKING_PREFERENCES.isOptedOut();
+      }
+    } catch (error) {}
+    return Boolean(window.TA_ANALYTICS_OPTOUT);
+  }
+
   function getVisitorId() {
     var key = "jb.visitorId." + config.siteId;
     var visitorId = null;
@@ -136,10 +145,13 @@
 
   function updateSyncStatus() {
     var connected = Boolean(getSupabaseClient());
+    var optedOut = visitorTrackingIsOptedOut();
     $all("[data-sync-status]").forEach(function (badge) {
-      badge.className = "sync-status " + (connected ? "synced" : "local");
-      badge.textContent = connected ? "Synced live" : "Local preview";
-      badge.setAttribute("title", connected ? "Supabase is connected." : "Showing this browser first. Connect Supabase to sync every reader.");
+      badge.className = "sync-status " + (connected && !optedOut ? "synced" : "local");
+      badge.textContent = optedOut ? "Tracking paused" : (connected ? "Synced live" : "Local preview");
+      badge.setAttribute("title", optedOut
+        ? "Visitor tracking is disabled in this browser."
+        : (connected ? "Supabase is connected." : "Showing this browser first. Connect Supabase to sync every reader."));
     });
   }
 
@@ -424,6 +436,9 @@
   }
 
   async function trackVisit(pageSlug) {
+    // This guard must run before any browser ID, IP lookup, or visit write.
+    if (visitorTrackingIsOptedOut()) return;
+
     pageSlug = pageSlug || document.body.getAttribute("data-page") || "home";
     var sessionKey = "jb.visitRecorded." + config.siteId + "." + pageSlug;
     try {
@@ -896,7 +911,7 @@
   function registerServiceWorker() {
     if (!("serviceWorker" in navigator)) return;
     if (window.location.protocol !== "https:" && window.location.hostname !== "localhost") return;
-    navigator.serviceWorker.register("sw.js?v=13").catch(function () {
+    navigator.serviceWorker.register("sw.js?v=14").catch(function () {
       // A failed service worker should never block the blog.
     });
   }

@@ -129,6 +129,10 @@ Disable geolocation in `assets/js/site-config.js`:
 enableGeoLookup: false
 ```
 
+### Exclude an owner device
+
+After deployment, open either `https://www.tajamulashraf.com/?visitor_tracking=off` or the blog with the same query parameter on the laptop/browser to exclude. The setting is stored as a first-party cookie shared by the main site and blog, with a local-storage fallback. It prevents map saves and the main site's Google Analytics calls before they begin. Use `?visitor_tracking=on` on either site to turn tracking back on for that browser.
+
 ## Deploy
 
 Good free/static hosting options:
@@ -171,4 +175,4 @@ assets/images/covers/cover-focus.svg
 assets/images/covers/cover-jamstack.svg
 ```
 
-The visitor map is on the About page. In local map mode it shows a preview dot saved only in your browser. After Supabase is connected, it shows approximate city-level dots from all visitors.
+The visitor map is displayed on the About page. It includes visits from both the main homepage (`www.tajamulashraf.com/`) and the blog because they share the same visitor-map dataset. In local map mode it shows a preview dot saved only in your browser. After Supabase is connected, it shows approximate city-level dots from all visitors.

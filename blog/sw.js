@@ -1,4 +1,4 @@
-const CACHE_NAME = 'journey-in-bytes-v13';
+const CACHE_NAME = 'journey-in-bytes-v14';
 const STATIC_ASSETS = [
   './favicon.ico',
   './assets/images/favicon-32.png',
@@ -9,8 +9,9 @@ const STATIC_ASSETS = [
   './assets/css/theme-1.css',
   './assets/css/custom.css',
   './assets/data/posts.js',
+  './assets/js/tracking-preferences.js?v=1',
   './assets/js/site-config.js',
-  './assets/js/site.js?v=13',
+  './assets/js/site.js?v=14',
   './assets/plugins/jquery-3.3.1.min.js',
   './assets/plugins/popper.min.js',
   './assets/plugins/bootstrap/js/bootstrap.min.js',
@@ -24,6 +25,7 @@ const NETWORK_FIRST_PATHS = new Set([
   '/about.html',
   '/assets/css/custom.css',
   '/assets/data/posts.js',
+  '/assets/js/tracking-preferences.js',
   '/assets/js/site-config.js',
   '/assets/js/site.js'
 ]);
