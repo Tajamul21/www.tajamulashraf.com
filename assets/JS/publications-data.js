@@ -39,7 +39,7 @@ window.PUBLICATIONS = {
       ],
       "venue": "IEEE TPAMI",
       "image": "assets/Profile Picture/papers/llm-post-training.png",
-      "imageAlt": "LLM Post-Training survey paper thumbnail",
+      "imageAlt": "Figure 1 of the LLM Post-Training survey: taxonomy of post-training approaches (fine-tuning, reinforcement learning, test-time scaling)",
       "imageVariants": {
         "type": "image/png",
         "src260": "assets/Profile Picture/papers/llm-post-training-fast-260.png",
